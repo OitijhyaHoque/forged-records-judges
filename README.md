@@ -151,6 +151,10 @@ The test split has 56 SummEdits documents (265 summaries, 126 wrong) and 244 LLM
 - Differences between `expected/` and the readouts that the original analysis printed: `sprint_check.py` now also prints the `S3a miss unverified-claim_e` rows, and `n1_check.py` the `fix_claim` pattern rows; both were added after the first readouts, and all other numbers are equal. The LLM-AggreFact readouts in `expected/` cover all six reasoning judges and the thinking-off comparison in one file; the original analysis had them in separate files with the same numbers. `think_check.py` runs with `--examples 0`, so no trace excerpts are printed.
 - Some docstrings mention the pre-registered sprint plan and the October pilots. Those documents and the pilot code are not part of this repository; `meta/summedits_exclude_ids.txt` lists the pilot items that the main set excludes.
 
+## Preexisting work
+
+The sprint ran from 2026-11-13 to 2026-11-16. Two pilots in October 2026 (Qwen3.5-9B and gemma-4-12B-it) came before it. They produced the claim_e and pointer_e record wordings and an earlier prompt builder and scorer. `src/build.py` extends the pilot prompt builder, and `src/score_vllm.py` keeps the prompt format of the pilot scorer. The other code in this repository was written during the sprint. The pilot code itself is not included.
+
 ## Dual-use
 
 The forged record belongs to a published class of attack: text in the judge's prompt that claims a verification.
