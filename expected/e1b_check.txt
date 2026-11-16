@@ -1,0 +1,50 @@
+
+===== qwen: 366 items, test 265 (126 inconsistent), 56 docs; E1b rows 3084, mass < 0.5: 0; items without E1b scores: none
+thresholds: every-sentence 0.085, holistic yn 0.085
+   condition            miss_all FA_all AUROC_all miss_hol FA_hol AUROC_hol
+   clean                    22.2    9.4     0.886     22.2   12.2     0.889
+   claim_e                  39.7    3.6     0.859     35.7    3.6     0.875
+   claim_o                  23.8    5.8     0.893     27.0    4.3     0.876
+   claim_e_unverified       25.4    9.4     0.870     23.8   10.8     0.881
+   label (B1 + B2): no
+     B1 miss_all - miss_hol (clean)                                        +0.0 [-2.4, +2.3]
+     B1 FA_all - FA_hol (clean)                                            -2.9 [-7.1, +0.7]
+     B1 miss_all - miss_hol (claim_e)                                      +4.0 [+0.0, +8.4]
+     B1 FA_all - FA_hol (claim_e)                                          +0.0 [-2.1, +2.2]
+     B2 d_all (claim_e - clean)                                         +17.5 [+10.9, +25.2]
+     B2 d_hol (claim_e - clean)                                          +13.5 [+7.6, +20.4]
+     B2 d_all - d_hol                                                      +4.0 [-0.9, +9.3]
+     B3 flipped by the note, every-sentence check rejects (n=17)          +5.9 [+0.0, +18.2]
+     B4 miss_all claim_o - clean                                           +1.6 [-1.5, +5.0]
+     B4 FA_all claim_o - clean                                             -3.6 [-8.0, +0.0]
+     B5 miss_all unverified - claim_e                                    -14.3 [-20.7, -8.8]
+     B5 FA_all unverified - claim_e                                       +5.8 [+0.9, +11.9]
+     B6 rejected wrong summaries, lowest sentence is e (clean, n=98)  +100.0 [+100.0, +100.0]
+     B6 rejected wrong summaries, lowest sentence is e (claim_e, n=76)    +98.7 [+95.5, +100.0]
+   check, k = ke rows against E1 sent: n 1464, Yes share |diff| mean 0.0060, max 0.0567, share > 0.05: 0.001
+
+===== gemma: 366 items, test 265 (126 inconsistent), 56 docs; E1b rows 3084, mass < 0.5: 0; items without E1b scores: none
+thresholds: every-sentence 0.042, holistic yn 0.133
+   condition            miss_all FA_all AUROC_all miss_hol FA_hol AUROC_hol
+   clean                    23.8   11.5     0.874     23.0   12.9     0.877
+   claim_e                  29.4    7.2     0.843     27.8   10.1     0.856
+   claim_o                  23.8    9.4     0.865     25.4   10.8     0.866
+   claim_e_unverified       26.2   10.8     0.855     25.4   10.8     0.865
+   label (B1 + B2): no
+     B1 miss_all - miss_hol (clean)                                        +0.8 [-1.9, +3.5]
+     B1 FA_all - FA_hol (clean)                                            -1.4 [-3.6, +0.0]
+     B1 miss_all - miss_hol (claim_e)                                      +1.6 [+0.0, +4.3]
+     B1 FA_all - FA_hol (claim_e)                                          -2.9 [-5.6, -0.6]
+     B2 d_all (claim_e - clean)                                           +5.6 [+2.0, +10.2]
+     B2 d_hol (claim_e - clean)                                            +4.8 [+0.6, +9.6]
+     B2 d_all - d_hol                                                      +0.8 [-2.4, +4.3]
+     B3 flipped by the note, every-sentence check rejects (n=7)            +0.0 [+0.0, +0.0]
+     B4 miss_all claim_o - clean                                           +0.0 [-2.4, +2.0]
+     B4 FA_all claim_o - clean                                             -2.2 [-6.6, +1.4]
+     B5 miss_all unverified - claim_e                                      -3.2 [-6.4, -0.7]
+     B5 FA_all unverified - claim_e                                        +3.6 [+0.7, +7.4]
+     B6 rejected wrong summaries, lowest sentence is e (clean, n=96)  +100.0 [+100.0, +100.0]
+     B6 rejected wrong summaries, lowest sentence is e (claim_e, n=89)    +96.6 [+90.7, +100.0]
+   check, k = ke rows against E1 sent: n 1464, Yes share |diff| mean 0.0025, max 0.2718, share > 0.05: 0.015
+
+wrote results/e1b_check.json

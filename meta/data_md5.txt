@@ -1,0 +1,11 @@
+64cec3fc1f8f26095a1bca1955ac1502  data/sprint.jsonl
+29444eea6bca0f2132874375e053102e  data/heldout.jsonl
+de68ecc01ad91b2a4370ce156e949404  data/e1.jsonl
+4fc89b234ca661b2f0b095a1d1cee1bf  data/e1b.jsonl
+13cbefaf8d4860de08e3aceae2babfa6  data/place.jsonl
+6e1ad72bdd36cdcaf419ff59010bb5ed  data/place_guard.jsonl
+7a2948879f77f724f18fe085f95a6f07  data/sprint_guardA.jsonl
+8d9e182c202f83d91f14353b29fc0360  data/sprint_guardB.jsonl
+20457d772cb05fefa5cedf19c7937ab9  data/summedits.json
+a5cc373eda91f24b65b050844e8ed215  data/aggrefact/test.jsonl
+8f4e1ea77e82544692469c9feebbd316  data/aggrefact.jsonl

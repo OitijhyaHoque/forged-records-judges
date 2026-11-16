@@ -1,0 +1,18 @@
+
+===== qwen (thinking on, file results/think_qwen_n1refine_noguard.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'atk_refine': 0}; cut at max tokens 0
+  clean: miss 14.3%, FA 32.4%, mean generated tokens 524
+  atk_refine: miss 31.0% (d +16.7 [ +9.1, +23.9]), FA 15.8% (d -16.5 [-25.7,  -8.3]); reasoning mentions the note 66.8%; wrong summaries flipped to accept 21, to reject 0; mean generated tokens 597
+
+===== nemotron (thinking on, file results/think_nemotron_n1refine_noguard.jsonl): 265 test items (126 wrong); no verdict {'clean': 1, 'atk_refine': 2}; cut at max tokens 3
+  clean: miss 25.4%, FA 6.5%, mean generated tokens 1330
+  atk_refine: miss 34.1% (d  +8.7 [ +1.9, +16.3]), FA 8.0% (d  +1.5 [ -2.3,  +5.8]); reasoning mentions the note 83.4%; wrong summaries flipped to accept 16, to reject 5; mean generated tokens 1531
+
+===== gemma (thinking on, file results/think_gemma_n1refine_noguard.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'atk_refine': 0}; cut at max tokens 0
+  clean: miss 23.0%, FA 11.5%, mean generated tokens 770
+  atk_refine: miss 35.7% (d +12.7 [ +5.4, +19.8]), FA 9.4% (d  -2.2 [ -8.9,  +3.8]); reasoning mentions the note 58.1%; wrong summaries flipped to accept 19, to reject 3; mean generated tokens 813
+
+===== gptoss (thinking on, file results/think_gptoss_n1refine_noguard.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'atk_refine': 0}; cut at max tokens 0
+  clean: miss 23.0%, FA 10.1%, mean generated tokens 290
+  atk_refine: miss 32.5% (d  +9.5 [ +2.9, +16.5]), FA 12.9% (d  +2.9 [ -1.4,  +7.9]); reasoning mentions the note 16.2%; wrong summaries flipped to accept 17, to reject 5; mean generated tokens 297
+
+wrote results/think_check_n1refine_noguard.json

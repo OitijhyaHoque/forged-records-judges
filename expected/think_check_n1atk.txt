@@ -1,0 +1,26 @@
+
+===== nemotron (thinking on, file results/think_nemotron_n1atk.jsonl): 265 test items (126 wrong); no verdict {'clean': 1, 'atk_rand': 1, 'atk_best': 1, 'claim_e': 1}; cut at max tokens 4
+  clean: miss 24.6%, FA 3.6%, mean generated tokens 1253
+  atk_rand: miss 32.5% (d  +7.9 [ +3.1, +13.9]), FA 2.9% (d  -0.7 [ -3.4,  +1.6]); reasoning mentions the note 61.1%; wrong summaries flipped to accept 11, to reject 1; mean generated tokens 1469
+  atk_best: miss 45.2% (d +20.6 [+12.5, +30.3]), FA 4.3% (d  +0.7 [ -1.7,  +3.1]); reasoning mentions the note 67.9%; wrong summaries flipped to accept 26, to reject 0; mean generated tokens 1594
+  claim_e: miss 42.4% (d +17.8 [ +9.0, +27.4]), FA 2.2% (d  -1.5 [ -3.7,  +0.0]); reasoning mentions the note 97.4%; wrong summaries flipped to accept 23, to reject 1; mean generated tokens 1692
+  pair atk_best - atk_rand: d miss +12.7 [ +5.2, +20.0], d FA  +1.4 [ -1.4,  +4.2]
+  pair atk_best - claim_e: d miss  +2.8 [ -6.8, +12.2], d FA  +2.2 [ +0.0,  +4.8]
+
+===== gemma (thinking on, file results/think_gemma_n1atk.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'atk_rand': 0, 'atk_best': 1, 'claim_e': 0}; cut at max tokens 1
+  clean: miss 21.4%, FA 12.2%, mean generated tokens 767
+  atk_rand: miss 28.6% (d  +7.1 [ +2.2, +12.8]), FA 14.4% (d  +2.2 [ -0.8,  +5.8]); reasoning mentions the note 32.1%; wrong summaries flipped to accept 10, to reject 1; mean generated tokens 822
+  atk_best: miss 37.3% (d +15.9 [ +8.9, +23.4]), FA 11.6% (d  -0.6 [ -4.5,  +3.5]); reasoning mentions the note 42.3%; wrong summaries flipped to accept 20, to reject 0; mean generated tokens 952
+  claim_e: miss 35.7% (d +14.3 [ +8.2, +21.3]), FA 3.6% (d  -8.6 [-14.3,  -3.5]); reasoning mentions the note 42.6%; wrong summaries flipped to accept 18, to reject 0; mean generated tokens 988
+  pair atk_best - atk_rand: d miss  +8.7 [ +1.7, +15.3], d FA  -2.8 [ -6.9,  +0.8]
+  pair atk_best - claim_e: d miss  +1.6 [ -6.7,  +9.2], d FA  +8.0 [ +2.7, +13.7]
+
+===== qwen (thinking on, file results/think_qwen_n1atk.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'atk_rand': 0, 'atk_best': 0, 'claim_e': 0}; cut at max tokens 0
+  clean: miss 14.3%, FA 33.1%, mean generated tokens 580
+  atk_rand: miss 17.5% (d  +3.2 [ +0.0,  +6.5]), FA 35.3% (d  +2.2 [ -4.9,  +9.0]); reasoning mentions the note 57.0%; wrong summaries flipped to accept 5, to reject 1; mean generated tokens 649
+  atk_best: miss 27.8% (d +13.5 [ +6.5, +21.4]), FA 30.9% (d  -2.2 [ -8.3,  +3.2]); reasoning mentions the note 62.3%; wrong summaries flipped to accept 18, to reject 1; mean generated tokens 763
+  claim_e: miss 34.1% (d +19.8 [+11.8, +29.4]), FA 6.5% (d -26.6 [-37.0, -16.7]); reasoning mentions the note 82.6%; wrong summaries flipped to accept 25, to reject 0; mean generated tokens 1054
+  pair atk_best - atk_rand: d miss +10.3 [ +4.4, +16.9], d FA  -4.3 [-10.9,  +1.6]
+  pair atk_best - claim_e: d miss  -6.3 [-15.3,  +1.8], d FA +24.5 [+14.6, +34.9]
+
+wrote results/think_check_n1atk.json

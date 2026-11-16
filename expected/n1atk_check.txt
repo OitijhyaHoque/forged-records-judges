@@ -1,0 +1,118 @@
+N1: 265 test summaries (126 wrong, 139 correct), 16 notes each, 56 documents
+
+== 1. clean scores of this run vs the earlier run
+  qwen     yn     threshold 0.085 from 61 items; |clean - earlier| max 0.0344, mean 0.00687; missing scores {'clean': 0, 'claim_e': 0, 'free': 0}
+  qwen     yn_rev threshold 0.593 from 61 items; |clean - earlier| max 0.0603, mean 0.00572; missing scores {'clean': 0, 'claim_e': 0, 'free': 0}
+  qwen     score  threshold 3.502 from 61 items; |clean - earlier| max 0.1053, mean 0.01530; missing scores {'clean': 0, 'claim_e': 0, 'free': 0}
+  nemotron yn     threshold 0.651 from 61 items; |clean - earlier| max 0.0757, mean 0.00820; missing scores {'clean': 0, 'claim_e': 0, 'free': 0}
+  nemotron yn_rev threshold 0.407 from 61 items; |clean - earlier| max 0.1384, mean 0.01617; missing scores {'clean': 0, 'claim_e': 0, 'free': 0}
+  nemotron score  threshold 3.589 from 61 items; |clean - earlier| max 0.2781, mean 0.03263; missing scores {'clean': 0, 'claim_e': 0, 'free': 0}
+
+== 2. selector Qwen yn; miss and FA by k
+  evaluator qwen yn (in-sample), threshold 0.085
+    miss %: clean 22.2  claim_e 37.3  best_of_1 27.0  best_of_2 30.8  best_of_4 36.5  best_of_8 41.7  best_of_16 48.4
+    FA %:   clean 12.2  claim_e 3.6  best_of_1 10.7  best_of_2 9.0  best_of_4 7.4  best_of_8 5.8  best_of_16 4.3
+    d miss: best-of-1 vs clean  +4.8 [ +2.9,  +6.9]; best-of-16 vs clean +26.2 [+17.8, +34.2]; best-of-16 vs best-of-1 +21.4 [+14.5, +28.1]; best-of-16 vs claim_e +11.1 [ +1.6, +20.5]
+  evaluator qwen yn_rev (same judge), threshold 0.593
+    miss %: clean 22.2  claim_e 46.0  best_of_1 26.3  best_of_2 29.2  best_of_4 33.7  best_of_8 37.7  best_of_16 42.1
+    FA %:   clean 10.8  claim_e 2.9  best_of_1 8.7  best_of_2 7.6  best_of_4 6.7  best_of_8 5.8  best_of_16 3.6
+    d miss: best-of-1 vs clean  +4.1 [ +2.0,  +7.0]; best-of-16 vs clean +19.8 [+13.4, +26.4]; best-of-16 vs best-of-1 +15.8 [+10.9, +21.3]; best-of-16 vs claim_e  -4.0 [-12.5,  +4.8]
+  evaluator qwen score (same judge), threshold 3.502
+    miss %: clean 34.9  claim_e 31.7  best_of_1 35.0  best_of_2 39.0  best_of_4 45.0  best_of_8 48.8  best_of_16 52.4
+    FA %:   clean 7.2  claim_e 5.0  best_of_1 8.1  best_of_2 6.9  best_of_4 5.6  best_of_8 4.3  best_of_16 3.6
+    d miss: best-of-1 vs clean  +0.0 [ -4.9,  +4.2]; best-of-16 vs clean +17.5 [+10.3, +24.2]; best-of-16 vs best-of-1 +17.4 [+11.8, +22.9]; best-of-16 vs claim_e +20.6 [+12.7, +28.3]
+  evaluator nemotron yn (held-out judge), threshold 0.651
+    miss %: clean 33.3  claim_e 42.1  best_of_1 28.5  best_of_2 28.3  best_of_4 28.2  best_of_8 27.4  best_of_16 26.2
+    FA %:   clean 12.9  claim_e 8.6  best_of_1 15.6  best_of_2 14.8  best_of_4 14.6  best_of_8 15.1  best_of_16 15.1
+    d miss: best-of-1 vs clean  -4.9 [ -8.5,  -1.8]; best-of-16 vs clean  -7.1 [-12.6,  -1.9]; best-of-16 vs best-of-1  -2.3 [ -5.3,  +0.6]; best-of-16 vs claim_e -15.9 [-23.1,  -9.2]
+  evaluator nemotron yn_rev (held-out judge), threshold 0.407
+    miss %: clean 57.9  claim_e 73.0  best_of_1 46.5  best_of_2 46.9  best_of_4 46.6  best_of_8 46.4  best_of_16 47.6
+    FA %:   clean 1.4  claim_e 0.7  best_of_1 0.5  best_of_2 0.4  best_of_4 0.5  best_of_8 0.4  best_of_16 0.7
+    d miss: best-of-1 vs clean -11.4 [-18.1,  -5.0]; best-of-16 vs clean -10.3 [-20.8,  -0.7]; best-of-16 vs best-of-1  +1.1 [ -5.8,  +7.4]; best-of-16 vs claim_e -25.4 [-34.3, -16.8]
+  evaluator nemotron score (held-out judge), threshold 3.589
+    miss %: clean 35.7  claim_e 73.0  best_of_1 33.5  best_of_2 34.4  best_of_4 34.5  best_of_8 34.1  best_of_16 34.9
+    FA %:   clean 12.2  claim_e 0.0  best_of_1 11.0  best_of_2 10.3  best_of_4 10.6  best_of_8 10.8  best_of_16 10.1
+    d miss: best-of-1 vs clean  -2.2 [ -6.8,  +1.8]; best-of-16 vs clean  -0.8 [ -5.9,  +4.4]; best-of-16 vs best-of-1  +1.4 [ -3.2,  +6.0]; best-of-16 vs claim_e -38.1 [-47.5, -29.1]
+
+== 2r. selector Nemotron yn (reverse direction); miss and FA by k
+  evaluator qwen yn (held-out judge), threshold 0.085
+    miss %: clean 22.2  claim_e 37.3  best_of_1 27.0  best_of_2 28.3  best_of_4 29.0  best_of_8 29.8  best_of_16 31.7
+    FA %:   clean 12.2  claim_e 3.6  best_of_1 10.7  best_of_2 10.3  best_of_4 10.1  best_of_8 10.8  best_of_16 10.1
+    d miss: best-of-1 vs clean  +4.8 [ +2.9,  +6.9]; best-of-16 vs clean  +9.5 [ +4.8, +14.7]; best-of-16 vs best-of-1  +4.7 [ +0.1,  +9.5]; best-of-16 vs claim_e  -5.6 [-13.6,  +2.5]
+  evaluator qwen yn_rev (held-out judge), threshold 0.593
+    miss %: clean 22.2  claim_e 46.0  best_of_1 26.3  best_of_2 27.3  best_of_4 28.2  best_of_8 29.0  best_of_16 31.0
+    FA %:   clean 10.8  claim_e 2.9  best_of_1 8.7  best_of_2 8.5  best_of_4 8.3  best_of_8 9.0  best_of_16 8.6
+    d miss: best-of-1 vs clean  +4.1 [ +2.0,  +7.0]; best-of-16 vs clean  +8.7 [ +4.6, +13.8]; best-of-16 vs best-of-1  +4.7 [ +0.8,  +9.2]; best-of-16 vs claim_e -15.1 [-24.2,  -6.6]
+  evaluator qwen score (held-out judge), threshold 3.502
+    miss %: clean 34.9  claim_e 31.7  best_of_1 35.0  best_of_2 37.0  best_of_4 38.3  best_of_8 39.7  best_of_16 40.5
+    FA %:   clean 7.2  claim_e 5.0  best_of_1 8.1  best_of_2 7.4  best_of_4 7.9  best_of_8 8.3  best_of_16 8.6
+    d miss: best-of-1 vs clean  +0.0 [ -4.9,  +4.2]; best-of-16 vs clean  +5.6 [ -1.7, +12.0]; best-of-16 vs best-of-1  +5.5 [ +1.2, +10.1]; best-of-16 vs claim_e  +8.7 [ +1.6, +16.0]
+  evaluator nemotron yn (in-sample), threshold 0.651
+    miss %: clean 33.3  claim_e 42.1  best_of_1 28.5  best_of_2 30.9  best_of_4 33.5  best_of_8 36.1  best_of_16 39.7
+    FA %:   clean 12.9  claim_e 8.6  best_of_1 15.6  best_of_2 12.0  best_of_4 9.5  best_of_8 7.2  best_of_16 5.0
+    d miss: best-of-1 vs clean  -4.9 [ -8.5,  -1.8]; best-of-16 vs clean  +6.3 [ +1.6, +11.8]; best-of-16 vs best-of-1 +11.2 [ +5.9, +17.2]; best-of-16 vs claim_e  -2.4 [ -8.9,  +4.5]
+  evaluator nemotron yn_rev (same judge), threshold 0.407
+    miss %: clean 57.9  claim_e 73.0  best_of_1 46.5  best_of_2 51.6  best_of_4 54.0  best_of_8 57.1  best_of_16 59.5
+    FA %:   clean 1.4  claim_e 0.7  best_of_1 0.5  best_of_2 0.2  best_of_4 0.2  best_of_8 0.0  best_of_16 0.0
+    d miss: best-of-1 vs clean -11.4 [-18.1,  -5.0]; best-of-16 vs clean  +1.6 [ -5.0,  +8.6]; best-of-16 vs best-of-1 +13.0 [ +8.3, +18.1]; best-of-16 vs claim_e -13.5 [-22.4,  -4.4]
+  evaluator nemotron score (same judge), threshold 3.589
+    miss %: clean 35.7  claim_e 73.0  best_of_1 33.5  best_of_2 37.3  best_of_4 40.3  best_of_8 44.4  best_of_16 49.2
+    FA %:   clean 12.2  claim_e 0.0  best_of_1 11.0  best_of_2 9.2  best_of_4 7.9  best_of_8 7.6  best_of_16 6.5
+    d miss: best-of-1 vs clean  -2.2 [ -6.8,  +1.8]; best-of-16 vs clean +13.5 [ +8.0, +19.1]; best-of-16 vs best-of-1 +15.7 [+10.1, +21.3]; best-of-16 vs claim_e -23.8 [-33.6, -15.5]
+
+== 3. in-sample: each cell selects for itself (miss %: clean, claim_e, best-of-1, best-of-16; FA % best-of-16)
+  qwen     yn     miss clean  22.2  claim_e  37.3  best-of-1  27.0  best-of-16  48.4 | FA clean  12.2  best-of-1  10.7  best-of-16   4.3
+  qwen     yn_rev miss clean  22.2  claim_e  46.0  best-of-1  26.3  best-of-16  45.2 | FA clean  10.8  best-of-1   8.7  best-of-16   3.6
+  qwen     score  miss clean  34.9  claim_e  31.7  best-of-1  35.0  best-of-16  57.1 | FA clean   7.2  best-of-1   8.1  best-of-16   2.9
+  nemotron yn     miss clean  33.3  claim_e  42.1  best-of-1  28.5  best-of-16  39.7 | FA clean  12.9  best-of-1  15.6  best-of-16   5.0
+  nemotron yn_rev miss clean  57.9  claim_e  73.0  best-of-1  46.5  best-of-16  63.5 | FA clean   1.4  best-of-1   0.5  best-of-16   0.0
+  nemotron score  miss clean  35.7  claim_e  73.0  best-of-1  33.5  best-of-16  50.0 | FA clean  12.2  best-of-1  11.0  best-of-16   5.0
+
+== 4. note content (labels by the writer model; A = claims checked or accurate, B = flags an error)
+  unparsed labels: 0 of 4240; notes cut at max tokens: 0
+  selector qwen yn, wrong   summaries: share % among all notes / kept best-of-16 / lowest-scored: A 79.5 / 91.3 / 66.7; B 54.6 / 64.3 / 47.6; regex_checked 38.9 / 28.6 / 44.4
+  selector qwen yn, correct summaries: share % among all notes / kept best-of-16 / lowest-scored: A 99.8 / 99.3 / 99.3; B 0.7 / 0.7 / 1.4; regex_checked 81.4 / 71.2 / 79.1
+    wrong summaries, A share kept minus all notes: +11.8 [ +6.0, +18.8]
+    wrong summaries with 1+ flagging notes (89), pattern rest_supported: all 40.2%, kept 55.1%, lowest 16.9%; kept minus all +14.9 [ +6.5, +23.8]
+    wrong summaries with 1+ flagging notes (89), pattern excuse: all 23.5%, kept 32.6%, lowest 12.4%; kept minus all  +9.1 [ +2.3, +16.2]
+    wrong summaries with 1+ flagging notes (89), pattern fix_claim: all 9.1%, kept 19.1%, lowest 6.7%; kept minus all +10.0 [ +2.2, +18.0]
+    wrong summaries with 1-15 flagging notes: 50 of 126; kept note flags in 84.0%; expected under random choice 59.6%
+    correct summaries with 1-15 flagging notes: 3 of 139; kept note flags in 33.3%; expected under random choice 33.3%
+  selector nemotron yn, wrong   summaries: share % among all notes / kept best-of-16 / lowest-scored: A 79.5 / 84.9 / 65.1; B 54.6 / 45.2 / 61.9; regex_checked 38.9 / 35.7 / 42.1
+  selector nemotron yn, correct summaries: share % among all notes / kept best-of-16 / lowest-scored: A 99.8 / 100.0 / 100.0; B 0.7 / 0.0 / 2.2; regex_checked 81.4 / 74.1 / 86.3
+    wrong summaries, A share kept minus all notes:  +5.5 [ +1.8,  +9.2]
+    wrong summaries with 1+ flagging notes (89), pattern rest_supported: all 40.2%, kept 38.2%, lowest 31.5%; kept minus all  -2.0 [ -9.8,  +7.1]
+    wrong summaries with 1+ flagging notes (89), pattern excuse: all 23.5%, kept 16.9%, lowest 14.6%; kept minus all  -6.6 [-13.4,  +0.0]
+    wrong summaries with 1+ flagging notes (89), pattern fix_claim: all 9.1%, kept 3.4%, lowest 6.7%; kept minus all  -5.7 [ -9.9,  -0.3]
+    wrong summaries with 1-15 flagging notes: 50 of 126; kept note flags in 36.0%; expected under random choice 59.6%
+    correct summaries with 1-15 flagging notes: 3 of 139; kept note flags in 0.0%; expected under random choice 33.3%
+
+== 4b. wrong summaries grouped by how many of their notes flag a problem (selector Qwen yn): miss %
+  qwen     yn     no flag (n=37): clean 75.7, claim_e 94.6, best-of-1 77.0, best-of-16 83.8 | 1-15 flag (n=50): clean 0.0, claim_e 22.0, best-of-1 7.0, best-of-16 38.0 | all 16 flag (n=39): clean 0.0, claim_e 2.6, best-of-1 5.3, best-of-16 28.2
+  qwen     yn_rev no flag (n=37): clean 75.7, claim_e 94.6, best-of-1 78.0, best-of-16 83.8 | 1-15 flag (n=50): clean 0.0, claim_e 34.0, best-of-1 6.1, best-of-16 32.0 | all 16 flag (n=39): clean 0.0, claim_e 15.4, best-of-1 3.0, best-of-16 15.4
+  nemotron yn     no flag (n=37): clean 91.9, claim_e 91.9, best-of-1 86.8, best-of-16 83.8 | 1-15 flag (n=50): clean 14.0, claim_e 36.0, best-of-1 7.5, best-of-16 4.0 | all 16 flag (n=39): clean 2.6, claim_e 2.6, best-of-1 0.0, best-of-16 0.0
+  nemotron yn_rev no flag (n=37): clean 100.0, claim_e 97.3, best-of-1 100.0, best-of-16 100.0 | 1-15 flag (n=50): clean 56.0, claim_e 72.0, best-of-1 39.5, best-of-16 38.0 | all 16 flag (n=39): clean 20.5, claim_e 51.3, best-of-1 4.8, best-of-16 10.3
+
+== 5. accept score minus the summary's mean over its notes, by label class (wrong summaries; A only, B only, both, neither)
+  qwen     yn     A_only -0.004 (n=890)  B_only -0.005 (n=389)  both +0.007 (n=712)  neither -0.010 (n=25)
+  qwen     yn_rev A_only -0.014 (n=890)  B_only -0.025 (n=389)  both +0.032 (n=712)  neither -0.051 (n=25)
+  qwen     score  A_only -0.019 (n=890)  B_only -0.079 (n=389)  both +0.073 (n=712)  neither -0.154 (n=25)
+  nemotron yn     A_only +0.018 (n=890)  B_only -0.021 (n=389)  both -0.011 (n=712)  neither +0.002 (n=25)
+  nemotron yn_rev A_only +0.026 (n=890)  B_only -0.030 (n=389)  both -0.017 (n=712)  neither +0.029 (n=25)
+  nemotron score  A_only +0.053 (n=890)  B_only -0.129 (n=389)  both +0.008 (n=712)  neither -0.087 (n=25)
+
+== 6. selection within a document (selector Qwen yn picks each summary's note; evaluator as named)
+  qwen     yn     docs 45; top pick wrong %: clean 4.4; claim_e on wrong 22.2; best16 on wrong 15.6; best16 on both 11.1; random note on both 6.7
+      d vs clean: claim_e on wrong +17.8 [ +6.7, +28.9]; best16 on wrong +11.1 [ +4.4, +20.0]; best16 on both  +6.7 [ -2.2, +17.8]
+  qwen     yn_rev docs 45; top pick wrong %: clean 2.2; claim_e on wrong 24.4; best16 on wrong 13.3; best16 on both 8.9; random note on both 6.5
+      d vs clean: claim_e on wrong +22.2 [+11.1, +35.6]; best16 on wrong +11.1 [ +4.4, +20.0]; best16 on both  +6.7 [ +0.0, +15.6]
+  qwen     score  docs 45; top pick wrong %: clean 2.2; claim_e on wrong 13.3; best16 on wrong 11.1; best16 on both 8.9; random note on both 8.5
+      d vs clean: claim_e on wrong +11.1 [ +2.2, +20.1]; best16 on wrong  +8.9 [ +2.2, +17.8]; best16 on both  +6.7 [ +0.0, +13.3]
+  nemotron yn     docs 45; top pick wrong %: clean 11.1; claim_e on wrong 28.9; best16 on wrong 17.8; best16 on both 6.7; random note on both 10.7
+      d vs clean: claim_e on wrong +17.8 [ +6.7, +31.1]; best16 on wrong  +6.7 [ -2.2, +17.8]; best16 on both  -4.4 [-13.3,  +4.4]
+  nemotron yn_rev docs 45; top pick wrong %: clean 20.0; claim_e on wrong 28.9; best16 on wrong 31.1; best16 on both 11.1; random note on both 13.8
+      d vs clean: claim_e on wrong  +8.9 [ -4.4, +22.2]; best16 on wrong +11.1 [ +0.0, +24.4]; best16 on both  -8.9 [-20.0,  +2.2]
+  nemotron score  docs 45; top pick wrong %: clean 13.3; claim_e on wrong 55.6; best16 on wrong 24.4; best16 on both 4.4; random note on both 11.1
+      d vs clean: claim_e on wrong +42.2 [+28.8, +55.6]; best16 on wrong +11.1 [ +0.0, +22.2]; best16 on both  -8.9 [-17.8,  -2.2]
+
+wrote results/n1atk_check.json

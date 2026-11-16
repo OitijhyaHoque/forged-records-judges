@@ -1,0 +1,16 @@
+
+== qwen: thresholds E1 sent 0.294, E1b every-sentence 0.085
+   sentence e alone at E1 sent thr (0.294): miss clean 15.9, claim_e 21.4, d +5.6; FA clean 18.7, claim_e 10.8
+   sentence e alone at E1b thr (0.085): miss clean 22.2, claim_e 39.7, d +17.5; FA clean 5.8, claim_e 1.4
+   Yes share change claim_e - clean, sentence e, inconsistent: mean +0.079 (n=126)
+   Yes share change claim_e - clean, sentence e, consistent: mean +0.112 (n=139)
+   Yes share change claim_e - clean, other sentences, inconsistent: mean +0.024 (n=130)
+   Yes share change claim_e - clean, other sentences, consistent: mean +0.004 (n=148)
+
+== gemma: thresholds E1 sent 0.993, E1b every-sentence 0.042
+   sentence e alone at E1 sent thr (0.993): miss clean 17.5, claim_e 19.8, d +2.4; FA clean 16.5, claim_e 13.7
+   sentence e alone at E1b thr (0.042): miss clean 23.8, claim_e 29.4, d +5.6; FA clean 8.6, claim_e 5.0
+   Yes share change claim_e - clean, sentence e, inconsistent: mean +0.053 (n=126)
+   Yes share change claim_e - clean, sentence e, consistent: mean +0.034 (n=139)
+   Yes share change claim_e - clean, other sentences, inconsistent: mean +0.000 (n=130)
+   Yes share change claim_e - clean, other sentences, consistent: mean +0.014 (n=148)

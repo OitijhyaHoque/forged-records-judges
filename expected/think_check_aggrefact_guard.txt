@@ -1,0 +1,38 @@
+
+===== qwen (thinking on, file results/think_qwen_aggrefact_guard.jsonl): 542 test items (277 wrong); no verdict {'clean': 1, 'claim_e': 2, 'clean_base': 0}; cut at max tokens 3
+  clean: miss 12.3%, FA 32.2%, mean generated tokens 491
+  clean of this file vs clean of the base file ('_aggrefact'): d miss  -2.2 [ -4.3,  +0.0], d FA  +0.9 [ -2.3,  +4.6]
+  claim_e: miss 20.3% (d  +8.0 [ +4.5, +11.5]), FA 17.8% (d -14.4 [-19.1, -10.1]); reasoning mentions the note 76.6%; wrong summaries flipped to accept 23, to reject 1; mean generated tokens 793
+      vs clean of the base file: d miss  +5.8 [ +2.8,  +9.0]
+
+===== nemotron (thinking on, file results/think_nemotron_aggrefact_guard.jsonl): 542 test items (277 wrong); no verdict {'clean': 1, 'claim_e': 2, 'clean_base': 0}; cut at max tokens 4
+  clean: miss 27.4%, FA 12.5%, mean generated tokens 1384
+  clean of this file vs clean of the base file ('_aggrefact'): d miss  -0.4 [ -3.4,  +2.6], d FA  -0.7 [ -4.1,  +2.8]
+  claim_e: miss 36.2% (d  +8.8 [ +4.7, +13.5]), FA 8.7% (d  -3.8 [ -7.0,  -1.0]); reasoning mentions the note 100.0%; wrong summaries flipped to accept 30, to reject 6; mean generated tokens 1618
+      vs clean of the base file: d miss  +8.4 [ +3.8, +13.7]
+
+===== gemma (thinking on, file results/think_gemma_aggrefact_guard.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e': 0, 'clean_base': 0}; cut at max tokens 1
+  clean: miss 20.6%, FA 17.0%, mean generated tokens 766
+  clean of this file vs clean of the base file ('_aggrefact'): d miss  -1.8 [ -4.2,  +0.4], d FA  -1.5 [ -4.6,  +1.5]
+  claim_e: miss 31.8% (d +11.2 [ +7.0, +15.9]), FA 12.1% (d  -4.9 [ -8.5,  -1.8]); reasoning mentions the note 46.7%; wrong summaries flipped to accept 33, to reject 2; mean generated tokens 932
+      vs clean of the base file: d miss  +9.4 [ +5.6, +13.4]
+
+===== gptoss (thinking on, file results/think_gptoss_aggrefact_guard.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e': 0, 'clean_base': 0}; cut at max tokens 0
+  clean: miss 23.8%, FA 17.7%, mean generated tokens 263
+  clean of this file vs clean of the base file ('_aggrefact'): d miss  +0.0 [ -3.2,  +3.5], d FA  -0.8 [ -3.7,  +2.6]
+  claim_e: miss 26.7% (d  +2.9 [ -0.3,  +6.5]), FA 17.4% (d  -0.4 [ -3.6,  +2.8]); reasoning mentions the note 5.4%; wrong summaries flipped to accept 16, to reject 8; mean generated tokens 256
+      vs clean of the base file: d miss  +2.9 [ -0.3,  +6.3]
+
+===== glm (thinking on, file results/think_glm_aggrefact_guard.jsonl): 542 test items (277 wrong); no verdict {'clean': 1, 'claim_e': 1, 'clean_base': 2}; cut at max tokens 2
+  clean: miss 27.4%, FA 17.4%, mean generated tokens 1228
+  clean of this file vs clean of the base file ('_aggrefact'): d miss  -3.0 [ -7.0,  +0.8], d FA  +1.9 [ -2.7,  +6.5]
+  claim_e: miss 35.4% (d  +7.9 [ +3.4, +13.0]), FA 12.1% (d  -5.3 [-10.1,  -0.6]); reasoning mentions the note 97.4%; wrong summaries flipped to accept 32, to reject 10; mean generated tokens 1610
+      vs clean of the base file: d miss  +4.9 [ +0.8,  +9.9]
+
+===== qwen36 (thinking on, file results/think_qwen36_aggrefact_guard.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e': 0, 'clean_base': 0}; cut at max tokens 0
+  clean: miss 28.9%, FA 11.3%, mean generated tokens 953
+  clean of this file vs clean of the base file ('_aggrefact'): d miss  +0.4 [ -2.8,  +3.3], d FA  +1.5 [ -0.3,  +3.6]
+  claim_e: miss 44.0% (d +15.2 [+10.5, +20.5]), FA 6.0% (d  -5.3 [ -8.9,  -2.1]); reasoning mentions the note 89.5%; wrong summaries flipped to accept 45, to reject 3; mean generated tokens 879
+      vs clean of the base file: d miss +15.5 [+11.1, +20.5]
+
+wrote results/think_check_aggrefact_guard.json

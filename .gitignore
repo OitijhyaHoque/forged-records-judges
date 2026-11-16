@@ -1,0 +1,10 @@
+# Data files are rebuilt by scripts/01_data.sh. LLM-AggreFact may not be redistributed.
+data/
+# Run outputs, logs and figures
+results/
+figs/
+internals/results/
+*.log
+*.done
+__pycache__/
+*.pyc

@@ -1,0 +1,18 @@
+# Versions of the environment that ran the main experiments: Python 3.12.3, NVIDIA A100-SXM4-80GB, driver 580.
+# The small judges without reasoning (qwen9, gemma12) and internals/ ran on an RTX 5090 with vllm 0.29.
+vllm==0.30.0
+torch==2.13.0
+transformers==5.17.0
+flashinfer-python==0.6.18.post1
+triton==3.7.1
+numpy==2.3.5
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+pandas==3.0.6
+pyarrow==25.0.1
+huggingface_hub==1.33.0
+# Figures (scripts/09_figures.sh and internals/k1_report_fig.py). The figures were made with this version.
+matplotlib==3.11.2
+# Only for the SummEdits download (src/get_summedits.py).
+datasets

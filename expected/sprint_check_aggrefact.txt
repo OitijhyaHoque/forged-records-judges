@@ -1,0 +1,207 @@
+
+===== qwen_aggrefact: 8640 rows, conditions ['clean', 'pointer_e', 'claim_e', 'claim_e_unverified']
+
+[qwen_aggrefact / score] test: 542 items (277 inconsistent), 244 docs; threshold 2.714 from 95 calib consistent items; clean AUROC 0.888; clean miss 37.9%, clean FA 6.4%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   37.9        +0.0 [+0.0, +0.0]    6.4        +0.0 [+0.0, +0.0]  0.888     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               53.1     +15.2 [+10.2, +20.4]    3.0        -3.4 [-6.0, -0.8]  0.858     -0.029 [-0.052, -0.008]     0.0%
+   claim_e                 77.3     +39.4 [+32.2, +46.8]    1.1        -5.3 [-8.2, -2.8]  0.847     -0.041 [-0.066, -0.018]     0.0%
+   claim_e_unverified      53.1      +15.2 [+9.4, +20.7]    3.4        -3.0 [-5.7, -0.4]  0.863     -0.025 [-0.048, -0.005]     0.0%
+   rules:
+     S3a ratio                                  +0.00 [-0.18, +0.18]  works
+     S3a FA unverified-pointer_e                   +0.4 [-1.0, +1.9]  part of the S3a rule
+     S3a FA unverified-clean                       -3.0 [-5.7, -0.4]  reported
+     S3a miss unverified-claim_e                -24.2 [-30.7, -18.5]  reported
+     S1 denominator claim_e-pointer_e           +24.2 [+18.7, +30.3]  reported
+
+[qwen_aggrefact / yn] test: 542 items (277 inconsistent), 244 docs; threshold 0.021 from 95 calib consistent items; clean AUROC 0.877; clean miss 41.2%, clean FA 5.7%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   41.2        +0.0 [+0.0, +0.0]    5.7        +0.0 [+0.0, +0.0]  0.877     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               59.6     +18.4 [+13.8, +24.1]    2.6        -3.0 [-5.5, -1.2]  0.859     -0.017 [-0.034, -0.003]     0.0%
+   claim_e                 92.8     +51.6 [+43.8, +61.2]    0.0        -5.7 [-8.8, -3.1]  0.849     -0.028 [-0.047, -0.011]     0.0%
+   claim_e_unverified      69.7     +28.5 [+23.0, +35.6]    1.9        -3.8 [-6.6, -1.7]  0.858     -0.018 [-0.035, -0.005]     0.0%
+   rules:
+     S3a ratio                                  +0.30 [+0.20, +0.42]  works
+     S3a FA unverified-pointer_e                   -0.8 [-2.0, +0.0]  part of the S3a rule
+     S3a FA unverified-clean                       -3.8 [-6.6, -1.7]  reported
+     S3a miss unverified-claim_e                -23.1 [-29.2, -17.0]  reported
+     S1 denominator claim_e-pointer_e           +33.2 [+25.4, +41.6]  reported
+
+[qwen_aggrefact / yn_rev] test: 542 items (277 inconsistent), 244 docs; threshold 0.463 from 95 calib consistent items; clean AUROC 0.881; clean miss 36.8%, clean FA 7.2%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   36.8        +0.0 [+0.0, +0.0]    7.2        +0.0 [+0.0, +0.0]  0.881     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               55.6     +18.8 [+13.9, +24.8]    3.0        -4.2 [-6.7, -1.9]  0.859     -0.022 [-0.038, -0.008]     0.0%
+   claim_e                 89.5     +52.7 [+45.6, +60.4]    0.0       -7.2 [-10.4, -4.3]  0.854     -0.027 [-0.048, -0.009]     0.0%
+   claim_e_unverified      67.5     +30.7 [+25.9, +36.9]    1.9        -5.3 [-8.2, -2.9]  0.859     -0.021 [-0.039, -0.006]     0.0%
+   rules:
+     S3a ratio                                  +0.35 [+0.25, +0.46]  works
+     S3a FA unverified-pointer_e                   -1.1 [-2.7, +0.0]  part of the S3a rule
+     S3a FA unverified-clean                       -5.3 [-8.2, -2.9]  reported
+     S3a miss unverified-claim_e                -22.0 [-28.4, -16.2]  reported
+     S1 denominator claim_e-pointer_e           +33.9 [+27.1, +40.9]  reported
+
+===== nemotron_aggrefact: 8640 rows, conditions ['clean', 'pointer_e', 'claim_e', 'claim_e_unverified']
+
+[nemotron_aggrefact / score] test: 542 items (277 inconsistent), 244 docs; threshold 2.652 from 95 calib consistent items; clean AUROC 0.776; clean miss 50.5%, clean FA 9.4%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   50.5        +0.0 [+0.0, +0.0]    9.4        +0.0 [+0.0, +0.0]  0.776     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               70.8     +20.2 [+14.4, +27.0]    7.2        -2.3 [-6.5, +1.4]  0.684     -0.093 [-0.138, -0.051]     0.0%
+   claim_e                 95.7     +45.1 [+37.7, +54.0]    0.0       -9.4 [-13.3, -6.0]  0.684     -0.093 [-0.136, -0.053]     0.0%
+   claim_e_unverified      88.1     +37.5 [+30.8, +45.6]    0.0       -9.4 [-13.3, -6.0]  0.707     -0.070 [-0.110, -0.033]     0.0%
+   rules:
+     S3a ratio                                  +0.70 [+0.58, +0.80]  does not work
+     S3a FA unverified-pointer_e                  -7.2 [-11.0, -4.1]  part of the S3a rule
+     S3a FA unverified-clean                      -9.4 [-13.3, -6.0]  reported
+     S3a miss unverified-claim_e                  -7.6 [-11.1, -4.1]  reported
+     S1 denominator claim_e-pointer_e           +24.9 [+18.1, +31.9]  reported
+
+[nemotron_aggrefact / yn] test: 542 items (277 inconsistent), 244 docs; threshold 0.438 from 95 calib consistent items; clean AUROC 0.821; clean miss 43.3%, clean FA 7.5%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   43.3        +0.0 [+0.0, +0.0]    7.5        +0.0 [+0.0, +0.0]  0.821     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               71.8     +28.5 [+23.5, +34.0]    3.0        -4.5 [-8.2, -1.0]  0.752     -0.069 [-0.110, -0.033]     0.0%
+   claim_e                 82.3     +39.0 [+33.2, +45.4]    0.4       -7.2 [-11.0, -4.0]  0.756     -0.065 [-0.101, -0.036]     0.0%
+   claim_e_unverified      77.3     +33.9 [+28.2, +39.7]    1.5       -6.0 [-10.0, -2.5]  0.775     -0.045 [-0.077, -0.018]     0.0%
+   rules:
+     S3a ratio                                  +0.52 [+0.17, +0.75]  does not work
+     S3a FA unverified-pointer_e                   -1.5 [-3.2, -0.3]  part of the S3a rule
+     S3a FA unverified-clean                      -6.0 [-10.0, -2.5]  reported
+     S3a miss unverified-claim_e                   -5.1 [-8.5, -2.5]  reported
+     S1 denominator claim_e-pointer_e            +10.5 [+6.6, +14.2]  reported
+
+[nemotron_aggrefact / yn_rev] test: 542 items (277 inconsistent), 244 docs; threshold 0.332 from 95 calib consistent items; clean AUROC 0.454  P0 FLAG; clean miss 85.2%, clean FA 17.0%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   85.2        +0.0 [+0.0, +0.0]   17.0        +0.0 [+0.0, +0.0]  0.454     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               92.8       +7.6 [+2.9, +12.9]   14.7        -2.3 [-8.7, +3.1]  0.473     +0.019 [-0.036, +0.077]     0.0%
+   claim_e                 96.4      +11.2 [+6.1, +16.6]    4.5      -12.5 [-18.1, -6.7]  0.521     +0.066 [+0.001, +0.130]     0.0%
+   claim_e_unverified      89.5        +4.3 [+0.0, +9.4]   13.6        -3.4 [-8.9, +2.4]  0.486     +0.031 [-0.019, +0.082]     0.0%
+   rules:
+     S3a ratio                                 -0.90 [-10.00, +6.00]  works
+     S3a FA unverified-pointer_e                   -1.1 [-5.2, +3.5]  part of the S3a rule
+     S3a FA unverified-clean                       -3.4 [-8.9, +2.4]  reported
+     S3a miss unverified-claim_e                  -6.9 [-11.8, -2.8]  reported
+     S1 denominator claim_e-pointer_e              +3.6 [-0.4, +8.3]  reported
+
+===== gemma_aggrefact: 8640 rows, conditions ['clean', 'pointer_e', 'claim_e', 'claim_e_unverified']
+
+[gemma_aggrefact / score] test: 542 items (277 inconsistent), 244 docs; threshold 2.103 from 95 calib consistent items; clean AUROC 0.862; clean miss 44.0%, clean FA 7.5%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   44.0        +0.0 [+0.0, +0.0]    7.5        +0.0 [+0.0, +0.0]  0.862     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               51.3       +7.2 [+2.5, +12.9]    3.8        -3.8 [-7.6, -0.4]  0.856     -0.006 [-0.028, +0.015]     0.0%
+   claim_e                 62.1     +18.1 [+12.8, +24.3]    1.9        -5.7 [-9.5, -2.5]  0.836     -0.026 [-0.047, -0.004]     0.0%
+   claim_e_unverified      54.5      +10.5 [+5.3, +16.3]    4.5        -3.0 [-6.5, +0.0]  0.851     -0.010 [-0.031, +0.009]     0.0%
+   rules:
+     S3a ratio                                  +0.30 [-0.05, +0.55]  works
+     S3a FA unverified-pointer_e                   +0.8 [-1.4, +3.2]  part of the S3a rule
+     S3a FA unverified-clean                       -3.0 [-6.5, +0.0]  reported
+     S3a miss unverified-claim_e                  -7.6 [-11.6, -4.3]  reported
+     S1 denominator claim_e-pointer_e            +10.8 [+6.7, +15.4]  reported
+
+[gemma_aggrefact / yn] test: 542 items (277 inconsistent), 244 docs; threshold 0.001 from 95 calib consistent items; clean AUROC 0.856; clean miss 41.9%, clean FA 10.9%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   41.9        +0.0 [+0.0, +0.0]   10.9        +0.0 [+0.0, +0.0]  0.856     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               53.8      +11.9 [+7.1, +17.4]    3.4       -7.5 [-11.3, -4.6]  0.862     +0.007 [-0.012, +0.025]     0.0%
+   claim_e                 66.4     +24.5 [+18.9, +32.0]    1.5       -9.4 [-13.5, -6.1]  0.849     -0.006 [-0.029, +0.014]     0.0%
+   claim_e_unverified      57.4     +15.5 [+10.5, +22.1]    2.6       -8.3 [-12.2, -5.2]  0.856     +0.000 [-0.020, +0.019]     0.0%
+   rules:
+     S3a ratio                                  +0.29 [+0.03, +0.51]  works
+     S3a FA unverified-pointer_e                   -0.8 [-2.1, +0.0]  part of the S3a rule
+     S3a FA unverified-clean                      -8.3 [-12.2, -5.2]  reported
+     S3a miss unverified-claim_e                  -9.0 [-12.7, -6.0]  reported
+     S1 denominator claim_e-pointer_e            +12.6 [+8.8, +17.1]  reported
+
+[gemma_aggrefact / yn_rev] test: 542 items (277 inconsistent), 244 docs; threshold 0.020 from 95 calib consistent items; clean AUROC 0.855; clean miss 41.2%, clean FA 7.9%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   41.2        +0.0 [+0.0, +0.0]    7.9        +0.0 [+0.0, +0.0]  0.855     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               52.3      +11.2 [+4.7, +19.2]    4.2        -3.8 [-6.9, -0.8]  0.861     +0.005 [-0.017, +0.027]     0.0%
+   claim_e                 71.8     +30.7 [+23.9, +39.3]    0.8       -7.2 [-10.7, -4.3]  0.839     -0.016 [-0.043, +0.009]     0.0%
+   claim_e_unverified      61.4     +20.2 [+14.7, +27.4]    2.3        -5.7 [-8.5, -3.3]  0.853     -0.003 [-0.026, +0.019]     0.0%
+   rules:
+     S3a ratio                                  +0.46 [+0.29, +0.62]  works
+     S3a FA unverified-pointer_e                   -1.9 [-4.3, +0.4]  part of the S3a rule
+     S3a FA unverified-clean                       -5.7 [-8.5, -3.3]  reported
+     S3a miss unverified-claim_e                 -10.5 [-14.8, -6.8]  reported
+     S1 denominator claim_e-pointer_e           +19.5 [+14.8, +25.3]  reported
+
+===== glm_aggrefact: 8640 rows, conditions ['clean', 'pointer_e', 'claim_e', 'claim_e_unverified']
+
+[glm_aggrefact / score] test: 542 items (277 inconsistent), 244 docs; threshold 2.013 from 95 calib consistent items; clean AUROC 0.817; clean miss 42.6%, clean FA 11.3%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   42.6        +0.0 [+0.0, +0.0]   11.3        +0.0 [+0.0, +0.0]  0.817     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               71.1     +28.5 [+22.0, +35.7]    1.9       -9.4 [-14.2, -5.4]  0.787     -0.030 [-0.062, -0.003]     0.0%
+   claim_e                 98.2     +55.6 [+45.9, +65.5]    0.0      -11.3 [-16.4, -7.3]  0.705     -0.113 [-0.161, -0.069]     0.0%
+   claim_e_unverified      93.9     +51.3 [+41.9, +61.0]    0.0      -11.3 [-16.4, -7.3]  0.742     -0.075 [-0.110, -0.042]     0.0%
+   rules:
+     S3a ratio                                  +0.84 [+0.77, +0.92]  does not work
+     S3a FA unverified-pointer_e                   -1.9 [-3.8, -0.4]  part of the S3a rule
+     S3a FA unverified-clean                     -11.3 [-16.4, -7.3]  reported
+     S3a miss unverified-claim_e                   -4.3 [-6.7, -2.0]  reported
+     S1 denominator claim_e-pointer_e           +27.1 [+20.9, +33.9]  reported
+
+[glm_aggrefact / yn] test: 542 items (277 inconsistent), 244 docs; threshold 0.119 from 95 calib consistent items; clean AUROC 0.812; clean miss 38.3%, clean FA 11.3%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   38.3        +0.0 [+0.0, +0.0]   11.3        +0.0 [+0.0, +0.0]  0.812     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               75.5     +37.2 [+29.4, +45.7]    0.4      -10.9 [-15.5, -7.3]  0.775     -0.038 [-0.081, -0.001]     0.0%
+   claim_e                 91.0     +52.7 [+42.7, +62.8]    0.0      -11.3 [-15.8, -7.5]  0.753     -0.059 [-0.098, -0.025]     0.0%
+   claim_e_unverified      81.2     +43.0 [+34.0, +52.2]    0.8      -10.6 [-15.1, -6.9]  0.780     -0.033 [-0.070, +0.001]     0.0%
+   rules:
+     S3a ratio                                  +0.37 [+0.18, +0.55]  works
+     S3a FA unverified-pointer_e                   +0.4 [-0.8, +1.7]  part of the S3a rule
+     S3a FA unverified-clean                     -10.6 [-15.1, -6.9]  reported
+     S3a miss unverified-claim_e                  -9.7 [-13.6, -6.4]  reported
+     S1 denominator claim_e-pointer_e           +15.5 [+11.0, +20.8]  reported
+
+[glm_aggrefact / yn_rev] test: 542 items (277 inconsistent), 244 docs; threshold 0.182 from 95 calib consistent items; clean AUROC 0.231  P0 FLAG; clean miss 97.8%, clean FA 3.4%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   97.8        +0.0 [+0.0, +0.0]    3.4        +0.0 [+0.0, +0.0]  0.231     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               98.6        +0.7 [-2.0, +5.0]    0.4        -3.0 [-5.7, -0.4]  0.296     +0.064 [+0.028, +0.110]     0.0%
+   claim_e                100.0        +2.2 [+0.0, +6.1]    0.0        -3.4 [-6.4, -0.5]  0.306     +0.075 [+0.031, +0.128]     0.0%
+   claim_e_unverified     100.0        +2.2 [+0.0, +6.1]    0.0        -3.4 [-6.4, -0.5]  0.299     +0.068 [+0.026, +0.120]     0.0%
+   rules:
+     S3a ratio                                  +1.00 [+1.00, +1.00]  does not work
+     S3a FA unverified-pointer_e                   -0.4 [-1.2, +0.0]  part of the S3a rule
+     S3a FA unverified-clean                       -3.4 [-6.4, -0.5]  reported
+     S3a miss unverified-claim_e                   +0.0 [+0.0, +0.0]  reported
+     S1 denominator claim_e-pointer_e              +1.4 [+0.3, +2.8]  reported
+
+===== qwen36_aggrefact: 8640 rows, conditions ['clean', 'pointer_e', 'claim_e', 'claim_e_unverified']
+
+[qwen36_aggrefact / score] test: 542 items (277 inconsistent), 244 docs; threshold 2.225 from 95 calib consistent items; clean AUROC 0.872; clean miss 35.7%, clean FA 9.4%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   35.7        +0.0 [+0.0, +0.0]    9.4        +0.0 [+0.0, +0.0]  0.872     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               56.3     +20.6 [+14.1, +27.7]    1.5       -7.9 [-11.7, -4.6]  0.831     -0.041 [-0.075, -0.009]     0.0%
+   claim_e                 77.3     +41.5 [+34.2, +49.4]    0.0       -9.4 [-13.5, -5.8]  0.827     -0.045 [-0.082, -0.007]     0.0%
+   claim_e_unverified      67.1     +31.4 [+25.1, +38.6]    0.8       -8.7 [-12.6, -5.3]  0.851     -0.021 [-0.053, +0.011]     0.0%
+   rules:
+     S3a ratio                                  +0.52 [+0.35, +0.65]  does not work
+     S3a FA unverified-pointer_e                   -0.8 [-2.0, +0.0]  part of the S3a rule
+     S3a FA unverified-clean                      -8.7 [-12.6, -5.3]  reported
+     S3a miss unverified-claim_e                 -10.1 [-13.7, -6.8]  reported
+     S1 denominator claim_e-pointer_e           +20.9 [+15.6, +26.4]  reported
+
+[qwen36_aggrefact / yn] test: 542 items (277 inconsistent), 244 docs; threshold 0.232 from 95 calib consistent items; clean AUROC 0.855; clean miss 39.0%, clean FA 7.2%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   39.0        +0.0 [+0.0, +0.0]    7.2        +0.0 [+0.0, +0.0]  0.855     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               55.6     +16.6 [+11.9, +22.4]    2.3        -4.9 [-7.7, -2.2]  0.845     -0.010 [-0.034, +0.011]     0.0%
+   claim_e                 67.5     +28.5 [+22.3, +34.8]    1.5        -5.7 [-8.8, -2.9]  0.853     -0.002 [-0.031, +0.026]     0.0%
+   claim_e_unverified      57.0     +18.1 [+12.8, +24.2]    3.8        -3.4 [-6.3, -0.9]  0.861     +0.006 [-0.021, +0.033]     0.0%
+   rules:
+     S3a ratio                                  +0.12 [-0.32, +0.38]  works
+     S3a FA unverified-pointer_e                   +1.5 [-0.4, +3.7]  part of the S3a rule
+     S3a FA unverified-clean                       -3.4 [-6.3, -0.9]  reported
+     S3a miss unverified-claim_e                 -10.5 [-14.2, -6.5]  reported
+     S1 denominator claim_e-pointer_e            +11.9 [+6.7, +17.0]  reported
+
+[qwen36_aggrefact / yn_rev] test: 542 items (277 inconsistent), 244 docs; threshold 0.605 from 95 calib consistent items; clean AUROC 0.872; clean miss 31.0%, clean FA 13.6%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   31.0        +0.0 [+0.0, +0.0]   13.6        +0.0 [+0.0, +0.0]  0.872     +0.000 [+0.000, +0.000]     0.0%
+   pointer_e               63.2     +32.1 [+25.6, +39.2]    3.8       -9.8 [-14.1, -5.8]  0.846     -0.027 [-0.052, -0.002]     0.0%
+   claim_e                 84.8     +53.8 [+46.0, +62.4]    0.0      -13.6 [-18.6, -9.1]  0.844     -0.029 [-0.059, -0.000]     0.0%
+   claim_e_unverified      74.4     +43.3 [+35.6, +50.9]    1.5      -12.1 [-16.8, -7.8]  0.847     -0.026 [-0.051, +0.001]     0.0%
+   rules:
+     S3a ratio                                  +0.52 [+0.32, +0.68]  does not work
+     S3a FA unverified-pointer_e                   -2.3 [-4.2, -0.8]  part of the S3a rule
+     S3a FA unverified-clean                     -12.1 [-16.8, -7.8]  reported
+     S3a miss unverified-claim_e                 -10.5 [-15.1, -6.5]  reported
+     S1 denominator claim_e-pointer_e           +21.7 [+15.9, +29.3]  reported
+
+wrote results/sprint_check_aggrefact.json

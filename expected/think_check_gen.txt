@@ -1,0 +1,28 @@
+
+===== glm (thinking on, file results/think_glm_gen.jsonl): 265 test items (126 wrong); no verdict {'clean': 1, 'claim_e': 3, 'claim_e_unverified': 3}; cut at max tokens 6
+  clean: miss 25.6%, FA 5.8%, mean generated tokens 1024
+  claim_e: miss 40.7% (d +15.1 [ +8.9, +21.0]), FA 1.4% (d  -4.3 [ -7.9,  -0.7]); reasoning mentions the note 90.2%; wrong summaries flipped to accept 19, to reject 0; mean generated tokens 1709
+      thinking off: miss clean 22.2, claim_e 51.6, d +29.4 [+20.6, +39.4]; FA clean 16.5, claim_e 2.2, d -14.4 [-23.7,  -5.9]
+  claim_e_unverified: miss 29.0% (d  +3.4 [ -1.0,  +8.3]), FA 5.8% (d  +0.0 [ -4.2,  +4.0]); reasoning mentions the note 95.1%; wrong summaries flipped to accept 6, to reject 2; mean generated tokens 1518
+      thinking off: miss clean 22.2, claim_e_unverified 46.0, d +23.8 [+15.1, +32.7]; FA clean 16.5, claim_e_unverified 3.6, d -12.9 [-21.4,  -4.8]
+
+===== qwen36 (thinking on, file results/think_qwen36_gen.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'claim_e_unverified': 0}; cut at max tokens 0
+  clean: miss 23.8%, FA 5.0%, mean generated tokens 1029
+  claim_e: miss 29.4% (d  +5.6 [ +1.5, +10.0]), FA 5.0% (d  +0.0 [ -1.9,  +2.2]); reasoning mentions the note 94.7%; wrong summaries flipped to accept 8, to reject 1; mean generated tokens 1129
+      thinking off: miss clean 24.6, claim_e 33.3, d  +8.7 [ +3.8, +14.5]; FA clean 10.1, claim_e 7.2, d  -2.9 [ -6.7,  +1.0]
+  claim_e_unverified: miss 24.6% (d  +0.8 [ -3.4,  +5.9]), FA 9.4% (d  +4.3 [ +0.0, +10.3]); reasoning mentions the note 92.8%; wrong summaries flipped to accept 5, to reject 4; mean generated tokens 1086
+      thinking off: miss clean 24.6, claim_e_unverified 27.8, d  +3.2 [ -0.7,  +7.3]; FA clean 10.1, claim_e_unverified 10.8, d  +0.7 [ -2.9,  +4.8]
+
+===== gemma31 (thinking on, file results/think_gemma31_gen.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'claim_e_unverified': 0}; cut at max tokens 0
+  clean: miss 24.6%, FA 12.9%, mean generated tokens 444
+  claim_e: miss 30.2% (d  +5.6 [ +1.7,  +9.7]), FA 6.5% (d  -6.5 [-12.8,  -1.4]); reasoning mentions the note 23.0%; wrong summaries flipped to accept 7, to reject 0; mean generated tokens 546
+      thinking off: miss clean 21.4, claim_e 26.2, d  +4.8 [ +1.5,  +8.5]; FA clean 25.9, claim_e 12.9, d -12.9 [-21.7,  -4.9]
+  claim_e_unverified: miss 23.0% (d  -1.6 [ -3.8,  +0.0]), FA 7.9% (d  -5.0 [-10.7,  +0.0]); reasoning mentions the note 12.1%; wrong summaries flipped to accept 0, to reject 2; mean generated tokens 480
+      thinking off: miss clean 21.4, claim_e_unverified 23.0, d  +1.6 [ +0.0,  +4.2]; FA clean 25.9, claim_e_unverified 19.4, d  -6.5 [-16.4,  +1.4]
+
+===== muse (thinking on, file results/think_muse_gen.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'claim_e_unverified': 0}; cut at max tokens 0
+  clean: miss 11.9%, FA 41.0%, mean generated tokens 425
+  claim_e: miss 24.6% (d +12.7 [ +4.9, +21.7]), FA 25.2% (d -15.8 [-24.8,  -7.8]); reasoning mentions the note 99.2%; wrong summaries flipped to accept 17, to reject 1; mean generated tokens 491
+  claim_e_unverified: miss 7.9% (d  -4.0 [ -8.8,  +0.0]), FA 51.1% (d +10.1 [ +1.9, +18.2]); reasoning mentions the note 100.0%; wrong summaries flipped to accept 1, to reject 6; mean generated tokens 570
+
+wrote results/think_check_gen.json

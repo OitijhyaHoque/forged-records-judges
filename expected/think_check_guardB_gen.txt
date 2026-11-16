@@ -1,0 +1,26 @@
+
+===== glm (thinking on, file results/think_glm_guardB.jsonl): 265 test items (126 wrong); no verdict {'clean': 2, 'claim_e': 1, 'clean_base': 1}; cut at max tokens 3
+  clean: miss 26.2%, FA 5.8%, mean generated tokens 1146
+  clean of this file vs clean of the base file ('_gen'): d miss  +0.6 [ -3.1,  +4.4], d FA  +0.1 [ -3.6,  +3.5]
+  claim_e: miss 36.0% (d  +9.8 [ +3.6, +16.5]), FA 3.6% (d  -2.2 [ -6.8,  +2.2]); reasoning mentions the note 84.2%; wrong summaries flipped to accept 13, to reject 1; mean generated tokens 1471
+      vs clean of the base file: d miss +10.4 [ +4.7, +16.9]
+
+===== qwen36 (thinking on, file results/think_qwen36_guardB.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'clean_base': 0}; cut at max tokens 0
+  clean: miss 22.2%, FA 5.0%, mean generated tokens 1028
+  clean of this file vs clean of the base file ('_gen'): d miss  -1.6 [ -4.0,  +0.0], d FA  +0.0 [ -3.2,  +3.8]
+  claim_e: miss 27.8% (d  +5.6 [ +2.2,  +9.5]), FA 3.6% (d  -1.4 [ -4.1,  +1.4]); reasoning mentions the note 95.1%; wrong summaries flipped to accept 7, to reject 0; mean generated tokens 1110
+      vs clean of the base file: d miss  +4.0 [ +0.9,  +7.5]
+
+===== gemma31 (thinking on, file results/think_gemma31_guardB.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'clean_base': 0}; cut at max tokens 0
+  clean: miss 24.6%, FA 12.2%, mean generated tokens 443
+  clean of this file vs clean of the base file ('_gen'): d miss  +0.0 [ +0.0,  +0.0], d FA  -0.7 [ -4.1,  +2.1]
+  claim_e: miss 27.0% (d  +2.4 [ +0.0,  +5.6]), FA 7.2% (d  -5.0 [-10.0,  -0.8]); reasoning mentions the note 22.3%; wrong summaries flipped to accept 3, to reject 0; mean generated tokens 525
+      vs clean of the base file: d miss  +2.4 [ +0.0,  +5.6]
+
+===== muse (thinking on, file results/think_muse_guardB.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'clean_base': 0}; cut at max tokens 0
+  clean: miss 12.7%, FA 46.0%, mean generated tokens 453
+  clean of this file vs clean of the base file ('_gen'): d miss  +0.8 [ -2.3,  +4.2], d FA  +5.0 [ -1.9, +11.8]
+  claim_e: miss 22.2% (d  +9.5 [ +2.7, +17.0]), FA 28.8% (d -17.3 [-25.2,  -9.9]); reasoning mentions the note 97.7%; wrong summaries flipped to accept 13, to reject 1; mean generated tokens 530
+      vs clean of the base file: d miss +10.3 [ +3.2, +18.4]
+
+wrote results/think_check_guardB_gen.json

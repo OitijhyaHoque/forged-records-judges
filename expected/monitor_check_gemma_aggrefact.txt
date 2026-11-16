@@ -1,0 +1,86 @@
+
+== gemma_aggrefact: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  22.4 FA  18.5 | claim_e: miss  56.7 (d +34.3 [+28.4, +40.6]), FA   2.6 (d -15.8 [-20.9, -11.6])
+  +found  clean miss  22.4 FA  18.5 | claim_e: miss  52.7 (d +30.3 [+24.4, +36.7]), FA   6.0 (d -12.5 [-17.4,  -8.4])
+  +both   clean miss  22.4 FA  18.5 | claim_e: miss  21.7 (d  -0.7 [ -4.8,  +3.5]), FA  22.3 (d  +3.8 [ -1.7,  +9.3])
+  clean: wrong summaries the judge accepts 62; monitor found 0, defers 0
+  claim_e: wrong summaries the judge accepts 157; monitor found 11, defers 97
+
+== gemma_aggrefact_guard: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  20.6 FA  17.0 | claim_e: miss  31.8 (d +11.2 [ +7.0, +15.9]), FA  12.1 (d  -4.9 [ -8.5,  -1.8])
+  +found  clean miss  20.6 FA  17.0 | claim_e: miss  31.4 (d +10.8 [ +6.3, +15.8]), FA  13.2 (d  -3.8 [ -7.6,  -0.4])
+  +both   clean miss  20.6 FA  17.0 | claim_e: miss  23.8 (d  +3.2 [ -0.4,  +7.3]), FA  17.7 (d  +0.8 [ -2.9,  +3.9])
+  clean: wrong summaries the judge accepts 57; monitor found 0, defers 0
+  claim_e: wrong summaries the judge accepts 88; monitor found 1, defers 22
+
+== glm_aggrefact: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  30.3 FA  15.8 | claim_e: miss  52.3 (d +22.0 [+16.8, +27.9]), FA   5.7 (d -10.2 [-15.1,  -6.2])
+  +found  clean miss  27.4 FA  21.1 | claim_e: miss  37.5 (d +10.1 [ +5.2, +15.2]), FA  16.2 (d  -4.9 [-10.0,  +0.0])
+  +both   clean miss  27.4 FA  21.1 | claim_e: miss  11.6 (d -15.9 [-21.6, -10.1]), FA  75.8 (d +54.7 [+48.4, +60.5])
+  clean: wrong summaries the judge accepts 84; monitor found 8, defers 0
+  claim_e: wrong summaries the judge accepts 145; monitor found 41, defers 113
+
+== glm_aggrefact_guard: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  27.4 FA  17.7 | claim_e: miss  35.4 (d  +7.9 [ +3.4, +13.0]), FA  12.5 (d  -5.3 [-10.3,  -0.7])
+  +found  clean miss  26.7 FA  20.8 | claim_e: miss  33.2 (d  +6.5 [ +2.0, +11.8]), FA  19.6 (d  -1.1 [ -6.0,  +4.1])
+  +both   clean miss  26.7 FA  20.8 | claim_e: miss  19.9 (d  -6.9 [-11.1,  -2.8]), FA  40.4 (d +19.6 [+13.8, +26.0])
+  clean: wrong summaries the judge accepts 76; monitor found 2, defers 0
+  claim_e: wrong summaries the judge accepts 98; monitor found 6, defers 43
+
+== gptoss_aggrefact: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  23.8 FA  18.5 | claim_e: miss  31.8 (d  +7.9 [ +3.9, +12.6]), FA  13.2 (d  -5.3 [ -9.3,  -1.9])
+  +found  clean miss  21.3 FA  22.3 | claim_e: miss  23.1 (d  +1.8 [ -1.7,  +5.5]), FA  19.6 (d  -2.6 [ -6.5,  +1.1])
+  +both   clean miss  21.3 FA  22.3 | claim_e: miss  22.7 (d  +1.4 [ -1.9,  +5.0]), FA  20.4 (d  -1.9 [ -5.7,  +2.0])
+  clean: wrong summaries the judge accepts 66; monitor found 7, defers 0
+  claim_e: wrong summaries the judge accepts 88; monitor found 24, defers 12
+
+== gptoss_aggrefact_guard: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  23.8 FA  17.7 | claim_e: miss  26.7 (d  +2.9 [ -0.3,  +6.5]), FA  17.4 (d  -0.4 [ -3.6,  +2.8])
+  +found  clean miss  21.3 FA  21.1 | claim_e: miss  23.5 (d  +2.2 [ -1.5,  +5.9]), FA  23.8 (d  +2.6 [ -1.5,  +7.1])
+  +both   clean miss  21.3 FA  21.1 | claim_e: miss  22.7 (d  +1.4 [ -2.5,  +5.4]), FA  24.5 (d  +3.4 [ -0.8,  +7.8])
+  clean: wrong summaries the judge accepts 66; monitor found 7, defers 0
+  claim_e: wrong summaries the judge accepts 74; monitor found 9, defers 4
+
+== nemotron_aggrefact: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  27.8 FA  13.2 | claim_e: miss  57.8 (d +30.0 [+22.6, +37.0]), FA   3.8 (d  -9.4 [-13.3,  -6.2])
+  +found  clean miss  26.0 FA  15.5 | claim_e: miss  36.5 (d +10.5 [ +5.9, +15.2]), FA  21.1 (d  +5.7 [ +0.7, +11.3])
+  +both   clean miss  26.0 FA  15.5 | claim_e: miss   2.9 (d -23.1 [-30.5, -15.3]), FA  83.4 (d +67.9 [+62.2, +73.6])
+  clean: wrong summaries the judge accepts 77; monitor found 5, defers 0
+  claim_e: wrong summaries the judge accepts 160; monitor found 59, defers 152
+
+== nemotron_aggrefact_guard: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  27.4 FA  12.8 | claim_e: miss  36.1 (d  +8.7 [ +4.6, +13.3]), FA   9.1 (d  -3.8 [ -7.2,  -0.7])
+  +found  clean miss  25.6 FA  15.8 | claim_e: miss  32.9 (d  +7.2 [ +3.1, +12.0]), FA  15.5 (d  -0.4 [ -4.6,  +3.7])
+  +both   clean miss  25.6 FA  15.8 | claim_e: miss  12.6 (d -13.0 [-18.9,  -6.9]), FA  50.6 (d +34.7 [+28.9, +40.6])
+  clean: wrong summaries the judge accepts 76; monitor found 5, defers 0
+  claim_e: wrong summaries the judge accepts 100; monitor found 9, defers 65
+
+== qwen36_aggrefact: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  28.5 FA   9.8 | claim_e: miss  59.9 (d +31.4 [+25.5, +37.3]), FA   3.4 (d  -6.4 [ -9.6,  -3.6])
+  +found  clean miss  23.5 FA  14.7 | claim_e: miss  32.9 (d  +9.4 [ +4.7, +14.2]), FA  16.6 (d  +1.9 [ -2.8,  +6.6])
+  +both   clean miss  23.5 FA  14.7 | claim_e: miss   3.6 (d -19.9 [-27.5, -12.2]), FA  81.5 (d +66.8 [+60.2, +72.9])
+  clean: wrong summaries the judge accepts 79; monitor found 14, defers 0
+  claim_e: wrong summaries the judge accepts 166; monitor found 75, defers 156
+
+== qwen36_aggrefact_guard: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  28.9 FA  11.3 | claim_e: miss  44.0 (d +15.2 [+10.5, +20.5]), FA   6.0 (d  -5.3 [ -8.9,  -2.1])
+  +found  clean miss  25.6 FA  15.1 | claim_e: miss  30.3 (d  +4.7 [ +0.6,  +9.8]), FA  18.5 (d  +3.4 [ -0.4,  +6.8])
+  +both   clean miss  25.6 FA  15.1 | claim_e: miss   9.4 (d -16.2 [-22.0, -10.4]), FA  60.8 (d +45.7 [+39.1, +51.8])
+  clean: wrong summaries the judge accepts 80; monitor found 9, defers 0
+  claim_e: wrong summaries the judge accepts 122; monitor found 38, defers 96
+
+== qwen_aggrefact: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  14.4 FA  31.3 | claim_e: miss  68.6 (d +54.2 [+47.8, +62.1]), FA   2.3 (d -29.1 [-35.6, -23.5])
+  +found  clean miss   5.8 FA  54.7 | claim_e: miss  13.4 (d  +7.6 [ +4.2, +10.6]), FA  48.3 (d  -6.4 [-11.5,  -1.5])
+  +both   clean miss   5.8 FA  54.7 | claim_e: miss   4.7 (d  -1.1 [ -2.9,  +0.7]), FA  74.7 (d +20.0 [+13.6, +25.8])
+  clean: wrong summaries the judge accepts 40; monitor found 24, defers 0
+  claim_e: wrong summaries the judge accepts 190; monitor found 153, defers 176
+
+== qwen_aggrefact_guard: 542 items (277 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  12.3 FA  32.5 | claim_e: miss  20.2 (d  +7.9 [ +4.4, +11.4]), FA  18.1 (d -14.3 [-19.1, -10.0])
+  +found  clean miss   6.5 FA  57.4 | claim_e: miss   9.7 (d  +3.2 [ +0.8,  +5.9]), FA  50.6 (d  -6.8 [-11.9,  -2.0])
+  +both   clean miss   6.5 FA  57.4 | claim_e: miss   6.1 (d  -0.4 [ -2.3,  +2.0]), FA  71.3 (d +14.0 [ +8.3, +19.3])
+  clean: wrong summaries the judge accepts 34; monitor found 16, defers 0
+  claim_e: wrong summaries the judge accepts 56; monitor found 29, defers 39
+
+wrote results/monitor_check_gemma_aggrefact.json

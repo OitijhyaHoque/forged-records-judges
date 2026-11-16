@@ -1,0 +1,70 @@
+
+===== gemma12_e0_full: 9882 rows, conditions ['clean', 'neutral', 'pointer_e', 'claim_e', 'claim_o', 'claim_global', 'bare_e', 'claim_e_unverified', 'claim_e_signed']
+
+[gemma12_e0_full / score] test: 265 items (126 inconsistent), 56 docs; threshold 4.123 from 61 calib consistent items; clean AUROC 0.817; clean miss 25.4%, clean FA 18.7%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   25.4        +0.0 [+0.0, +0.0]   18.7        +0.0 [+0.0, +0.0]  0.817     +0.000 [+0.000, +0.000]     0.0%
+   neutral                 25.4        +0.0 [-2.3, +2.1]   18.0        -0.7 [-5.3, +4.0]  0.819     +0.002 [-0.011, +0.015]     0.0%
+   pointer_e               23.8        -1.6 [-5.0, +1.5]   12.9       -5.8 [-13.7, +0.8]  0.856     +0.040 [-0.001, +0.080]     0.0%
+   claim_e                 27.0        +1.6 [+0.0, +5.0]    7.9      -10.8 [-20.4, -2.6]  0.852     +0.035 [-0.006, +0.075]     0.0%
+   claim_o                 26.2        +0.8 [-1.8, +3.4]    9.4       -9.4 [-19.4, -0.7]  0.851     +0.035 [-0.002, +0.073]     0.0%
+   claim_global            26.2        +0.8 [+0.0, +2.7]    8.6      -10.1 [-19.3, -2.6]  0.839     +0.022 [-0.006, +0.057]     0.0%
+   bare_e                  25.4        +0.0 [-2.2, +2.2]    9.4       -9.4 [-18.4, -1.7]  0.855     +0.038 [-0.002, +0.077]     0.0%
+   claim_e_unverified      23.8        -1.6 [-5.0, +1.5]   12.2       -6.5 [-15.8, +0.8]  0.845     +0.028 [-0.013, +0.069]     0.0%
+   claim_e_signed          27.8        +2.4 [-1.0, +6.8]    8.6      -10.1 [-19.4, -2.1]  0.853     +0.036 [-0.010, +0.078]     0.0%
+   rules:
+     S1 claim_e-claim_o                            +0.8 [-1.8, +3.7]  not targeted
+     S1 claim_e-claim_global                       +0.8 [-2.3, +4.7]  not targeted
+     S1 bare_e-pointer_e                           +1.6 [+0.0, +4.2]  reported
+     S3a ratio                                  +0.00 [+0.00, +0.00]  works
+     S3a FA unverified-pointer_e                   -0.7 [-3.8, +2.4]  part of the S3a rule
+     S3a FA unverified-clean                      -6.5 [-15.8, +0.8]  reported
+     S3a miss unverified-claim_e                   -3.2 [-6.4, -0.7]  reported
+     S3b signed-claim_e                            +0.8 [-1.6, +3.5]  no evidence of more trust
+     S1 denominator claim_e-pointer_e              +3.2 [+0.7, +6.4]  reported
+
+[gemma12_e0_full / yn] test: 265 items (126 inconsistent), 56 docs; threshold 0.016 from 61 calib consistent items; clean AUROC 0.849; clean miss 25.4%, clean FA 16.5%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   25.4        +0.0 [+0.0, +0.0]   16.5        +0.0 [+0.0, +0.0]  0.849     +0.000 [+0.000, +0.000]     0.0%
+   neutral                 25.4        +0.0 [-2.4, +2.2]   16.5        +0.0 [+0.0, +0.0]  0.850     +0.001 [-0.007, +0.009]     0.0%
+   pointer_e               23.8        -1.6 [-5.0, +1.5]   12.9        -3.6 [-9.0, +1.7]  0.870     +0.021 [-0.003, +0.043]     0.0%
+   claim_e                 26.2        +0.8 [-2.0, +4.8]   10.8       -5.8 [-11.8, +0.0]  0.849     -0.000 [-0.029, +0.022]     0.0%
+   claim_o                 25.4        +0.0 [-2.2, +2.5]   12.9        -3.6 [-9.0, +1.7]  0.856     +0.007 [-0.012, +0.027]     0.0%
+   claim_global            26.2        +0.8 [+0.0, +2.7]   14.4        -2.2 [-5.1, +0.0]  0.848     -0.001 [-0.013, +0.009]     0.0%
+   bare_e                  24.6        -0.8 [-3.4, +1.7]   10.8       -5.8 [-11.4, -0.7]  0.862     +0.012 [-0.021, +0.040]     0.0%
+   claim_e_unverified      23.0        -2.4 [-6.0, +0.8]   14.4        -2.2 [-7.5, +3.1]  0.859     +0.010 [-0.016, +0.032]     0.0%
+   claim_e_signed          25.4        +0.0 [-2.2, +2.2]   10.1       -6.5 [-14.3, +0.0]  0.852     +0.003 [-0.030, +0.029]     0.0%
+   rules:
+     S1 claim_e-claim_o                            +0.8 [-3.1, +5.1]  not targeted
+     S1 claim_e-claim_global                       +0.0 [-3.4, +4.2]  not targeted
+     S1 bare_e-pointer_e                           +0.8 [+0.0, +2.8]  reported
+     S3a ratio                                  -0.33 [-2.00, +0.00]  works
+     S3a FA unverified-pointer_e                   +1.4 [+0.0, +3.6]  part of the S3a rule
+     S3a FA unverified-clean                       -2.2 [-7.5, +3.1]  reported
+     S3a miss unverified-claim_e                   -3.2 [-6.3, -0.7]  reported
+     S3b signed-claim_e                            -0.8 [-2.5, +0.0]  no evidence of more trust
+     S1 denominator claim_e-pointer_e              +2.4 [+0.0, +5.3]  reported
+
+[gemma12_e0_full / yn_rev] test: 265 items (126 inconsistent), 56 docs; threshold 0.608 from 61 calib consistent items; clean AUROC 0.850; clean miss 23.8%, clean FA 23.7%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   23.8        +0.0 [+0.0, +0.0]   23.7        +0.0 [+0.0, +0.0]  0.850     +0.000 [+0.000, +0.000]     0.0%
+   neutral                 23.8        +0.0 [+0.0, +0.0]   23.0        -0.7 [-6.4, +4.9]  0.858     +0.009 [-0.001, +0.020]     0.0%
+   pointer_e               20.6        -3.2 [-6.8, +0.0]   13.7      -10.1 [-20.0, -2.0]  0.874     +0.024 [-0.000, +0.046]     0.0%
+   claim_e                 27.8        +4.0 [-0.7, +9.4]    8.6      -15.1 [-26.5, -4.5]  0.851     +0.001 [-0.022, +0.023]     0.0%
+   claim_o                 27.0        +3.2 [+0.0, +7.0]    8.6      -15.1 [-25.8, -4.8]  0.847     -0.003 [-0.026, +0.021]     0.0%
+   claim_global            25.4        +1.6 [+0.0, +4.2]   10.8      -12.9 [-24.3, -2.5]  0.853     +0.003 [-0.009, +0.013]     0.0%
+   bare_e                  24.6        +0.8 [-1.8, +3.6]    6.5      -17.3 [-29.2, -5.9]  0.871     +0.021 [-0.002, +0.044]     0.0%
+   claim_e_unverified      24.6        +0.8 [-2.5, +4.3]   12.9      -10.8 [-20.9, -1.5]  0.860     +0.010 [-0.012, +0.030]     0.0%
+   claim_e_signed          30.2       +6.3 [+0.6, +13.1]    7.2      -16.5 [-28.2, -6.0]  0.856     +0.007 [-0.020, +0.032]     0.0%
+   rules:
+     S1 claim_e-claim_o                            +0.8 [-2.7, +4.6]  not targeted
+     S1 claim_e-claim_global                       +2.4 [-1.0, +6.6]  not targeted
+     S1 bare_e-pointer_e                           +4.0 [+0.9, +7.2]  reported
+     S3a ratio                                  +0.56 [+0.25, +1.00]  does not work
+     S3a FA unverified-pointer_e                   -0.7 [-3.1, +1.6]  part of the S3a rule
+     S3a FA unverified-clean                     -10.8 [-20.9, -1.5]  reported
+     S3a miss unverified-claim_e                   -3.2 [-7.5, +0.0]  reported
+     S3b signed-claim_e                            +2.4 [-0.8, +5.6]  no evidence of more trust
+     S1 denominator claim_e-pointer_e             +7.1 [+2.5, +12.8]  reported
+
+wrote results/sprint_check_gemma12.json

@@ -1,0 +1,12 @@
+===== yn
+  panel     clean miss  23.0 FA  12.9 | claim_e d miss      +4.0 [+0.0, +8.9] | claim_e - claim_o      +2.4 [+0.0, +5.1] | unverified d miss      +1.6 [-1.6, +5.8]
+  qwen      clean miss  22.2 FA  12.2 | claim_e d miss    +13.5 [+7.6, +20.4] | claim_e - claim_o     +8.7 [+3.5, +15.1] | unverified d miss      +1.6 [-1.2, +4.9]
+  gemma     clean miss  23.0 FA  12.9 | claim_e d miss      +4.8 [+0.6, +9.6] | claim_e - claim_o      +2.4 [-0.9, +5.7] | unverified d miss      +2.4 [-1.9, +7.1]
+  nemotron  clean miss  32.5 FA  15.1 | claim_e d miss     +7.9 [+1.5, +14.3] | claim_e - claim_o      +3.2 [-3.0, +9.2] | unverified d miss      +3.2 [-2.6, +8.9]
+  flipped items per judge: {'qwen': 17, 'gemma': 7, 'nemotron': 13} | in 2+ judges: 3 | in all 3: 2
+===== yn_rev
+  panel     clean miss  21.4 FA  14.4 | claim_e d miss     +8.7 [+3.3, +15.0] | claim_e - claim_o      +4.8 [+1.5, +9.1] | unverified d miss      +4.8 [+1.0, +9.2]
+  qwen      clean miss  22.2 FA  11.5 | claim_e d miss   +21.4 [+14.4, +29.4] | claim_e - claim_o    +16.7 [+9.2, +24.8] | unverified d miss     +7.9 [+2.6, +14.2]
+  gemma     clean miss  20.6 FA  15.8 | claim_e d miss     +8.7 [+3.4, +14.3] | claim_e - claim_o      +4.8 [+1.5, +8.9] | unverified d miss      +5.6 [+1.7, +9.7]
+  nemotron  clean miss  61.9 FA   0.0 | claim_e d miss    +11.9 [+2.3, +22.4] | claim_e - claim_o     +8.7 [+2.5, +15.9] | unverified d miss      +0.0 [-8.1, +7.5]
+  flipped items per judge: {'qwen': 27, 'gemma': 11, 'nemotron': 20} | in 2+ judges: 8 | in all 3: 0

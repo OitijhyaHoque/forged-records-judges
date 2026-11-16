@@ -1,0 +1,20 @@
+
+== qwen (test items 265)
+   yn       AUROC clean 0.889 claim_e 0.875 change -0.014 [-0.041, +0.009] | accept-score shift: inconsistent +0.061, consistent +0.075
+   sent     AUROC clean 0.912 claim_e 0.906 change -0.007 [-0.031, +0.013] | accept-score shift: inconsistent +0.079, consistent +0.111
+   all      AUROC clean 0.886 claim_e 0.859 change -0.028 [-0.052, -0.006] | accept-score shift: inconsistent +0.073, consistent +0.085
+   yn_rev   AUROC clean 0.894 claim_e 0.876 change -0.018 [-0.042, +0.002] | accept-score shift: inconsistent +0.295, consistent +0.059
+   sent_rev AUROC clean 0.915 claim_e 0.903 change -0.013 [-0.042, +0.016] | accept-score shift: inconsistent +0.331, consistent +0.074
+
+== gemma (test items 265)
+   yn       AUROC clean 0.877 claim_e 0.856 change -0.021 [-0.058, +0.007] | accept-score shift: inconsistent +0.041, consistent +0.027
+   sent     AUROC clean 0.898 claim_e 0.876 change -0.021 [-0.057, +0.008] | accept-score shift: inconsistent +0.052, consistent +0.035
+   all      AUROC clean 0.874 claim_e 0.843 change -0.031 [-0.062, -0.003] | accept-score shift: inconsistent +0.053, consistent +0.033
+   yn_rev   AUROC clean 0.877 claim_e 0.857 change -0.019 [-0.042, +0.002] | accept-score shift: inconsistent +0.090, consistent +0.082
+   sent_rev AUROC clean 0.903 claim_e 0.891 change -0.012 [-0.049, +0.017] | accept-score shift: inconsistent +0.116, consistent +0.067
+
+== nemotron (test items 265)
+   yn       AUROC clean 0.813 claim_e 0.797 change -0.016 [-0.057, +0.021] | accept-score shift: inconsistent +0.145, consistent +0.028
+   sent     AUROC clean 0.845 claim_e 0.841 change -0.004 [-0.042, +0.028] | accept-score shift: inconsistent +0.147, consistent +0.039
+   yn_rev   AUROC clean 0.773 claim_e 0.753 change -0.020 [-0.068, +0.030] | accept-score shift: inconsistent +0.067, consistent +0.028
+   sent_rev AUROC clean 0.466 claim_e 0.549 change +0.083 [+0.018, +0.151] | accept-score shift: inconsistent +0.049, consistent +0.085

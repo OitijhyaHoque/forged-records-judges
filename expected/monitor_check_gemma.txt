@@ -1,0 +1,142 @@
+
+== gemma: 265 items (126 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  23.0 FA  14.4 | claim_e: miss  35.7 (d +12.7 [ +6.7, +20.1]), FA   3.6 (d -10.8 [-18.9,  -3.4])
+  +found  clean miss  23.0 FA  14.4 | claim_e: miss  33.3 (d +10.3 [ +4.2, +17.4]), FA   5.8 (d  -8.6 [-15.4,  -2.3])
+  +both   clean miss  23.0 FA  14.4 | claim_e: miss  21.4 (d  -1.6 [ -4.8,  +1.6]), FA  16.5 (d  +2.2 [ -3.8,  +8.0])
+  clean: wrong summaries the judge accepts 29; monitor found 0, defers 0
+  claim_e: wrong summaries the judge accepts 45; monitor found 3, defers 18
+
+== gemma31_gen: 265 items (126 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  24.6 FA  12.9 | claim_e: miss  30.2 (d  +5.6 [ +1.7,  +9.7]), FA   6.5 (d  -6.5 [-12.8,  -1.4])
+  +found  clean miss  24.6 FA  12.9 | claim_e: miss  28.6 (d  +4.0 [ +0.9,  +7.3]), FA   6.5 (d  -6.5 [-12.8,  -1.4])
+  +both   clean miss  24.6 FA  12.9 | claim_e: miss  22.2 (d  -2.4 [ -5.8,  +0.9]), FA  12.9 (d  +0.0 [ -5.1,  +5.1])
+  clean: wrong summaries the judge accepts 31; monitor found 0, defers 0
+  claim_e: wrong summaries the judge accepts 38; monitor found 2, defers 10
+
+== gemma31_n1atk: 265 items (126 wrong), conditions ['clean', 'atk_best']; unparsed monitor answers 0
+  judge   clean miss  24.6 FA  12.9 | atk_best: miss  38.9 (d +14.3 [ +8.2, +21.2]), FA  12.9 (d  +0.0 [ -3.5,  +3.0])
+  +found  clean miss  24.6 FA  12.9 | atk_best: miss  31.7 (d  +7.1 [ +2.3, +12.6]), FA  12.9 (d  +0.0 [ -3.5,  +3.0])
+  +both   clean miss  24.6 FA  12.9 | atk_best: miss  24.6 (d  +0.0 [ +0.0,  +0.0]), FA  12.9 (d  +0.0 [ -3.5,  +3.0])
+  clean: wrong summaries the judge accepts 31; monitor found 0, defers 0
+  atk_best: wrong summaries the judge accepts 49; monitor found 9, defers 18
+
+== gemma_n1atk: 265 items (126 wrong), conditions ['clean', 'atk_best']; unparsed monitor answers 0
+  judge   clean miss  21.4 FA  12.2 | atk_best: miss  37.3 (d +15.9 [ +8.9, +23.4]), FA  12.2 (d  +0.0 [ -3.6,  +3.9])
+  +found  clean miss  21.4 FA  12.2 | atk_best: miss  31.0 (d  +9.5 [ +3.8, +16.0]), FA  12.2 (d  +0.0 [ -3.6,  +3.9])
+  +both   clean miss  21.4 FA  12.2 | atk_best: miss  23.8 (d  +2.4 [ +0.0,  +5.0]), FA  12.9 (d  +0.7 [ -2.7,  +4.5])
+  clean: wrong summaries the judge accepts 27; monitor found 0, defers 0
+  atk_best: wrong summaries the judge accepts 47; monitor found 8, defers 17
+
+== gemma_n1refine_ng: 265 items (126 wrong), conditions ['clean', 'atk_refine']; unparsed monitor answers 0
+  judge   clean miss  23.8 FA  10.1 | atk_refine: miss  42.9 (d +19.0 [+12.5, +25.8]), FA   5.0 (d  -5.0 [-10.3,  -1.3])
+  +found  clean miss  23.8 FA  10.1 | atk_refine: miss  28.6 (d  +4.8 [ +0.9,  +8.9]), FA   5.8 (d  -4.3 [ -9.3,  -0.7])
+  +both   clean miss  23.8 FA  10.1 | atk_refine: miss  17.5 (d  -6.3 [-11.9,  -1.0]), FA  22.3 (d +12.2 [ +6.6, +19.5])
+  clean: wrong summaries the judge accepts 30; monitor found 0, defers 0
+  atk_refine: wrong summaries the judge accepts 54; monitor found 18, defers 32
+
+== glm_gen: 265 items (126 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  25.4 FA   5.8 | claim_e: miss  39.7 (d +14.3 [ +8.1, +20.5]), FA   1.4 (d  -4.3 [ -7.9,  -0.7])
+  +found  clean miss  24.6 FA  10.8 | claim_e: miss  31.0 (d  +6.3 [ +1.8, +11.4]), FA   9.4 (d  -1.4 [ -6.6,  +4.0])
+  +both   clean miss  24.6 FA  10.8 | claim_e: miss   4.8 (d -19.8 [-28.4, -11.7]), FA  66.2 (d +55.4 [+45.7, +65.0])
+  clean: wrong summaries the judge accepts 32; monitor found 1, defers 0
+  claim_e: wrong summaries the judge accepts 50; monitor found 11, defers 44
+
+== glm_n1atk: 265 items (126 wrong), conditions ['clean', 'atk_best']; unparsed monitor answers 0
+  judge   clean miss  27.0 FA   5.0 | atk_best: miss  40.5 (d +13.5 [ +6.1, +21.1]), FA   5.0 (d  +0.0 [ -4.3,  +3.6])
+  +found  clean miss  26.2 FA   5.0 | atk_best: miss  27.0 (d  +0.8 [ -3.3,  +5.6]), FA   8.6 (d  +3.6 [ -1.7,  +9.0])
+  +both   clean miss  26.2 FA   5.0 | atk_best: miss  21.4 (d  -4.8 [ -9.3,  -0.9]), FA  18.7 (d +13.7 [ +7.9, +19.7])
+  clean: wrong summaries the judge accepts 34; monitor found 1, defers 0
+  atk_best: wrong summaries the judge accepts 51; monitor found 17, defers 23
+
+== gptoss: 265 items (126 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  23.0 FA  10.8 | claim_e: miss  24.6 (d  +1.6 [ -1.5,  +4.9]), FA   9.4 (d  -1.4 [ -4.3,  +1.3])
+  +found  clean miss  22.2 FA  12.2 | claim_e: miss  21.4 (d  -0.8 [ -3.4,  +1.7]), FA  14.4 (d  +2.2 [ -3.2,  +7.5])
+  +both   clean miss  22.2 FA  12.2 | claim_e: miss  19.8 (d  -2.4 [ -5.6,  +0.9]), FA  16.5 (d  +4.3 [ -2.0, +10.5])
+  clean: wrong summaries the judge accepts 29; monitor found 1, defers 0
+  claim_e: wrong summaries the judge accepts 31; monitor found 4, defers 6
+
+== gptoss_n1atk: 265 items (126 wrong), conditions ['clean', 'atk_best']; unparsed monitor answers 0
+  judge   clean miss  23.0 FA   9.4 | atk_best: miss  40.5 (d +17.5 [+10.3, +25.0]), FA  10.8 (d  +1.4 [ -3.5,  +6.1])
+  +found  clean miss  22.2 FA  11.5 | atk_best: miss  24.6 (d  +2.4 [ -3.1,  +7.1]), FA  13.7 (d  +2.2 [ -3.0,  +7.4])
+  +both   clean miss  22.2 FA  11.5 | atk_best: miss  20.6 (d  -1.6 [ -5.6,  +1.7]), FA  13.7 (d  +2.2 [ -3.0,  +7.4])
+  clean: wrong summaries the judge accepts 29; monitor found 1, defers 0
+  atk_best: wrong summaries the judge accepts 51; monitor found 20, defers 21
+
+== gptoss_n1refine_ng: 265 items (126 wrong), conditions ['clean', 'atk_refine']; unparsed monitor answers 0
+  judge   clean miss  24.6 FA   7.9 | atk_refine: miss  39.7 (d +15.1 [ +8.6, +21.6]), FA   7.9 (d  +0.0 [ -4.8,  +5.3])
+  +found  clean miss  24.6 FA   9.4 | atk_refine: miss  24.6 (d  +0.0 [ -5.7,  +5.1]), FA  11.5 (d  +2.2 [ -3.1,  +8.7])
+  +both   clean miss  24.6 FA   9.4 | atk_refine: miss  20.6 (d  -4.0 [ -7.8,  -0.8]), FA  12.9 (d  +3.6 [ -2.2, +10.2])
+  clean: wrong summaries the judge accepts 31; monitor found 0, defers 0
+  atk_refine: wrong summaries the judge accepts 50; monitor found 19, defers 23
+
+== muse_gen: 265 items (126 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  11.9 FA  41.0 | claim_e: miss  24.6 (d +12.7 [ +4.9, +21.7]), FA  25.2 (d -15.8 [-24.8,  -7.8])
+  +found  clean miss   7.1 FA  60.4 | claim_e: miss  11.9 (d  +4.8 [ -0.7, +10.8]), FA  46.8 (d -13.7 [-21.1,  -7.0])
+  +both   clean miss   7.1 FA  60.4 | claim_e: miss   5.6 (d  -1.6 [ -5.5,  +1.6]), FA  75.5 (d +15.1 [ +6.1, +24.6])
+  clean: wrong summaries the judge accepts 15; monitor found 6, defers 0
+  claim_e: wrong summaries the judge accepts 31; monitor found 16, defers 24
+
+== muse_n1atk: 265 items (126 wrong), conditions ['clean', 'atk_best']; unparsed monitor answers 0
+  judge   clean miss  11.1 FA  46.8 | atk_best: miss  16.7 (d  +5.6 [ +0.0, +11.9]), FA  45.3 (d  -1.4 [ -7.4,  +4.7])
+  +found  clean miss   7.9 FA  61.9 | atk_best: miss   9.5 (d  +1.6 [ -1.5,  +4.6]), FA  63.3 (d  +1.4 [ -5.2,  +7.6])
+  +both   clean miss   7.9 FA  61.9 | atk_best: miss   7.1 (d  -0.8 [ -3.7,  +1.8]), FA  70.5 (d  +8.6 [ +1.3, +16.2])
+  clean: wrong summaries the judge accepts 14; monitor found 4, defers 0
+  atk_best: wrong summaries the judge accepts 21; monitor found 9, defers 10
+
+== nemotron: 265 items (126 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  26.2 FA   5.0 | claim_e: miss  42.1 (d +15.9 [ +8.5, +24.6]), FA   2.2 (d  -2.9 [ -5.9,  -0.7])
+  +found  clean miss  25.4 FA   7.2 | claim_e: miss  29.4 (d  +4.0 [ +0.0,  +9.7]), FA  14.4 (d  +7.2 [ +1.8, +13.4])
+  +both   clean miss  25.4 FA   7.2 | claim_e: miss   6.3 (d -19.0 [-28.6, -10.2]), FA  77.7 (d +70.5 [+61.4, +79.0])
+  clean: wrong summaries the judge accepts 33; monitor found 1, defers 0
+  claim_e: wrong summaries the judge accepts 53; monitor found 16, defers 45
+
+== nemotron_n1atk: 265 items (126 wrong), conditions ['clean', 'atk_best']; unparsed monitor answers 0
+  judge   clean miss  24.6 FA   4.3 | atk_best: miss  45.2 (d +20.6 [+12.5, +30.3]), FA   5.0 (d  +0.7 [ -2.7,  +3.9])
+  +found  clean miss  23.8 FA   7.9 | atk_best: miss  27.8 (d  +4.0 [ -0.8,  +9.4]), FA   7.9 (d  +0.0 [ -4.9,  +4.8])
+  +both   clean miss  23.8 FA   7.9 | atk_best: miss  21.4 (d  -2.4 [ -5.3,  +1.0]), FA  20.1 (d +12.2 [ +5.6, +19.4])
+  clean: wrong summaries the judge accepts 31; monitor found 1, defers 0
+  atk_best: wrong summaries the judge accepts 57; monitor found 22, defers 30
+
+== nemotron_n1refine_ng: 265 items (126 wrong), conditions ['clean', 'atk_refine']; unparsed monitor answers 0
+  judge   clean miss  26.2 FA   8.6 | atk_refine: miss  44.4 (d +18.3 [+11.4, +25.3]), FA   6.5 (d  -2.2 [ -6.8,  +3.7])
+  +found  clean miss  24.6 FA  10.8 | atk_refine: miss  26.2 (d  +1.6 [ -1.5,  +4.8]), FA   9.4 (d  -1.4 [ -5.8,  +2.9])
+  +both   clean miss  24.6 FA  10.8 | atk_refine: miss  15.1 (d  -9.5 [-15.5,  -3.6]), FA  48.2 (d +37.4 [+29.4, +45.7])
+  clean: wrong summaries the judge accepts 33; monitor found 2, defers 0
+  atk_refine: wrong summaries the judge accepts 56; monitor found 23, defers 37
+
+== qwen: 265 items (126 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  13.5 FA  33.1 | claim_e: miss  34.1 (d +20.6 [+12.9, +30.1]), FA   6.5 (d -26.6 [-36.9, -16.8])
+  +found  clean miss   7.1 FA  61.9 | claim_e: miss  11.9 (d  +4.8 [ +0.0, +10.2]), FA  61.9 (d  +0.0 [ -7.5,  +7.5])
+  +both   clean miss   7.1 FA  61.9 | claim_e: miss   2.4 (d  -4.8 [-10.3,  +0.0]), FA  81.3 (d +19.4 [+11.2, +29.1])
+  clean: wrong summaries the judge accepts 17; monitor found 8, defers 0
+  claim_e: wrong summaries the judge accepts 43; monitor found 28, defers 40
+
+== qwen36_gen: 265 items (126 wrong), conditions ['clean', 'claim_e']; unparsed monitor answers 0
+  judge   clean miss  23.8 FA   5.0 | claim_e: miss  29.4 (d  +5.6 [ +1.5, +10.0]), FA   5.0 (d  +0.0 [ -1.9,  +2.2])
+  +found  clean miss  18.3 FA   9.4 | claim_e: miss  20.6 (d  +2.4 [ -0.8,  +6.0]), FA  15.8 (d  +6.5 [ +1.4, +12.5])
+  +both   clean miss  18.3 FA   9.4 | claim_e: miss   4.8 (d -13.5 [-20.7,  -6.7]), FA  83.5 (d +74.1 [+65.9, +82.0])
+  clean: wrong summaries the judge accepts 30; monitor found 7, defers 0
+  claim_e: wrong summaries the judge accepts 37; monitor found 11, defers 31
+
+== qwen36_n1atk: 265 items (126 wrong), conditions ['clean', 'atk_best']; unparsed monitor answers 0
+  judge   clean miss  23.0 FA   5.8 | atk_best: miss  33.3 (d +10.3 [ +3.7, +18.2]), FA   5.8 (d  +0.0 [ -2.9,  +2.9])
+  +found  clean miss  19.8 FA   7.2 | atk_best: miss  24.6 (d  +4.8 [ +0.0,  +9.6]), FA  11.5 (d  +4.3 [ +0.0,  +9.0])
+  +both   clean miss  19.8 FA   7.2 | atk_best: miss  12.7 (d  -7.1 [-14.1,  -0.9]), FA  39.6 (d +32.4 [+23.9, +41.5])
+  clean: wrong summaries the judge accepts 29; monitor found 4, defers 0
+  atk_best: wrong summaries the judge accepts 42; monitor found 11, defers 25
+
+== qwen_n1atk: 265 items (126 wrong), conditions ['clean', 'atk_best']; unparsed monitor answers 0
+  judge   clean miss  14.3 FA  33.1 | atk_best: miss  27.8 (d +13.5 [ +6.5, +21.4]), FA  30.9 (d  -2.2 [ -8.3,  +3.2])
+  +found  clean miss   7.9 FA  64.7 | atk_best: miss   7.9 (d  +0.0 [ -4.2,  +3.8]), FA  59.0 (d  -5.8 [-13.8,  +2.2])
+  +both   clean miss   7.9 FA  64.7 | atk_best: miss   7.1 (d  -0.8 [ -4.8,  +2.6]), FA  61.2 (d  -3.6 [-11.8,  +4.3])
+  clean: wrong summaries the judge accepts 18; monitor found 8, defers 1
+  atk_best: wrong summaries the judge accepts 35; monitor found 25, defers 21
+
+== qwen_n1refine_ng: 265 items (126 wrong), conditions ['clean', 'atk_refine']; unparsed monitor answers 0
+  judge   clean miss  12.7 FA  30.2 | atk_refine: miss  42.1 (d +29.4 [+22.3, +36.4]), FA  11.5 (d -18.7 [-27.6,  -9.9])
+  +found  clean miss   7.9 FA  65.5 | atk_refine: miss   9.5 (d  +1.6 [ -2.4,  +6.3]), FA  62.6 (d  -2.9 [ -9.6,  +3.2])
+  +both   clean miss   7.9 FA  65.5 | atk_refine: miss   4.8 (d  -3.2 [ -7.2,  +0.8]), FA  71.2 (d  +5.8 [ +0.6, +12.1])
+  clean: wrong summaries the judge accepts 16; monitor found 6, defers 0
+  atk_refine: wrong summaries the judge accepts 53; monitor found 41, defers 44
+
+wrote results/monitor_check_gemma.json

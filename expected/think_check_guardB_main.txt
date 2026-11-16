@@ -1,0 +1,20 @@
+
+===== qwen (thinking on, file results/think_qwen_guardB.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'clean_base': 0}; cut at max tokens 0
+  clean: miss 12.7%, FA 33.1%, mean generated tokens 539
+  clean of this file vs clean of the base file (''): d miss  -0.8 [ -2.7,  +0.0], d FA  +0.0 [ -5.0,  +5.0]
+  claim_e: miss 27.8% (d +15.1 [ +8.1, +22.9]), FA 7.9% (d -25.2 [-36.6, -14.6]); reasoning mentions the note 76.2%; wrong summaries flipped to accept 19, to reject 0; mean generated tokens 893
+      vs clean of the base file: d miss +14.3 [ +7.9, +21.6]
+
+===== nemotron (thinking on, file results/think_nemotron_guardB.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 2, 'clean_base': 1}; cut at max tokens 2
+  clean: miss 27.0%, FA 5.8%, mean generated tokens 1282
+  clean of this file vs clean of the base file (''): d miss  +0.8 [ +0.0,  +2.8], d FA  +1.4 [ -1.7,  +4.8]
+  claim_e: miss 32.8% (d  +5.8 [ +0.8, +11.7]), FA 5.1% (d  -0.7 [ -4.9,  +3.5]); reasoning mentions the note 91.3%; wrong summaries flipped to accept 9, to reject 1; mean generated tokens 1748
+      vs clean of the base file: d miss  +6.6 [ +1.1, +12.8]
+
+===== gemma (thinking on, file results/think_gemma_guardB.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 1, 'clean_base': 0}; cut at max tokens 1
+  clean: miss 23.0%, FA 10.8%, mean generated tokens 799
+  clean of this file vs clean of the base file (''): d miss  +0.0 [ -2.3,  +2.3], d FA  -3.6 [ -7.5,  +0.0]
+  claim_e: miss 32.8% (d  +9.8 [ +4.8, +15.2]), FA 2.9% (d  -7.9 [-14.4,  -2.3]); reasoning mentions the note 39.2%; wrong summaries flipped to accept 12, to reject 0; mean generated tokens 1045
+      vs clean of the base file: d miss  +9.8 [ +4.9, +15.3]
+
+wrote results/think_check_guardB_main.json

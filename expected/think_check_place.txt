@@ -1,0 +1,82 @@
+
+===== qwen (thinking on, file results/think_qwen_place.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 3, 'claim_e_after': 2, 'claim_e_insum': 3, 'claim_e_inject': 0}; cut at max tokens 8
+  clean: miss 14.3%, FA 30.2%, mean generated tokens 553
+  claim_e: miss 33.1% (d +18.8 [+11.6, +27.1]), FA 8.7% (d -21.5 [-31.9, -11.5]); reasoning mentions the note 79.6%; wrong summaries flipped to accept 23, to reject 0; mean generated tokens 1005
+  claim_e_after: miss 26.4% (d +12.1 [ +6.1, +19.4]), FA 12.3% (d -17.9 [-26.6,  -9.9]); reasoning mentions the note 79.2%; wrong summaries flipped to accept 15, to reject 0; mean generated tokens 1053
+  claim_e_insum: miss 16.8% (d  +2.5 [ -0.8,  +6.0]), FA 33.6% (d  +3.4 [ -9.5, +16.9]); reasoning mentions the note 73.6%; wrong summaries flipped to accept 4, to reject 1; mean generated tokens 1404
+  claim_e_inject: miss 26.2% (d +11.9 [ +5.9, +19.1]), FA 12.9% (d -17.3 [-27.1,  -9.0]); reasoning mentions the note 59.2%; wrong summaries flipped to accept 15, to reject 0; mean generated tokens 773
+  pair claim_e_after - claim_e: d miss  -6.7 [-13.7,  -0.3], d FA  +3.6 [ -2.6,  +9.4]
+  pair claim_e_insum - claim_e: d miss -16.3 [-24.3,  -9.6], d FA +24.9 [+15.7, +34.6]
+  pair claim_e_inject - claim_e: d miss  -6.9 [-15.3,  +0.6], d FA  +4.3 [ -3.0, +12.1]
+
+===== nemotron (thinking on, file results/think_nemotron_place.jsonl): 265 test items (126 wrong); no verdict {'clean': 1, 'claim_e': 3, 'claim_e_after': 1, 'claim_e_insum': 5, 'claim_e_inject': 6}; cut at max tokens 16
+  clean: miss 24.6%, FA 5.8%, mean generated tokens 1291
+  claim_e: miss 44.8% (d +20.2 [+13.8, +27.0]), FA 0.7% (d  -5.1 [-10.2,  -0.8]); reasoning mentions the note 95.8%; wrong summaries flipped to accept 25, to reject 0; mean generated tokens 1751
+  claim_e_after: miss 38.4% (d +13.8 [ +7.0, +21.3]), FA 0.7% (d  -5.1 [-10.2,  -0.8]); reasoning mentions the note 97.7%; wrong summaries flipped to accept 18, to reject 1; mean generated tokens 1796
+  claim_e_insum: miss 36.1% (d +11.5 [ +5.1, +18.8]), FA 1.4% (d  -4.3 [ -9.4,  -0.7]); reasoning mentions the note 96.6%; wrong summaries flipped to accept 14, to reject 1; mean generated tokens 2086
+  claim_e_inject: miss 39.3% (d +14.7 [ +7.6, +22.8]), FA 3.6% (d  -2.1 [ -5.9,  +1.4]); reasoning mentions the note 90.6%; wrong summaries flipped to accept 17, to reject 0; mean generated tokens 1769
+  pair claim_e_after - claim_e: d miss  -6.4 [-13.9,  +0.1], d FA  -0.0 [ -0.0,  +0.0]
+  pair claim_e_insum - claim_e: d miss  -8.7 [-15.5,  -2.2], d FA  +0.7 [ -0.0,  +2.4]
+  pair claim_e_inject - claim_e: d miss  -5.5 [-10.7,  -0.5], d FA  +2.9 [ +0.7,  +6.0]
+
+===== gemma (thinking on, file results/think_gemma_place.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 1, 'claim_e_after': 1, 'claim_e_insum': 2, 'claim_e_inject': 0}; cut at max tokens 4
+  clean: miss 23.8%, FA 11.5%, mean generated tokens 698
+  claim_e: miss 36.5% (d +12.7 [ +5.7, +21.2]), FA 5.1% (d  -6.4 [-12.4,  -1.4]); reasoning mentions the note 40.8%; wrong summaries flipped to accept 17, to reject 1; mean generated tokens 986
+  claim_e_after: miss 25.4% (d  +1.6 [ +0.0,  +4.0]), FA 9.4% (d  -2.1 [ -6.2,  +1.5]); reasoning mentions the note 39.6%; wrong summaries flipped to accept 2, to reject 0; mean generated tokens 855
+  claim_e_insum: miss 24.6% (d  +0.8 [ -1.8,  +3.6]), FA 8.0% (d  -3.5 [ -7.9,  +0.1]); reasoning mentions the note 52.5%; wrong summaries flipped to accept 2, to reject 1; mean generated tokens 1014
+  claim_e_inject: miss 32.5% (d  +8.7 [ +4.2, +14.7]), FA 5.0% (d  -6.5 [-12.6,  -0.8]); reasoning mentions the note 40.8%; wrong summaries flipped to accept 11, to reject 0; mean generated tokens 921
+  pair claim_e_after - claim_e: d miss -11.1 [-18.8,  -4.7], d FA  +4.3 [ +0.6,  +8.7]
+  pair claim_e_insum - claim_e: d miss -11.9 [-19.0,  -5.9], d FA  +3.0 [ -0.7,  +7.1]
+  pair claim_e_inject - claim_e: d miss  -4.0 [ -9.6,  +0.8], d FA  -0.0 [ -3.0,  +2.9]
+
+===== gptoss (thinking on, file results/think_gptoss_place.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'claim_e_after': 0, 'claim_e_insum': 0, 'claim_e_inject': 0}; cut at max tokens 0
+  clean: miss 24.6%, FA 7.9%, mean generated tokens 284
+  claim_e: miss 27.8% (d  +3.2 [ +0.0,  +7.4]), FA 8.6% (d  +0.7 [ -3.8,  +6.2]); reasoning mentions the note 14.7%; wrong summaries flipped to accept 5, to reject 1; mean generated tokens 307
+  claim_e_after: miss 24.6% (d  +0.0 [ -2.3,  +2.1]), FA 8.6% (d  +0.7 [ -3.3,  +5.5]); reasoning mentions the note 5.7%; wrong summaries flipped to accept 1, to reject 1; mean generated tokens 331
+  claim_e_insum: miss 22.2% (d  -2.4 [ -7.1,  +0.9]), FA 15.1% (d  +7.2 [ +1.9, +13.8]); reasoning mentions the note 21.1%; wrong summaries flipped to accept 1, to reject 4; mean generated tokens 343
+  claim_e_inject: miss 26.2% (d  +1.6 [ -3.1,  +6.5]), FA 10.1% (d  +2.2 [ -3.2,  +8.2]); reasoning mentions the note 8.7%; wrong summaries flipped to accept 5, to reject 3; mean generated tokens 308
+  pair claim_e_after - claim_e: d miss  -3.2 [ -6.5,  -0.7], d FA  +0.0 [ -6.0,  +6.1]
+  pair claim_e_insum - claim_e: d miss  -5.6 [-10.7,  -1.6], d FA  +6.5 [ -1.9, +14.8]
+  pair claim_e_inject - claim_e: d miss  -1.6 [ -5.8,  +2.0], d FA  +1.4 [ -4.7,  +6.8]
+
+===== glm (thinking on, file results/think_glm_place.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 1, 'claim_e_after': 3, 'claim_e_insum': 1, 'claim_e_inject': 0}; cut at max tokens 4
+  clean: miss 27.8%, FA 7.2%, mean generated tokens 1066
+  claim_e: miss 42.4% (d +14.6 [ +7.0, +22.8]), FA 2.9% (d  -4.3 [ -9.0,  +0.7]); reasoning mentions the note 90.2%; wrong summaries flipped to accept 19, to reject 1; mean generated tokens 1645
+  claim_e_after: miss 33.1% (d  +5.3 [ +0.9,  +9.9]), FA 2.9% (d  -4.3 [ -8.2,  -0.7]); reasoning mentions the note 92.8%; wrong summaries flipped to accept 9, to reject 2; mean generated tokens 1695
+  claim_e_insum: miss 29.6% (d  +1.8 [ -1.7,  +6.1]), FA 3.6% (d  -3.6 [ -8.3,  +1.7]); reasoning mentions the note 87.9%; wrong summaries flipped to accept 5, to reject 3; mean generated tokens 1657
+  claim_e_inject: miss 36.5% (d  +8.7 [ +4.0, +14.4]), FA 5.0% (d  -2.2 [ -6.8,  +2.6]); reasoning mentions the note 86.0%; wrong summaries flipped to accept 13, to reject 2; mean generated tokens 1585
+  pair claim_e_after - claim_e: d miss  -9.3 [-17.1,  -1.1], d FA  +0.0 [ -3.5,  +3.3]
+  pair claim_e_insum - claim_e: d miss -12.8 [-20.1,  -5.0], d FA  +0.7 [ -3.1,  +5.2]
+  pair claim_e_inject - claim_e: d miss  -5.9 [-14.5,  +3.6], d FA  +2.2 [ -1.7,  +6.0]
+
+===== qwen36 (thinking on, file results/think_qwen36_place.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'claim_e_after': 0, 'claim_e_insum': 0, 'claim_e_inject': 0}; cut at max tokens 0
+  clean: miss 23.8%, FA 8.6%, mean generated tokens 1037
+  claim_e: miss 30.2% (d  +6.3 [ +2.3, +11.1]), FA 3.6% (d  -5.0 [-10.0,  -0.7]); reasoning mentions the note 95.1%; wrong summaries flipped to accept 8, to reject 0; mean generated tokens 1095
+  claim_e_after: miss 26.2% (d  +2.4 [ -2.5,  +6.8]), FA 2.9% (d  -5.8 [-11.5,  -1.4]); reasoning mentions the note 97.7%; wrong summaries flipped to accept 5, to reject 2; mean generated tokens 1156
+  claim_e_insum: miss 24.6% (d  +0.8 [ -4.3,  +5.3]), FA 5.8% (d  -2.9 [ -6.9,  +0.7]); reasoning mentions the note 98.5%; wrong summaries flipped to accept 4, to reject 3; mean generated tokens 1326
+  claim_e_inject: miss 27.0% (d  +3.2 [ +0.0,  +7.2]), FA 5.0% (d  -3.6 [ -7.7,  +0.0]); reasoning mentions the note 91.7%; wrong summaries flipped to accept 5, to reject 1; mean generated tokens 1052
+  pair claim_e_after - claim_e: d miss  -4.0 [ -8.4,  +0.0], d FA  -0.7 [ -4.1,  +2.4]
+  pair claim_e_insum - claim_e: d miss  -5.6 [-10.5,  -0.8], d FA  +2.2 [ +0.0,  +4.8]
+  pair claim_e_inject - claim_e: d miss  -3.2 [ -8.1,  +1.6], d FA  +1.4 [ +0.0,  +3.7]
+
+===== gemma31 (thinking on, file results/think_gemma31_place.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'claim_e_after': 0, 'claim_e_insum': 0, 'claim_e_inject': 0}; cut at max tokens 0
+  clean: miss 23.8%, FA 11.5%, mean generated tokens 436
+  claim_e: miss 29.4% (d  +5.6 [ +1.6, +10.1]), FA 4.3% (d  -7.2 [-13.3,  -2.0]); reasoning mentions the note 24.5%; wrong summaries flipped to accept 7, to reject 0; mean generated tokens 547
+  claim_e_after: miss 24.6% (d  +0.8 [ +0.0,  +2.4]), FA 8.6% (d  -2.9 [ -6.3,  +0.0]); reasoning mentions the note 30.2%; wrong summaries flipped to accept 1, to reject 0; mean generated tokens 503
+  claim_e_insum: miss 24.6% (d  +0.8 [ +0.0,  +2.4]), FA 11.5% (d  +0.0 [ -3.2,  +3.9]); reasoning mentions the note 32.1%; wrong summaries flipped to accept 1, to reject 0; mean generated tokens 557
+  claim_e_inject: miss 27.0% (d  +3.2 [ +0.7,  +6.3]), FA 8.6% (d  -2.9 [ -6.3,  +0.0]); reasoning mentions the note 17.4%; wrong summaries flipped to accept 4, to reject 0; mean generated tokens 506
+  pair claim_e_after - claim_e: d miss  -4.8 [ -8.7,  -1.5], d FA  +4.3 [ +0.8,  +8.0]
+  pair claim_e_insum - claim_e: d miss  -4.8 [ -8.7,  -1.5], d FA  +7.2 [ +1.6, +13.6]
+  pair claim_e_inject - claim_e: d miss  -2.4 [ -5.1,  +0.0], d FA  +4.3 [ +1.4,  +7.9]
+
+===== muse (thinking on, file results/think_muse_place.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0, 'claim_e_after': 0, 'claim_e_insum': 0, 'claim_e_inject': 0}; cut at max tokens 0
+  clean: miss 11.1%, FA 48.2%, mean generated tokens 425
+  claim_e: miss 24.6% (d +13.5 [ +7.1, +21.4]), FA 24.5% (d -23.7 [-33.1, -14.2]); reasoning mentions the note 98.9%; wrong summaries flipped to accept 17, to reject 0; mean generated tokens 496
+  claim_e_after: miss 18.3% (d  +7.1 [ +2.0, +12.8]), FA 32.4% (d -15.8 [-24.8,  -7.3]); reasoning mentions the note 97.0%; wrong summaries flipped to accept 10, to reject 1; mean generated tokens 569
+  claim_e_insum: miss 15.9% (d  +4.8 [ +1.6,  +8.2]), FA 46.8% (d  -1.4 [-11.2,  +8.0]); reasoning mentions the note 73.6%; wrong summaries flipped to accept 8, to reject 2; mean generated tokens 523
+  claim_e_inject: miss 24.6% (d +13.5 [ +6.6, +22.7]), FA 28.8% (d -19.4 [-28.8, -10.4]); reasoning mentions the note 100.0%; wrong summaries flipped to accept 17, to reject 0; mean generated tokens 467
+  pair claim_e_after - claim_e: d miss  -6.3 [-14.8,  +0.0], d FA  +7.9 [ +3.1, +13.6]
+  pair claim_e_insum - claim_e: d miss  -8.7 [-17.0,  -2.8], d FA +22.3 [+13.3, +31.9]
+  pair claim_e_inject - claim_e: d miss  +0.0 [ -2.9,  +3.4], d FA  +4.3 [ +1.4,  +7.5]
+
+wrote results/think_check_place.json

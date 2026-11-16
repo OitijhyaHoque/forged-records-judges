@@ -1,0 +1,6 @@
+
+===== gptoss (thinking on, file results/think_gptoss_low.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 0}; cut at max tokens 0
+  clean: miss 25.4%, FA 5.0%, mean generated tokens 103
+  claim_e: miss 25.4% (d  +0.0 [ -3.2,  +3.3]), FA 7.2% (d  +2.2 [ +0.0,  +4.8]); reasoning mentions the note 3.0%; wrong summaries flipped to accept 3, to reject 3; mean generated tokens 117
+
+wrote results/think_check_low.json

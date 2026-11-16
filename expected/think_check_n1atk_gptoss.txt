@@ -1,0 +1,10 @@
+
+===== gptoss (thinking on, file results/think_gptoss_n1atk.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'atk_rand': 0, 'atk_best': 0, 'claim_e': 0}; cut at max tokens 0
+  clean: miss 23.0%, FA 9.4%, mean generated tokens 288
+  atk_rand: miss 29.4% (d  +6.3 [ +1.2, +11.5]), FA 13.7% (d  +4.3 [ +0.0,  +9.1]); reasoning mentions the note 9.8%; wrong summaries flipped to accept 10, to reject 2; mean generated tokens 293
+  atk_best: miss 40.5% (d +17.5 [+10.3, +25.0]), FA 10.8% (d  +1.4 [ -3.5,  +6.1]); reasoning mentions the note 11.3%; wrong summaries flipped to accept 23, to reject 1; mean generated tokens 307
+  claim_e: miss 24.6% (d  +1.6 [ -1.5,  +5.0]), FA 9.4% (d  +0.0 [ -4.9,  +4.8]); reasoning mentions the note 13.2%; wrong summaries flipped to accept 3, to reject 1; mean generated tokens 305
+  pair atk_best - atk_rand: d miss +11.1 [ +4.5, +18.6], d FA  -2.9 [ -6.9,  +0.8]
+  pair atk_best - claim_e: d miss +15.9 [ +9.0, +23.2], d FA  +1.4 [ -2.1,  +5.7]
+
+wrote results/think_check_n1atk_gptoss.json

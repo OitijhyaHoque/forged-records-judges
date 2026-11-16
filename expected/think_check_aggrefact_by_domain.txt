@@ -1,0 +1,24 @@
+== qwen (_aggrefact)
+  AggreFact-XSum   n=182 (98 wrong, 174 docs): miss 4.1 -> 77.3, d miss +73.2 [+64.0, +81.6]; FA 54.8 -> 3.6
+  Lfqa             n=184 (91 wrong, 59 docs): miss 3.3 -> 54.9, d miss +51.6 [+40.9, +61.6]; FA 22.6 -> 2.2
+  TofuEval-MediaS  n=176 (88 wrong, 11 docs): miss 37.5 -> 74.7, d miss +37.2 [+26.0, +46.5]; FA 18.2 -> 1.1
+== nemotron (_aggrefact)
+  AggreFact-XSum   n=182 (98 wrong, 174 docs): miss 19.4 -> 68.4, d miss +49.0 [+39.2, +59.8]; FA 26.2 -> 6.0
+  Lfqa             n=184 (91 wrong, 59 docs): miss 15.4 -> 34.8, d miss +19.4 [ +8.8, +30.0]; FA 8.6 -> 4.3
+  TofuEval-MediaS  n=176 (88 wrong, 11 docs): miss 50.0 -> 72.7, d miss +22.7 [+10.2, +35.0]; FA 5.7 -> 1.1
+== gemma (_aggrefact)
+  AggreFact-XSum   n=182 (98 wrong, 174 docs): miss 10.2 -> 60.2, d miss +50.0 [+39.4, +60.0]; FA 33.3 -> 3.6
+  Lfqa             n=184 (91 wrong, 59 docs): miss 11.0 -> 37.4, d miss +26.4 [+17.5, +35.3]; FA 11.8 -> 3.2
+  TofuEval-MediaS  n=176 (88 wrong, 11 docs): miss 47.7 -> 72.7, d miss +25.0 [+13.2, +35.0]; FA 11.4 -> 1.1
+== gptoss (_aggrefact)
+  AggreFact-XSum   n=182 (98 wrong, 174 docs): miss 14.3 -> 27.6, d miss +13.3 [ +6.3, +20.5]; FA 34.5 -> 25.0
+  Lfqa             n=184 (91 wrong, 59 docs): miss 9.9 -> 20.9, d miss +11.0 [ +3.6, +17.8]; FA 11.8 -> 6.5
+  TofuEval-MediaS  n=176 (88 wrong, 11 docs): miss 48.9 -> 47.7, d miss  -1.1 [ -8.5,  +5.4]; FA 10.2 -> 9.1
+== glm (_aggrefact)
+  AggreFact-XSum   n=182 (98 wrong, 174 docs): miss 24.5 -> 58.9, d miss +34.5 [+24.4, +45.4]; FA 32.5 -> 10.7
+  Lfqa             n=184 (91 wrong, 59 docs): miss 16.7 -> 37.4, d miss +20.7 [+11.3, +29.3]; FA 5.4 -> 1.1
+  TofuEval-MediaS  n=176 (88 wrong, 11 docs): miss 51.1 -> 64.0, d miss +12.8 [ +4.2, +20.2]; FA 10.2 -> 5.7
+== qwen36 (_aggrefact)
+  AggreFact-XSum   n=182 (98 wrong, 174 docs): miss 23.5 -> 72.4, d miss +49.0 [+38.9, +58.4]; FA 22.6 -> 6.0
+  Lfqa             n=184 (91 wrong, 59 docs): miss 11.0 -> 30.8, d miss +19.8 [+13.3, +27.7]; FA 4.3 -> 3.2
+  TofuEval-MediaS  n=176 (88 wrong, 11 docs): miss 52.3 -> 76.1, d miss +23.9 [+13.2, +33.0]; FA 3.4 -> 1.1

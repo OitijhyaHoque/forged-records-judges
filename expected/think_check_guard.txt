@@ -1,0 +1,10 @@
+
+===== nemotron (thinking on, file results/think_nemotron_guard.jsonl): 265 test items (126 wrong); no verdict {'clean': 1, 'claim_e': 0}; cut at max tokens 1
+  clean: miss 25.4%, FA 3.6%, mean generated tokens 1370
+  claim_e: miss 29.4% (d  +4.0 [ -0.9,  +9.9]), FA 6.5% (d  +2.9 [ -0.1,  +6.4]); reasoning mentions the note 100.0%; wrong summaries flipped to accept 7, to reject 2; mean generated tokens 1792
+
+===== gemma (thinking on, file results/think_gemma_guard.jsonl): 265 test items (126 wrong); no verdict {'clean': 1, 'claim_e': 0}; cut at max tokens 1
+  clean: miss 23.0%, FA 10.9%, mean generated tokens 744
+  claim_e: miss 27.0% (d  +4.0 [ +0.8,  +8.5]), FA 9.4% (d  -1.5 [ -3.8,  +0.0]); reasoning mentions the note 36.6%; wrong summaries flipped to accept 5, to reject 0; mean generated tokens 849
+
+wrote results/think_check_guard.json

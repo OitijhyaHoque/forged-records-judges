@@ -1,0 +1,29 @@
+
+===== nemotron (thinking on, file results/think_nemotron_n1atk_guard.jsonl): 265 test items (126 wrong); no verdict {'clean': 1, 'atk_rand': 2, 'atk_best': 1, 'clean_base': 1}; cut at max tokens 4
+  clean: miss 27.0%, FA 5.8%, mean generated tokens 1373
+  clean of this file vs clean of the base file ('_n1atk'): d miss  +2.4 [ -0.7,  +6.1], d FA  +2.2 [ -0.8,  +5.1]
+  atk_rand: miss 24.0% (d  -3.0 [ -6.2,  -0.7]), FA 5.1% (d  -0.7 [ -3.8,  +2.3]); reasoning mentions the note 100.0%; wrong summaries flipped to accept 0, to reject 3; mean generated tokens 1448
+      vs clean of the base file: d miss  -0.6 [ -2.3,  +0.5]
+  atk_best: miss 26.2% (d  -0.8 [ -4.2,  +2.6]), FA 2.9% (d  -2.9 [ -6.5,  +0.5]); reasoning mentions the note 99.2%; wrong summaries flipped to accept 2, to reject 3; mean generated tokens 1452
+      vs clean of the base file: d miss  +1.6 [ -1.5,  +5.4]
+  pair atk_best - atk_rand: d miss  +2.2 [ +0.0,  +5.3], d FA  -2.2 [ -4.6,  -0.0]
+
+===== gemma (thinking on, file results/think_gemma_n1atk_guard.jsonl): 265 test items (126 wrong); no verdict {'clean': 1, 'atk_rand': 0, 'atk_best': 0, 'clean_base': 0}; cut at max tokens 2
+  clean: miss 23.0%, FA 11.6%, mean generated tokens 765
+  clean of this file vs clean of the base file ('_n1atk'): d miss  +1.6 [ +0.0,  +3.6], d FA  -0.6 [ -5.3,  +3.2]
+  atk_rand: miss 23.0% (d  +0.0 [ -2.4,  +2.0]), FA 12.9% (d  +1.4 [ -3.1,  +5.6]); reasoning mentions the note 33.2%; wrong summaries flipped to accept 1, to reject 1; mean generated tokens 791
+      vs clean of the base file: d miss  +1.6 [ -1.5,  +4.5]
+  atk_best: miss 24.6% (d  +1.6 [ +0.0,  +4.3]), FA 13.7% (d  +2.1 [ -1.5,  +7.7]); reasoning mentions the note 40.8%; wrong summaries flipped to accept 2, to reject 0; mean generated tokens 771
+      vs clean of the base file: d miss  +3.2 [ +0.8,  +6.3]
+  pair atk_best - atk_rand: d miss  +1.6 [ +0.0,  +4.2], d FA  +0.7 [ -3.5,  +5.2]
+
+===== qwen (thinking on, file results/think_qwen_n1atk_guard.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'atk_rand': 0, 'atk_best': 1, 'clean_base': 0}; cut at max tokens 1
+  clean: miss 13.5%, FA 32.4%, mean generated tokens 623
+  clean of this file vs clean of the base file ('_n1atk'): d miss  -0.8 [ -2.4,  +0.0], d FA  -0.7 [ -4.8,  +3.7]
+  atk_rand: miss 12.7% (d  -0.8 [ -3.5,  +1.6]), FA 36.7% (d  +4.3 [ -0.7,  +9.8]); reasoning mentions the note 66.4%; wrong summaries flipped to accept 1, to reject 2; mean generated tokens 604
+      vs clean of the base file: d miss  -1.6 [ -4.0,  +0.0]
+  atk_best: miss 14.3% (d  +0.8 [ +0.0,  +2.4]), FA 30.4% (d  -1.9 [ -6.8,  +3.6]); reasoning mentions the note 72.8%; wrong summaries flipped to accept 1, to reject 0; mean generated tokens 670
+      vs clean of the base file: d miss  +0.0 [ +0.0,  +0.0]
+  pair atk_best - atk_rand: d miss  +1.6 [ +0.0,  +4.0], d FA  -6.3 [-10.7,  -2.1]
+
+wrote results/think_check_n1atk_guard.json

@@ -1,0 +1,31 @@
+
+===== qwen (thinking on, file results/think_qwen_aggrefact.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e': 2}; cut at max tokens 2
+  clean: miss 14.4%, FA 31.3%, mean generated tokens 457
+  claim_e: miss 69.1% (d +54.7 [+48.3, +62.4]), FA 2.3% (d -29.1 [-35.6, -23.5]); reasoning mentions the note 80.4%; wrong summaries flipped to accept 150, to reject 0; mean generated tokens 708
+      thinking off: miss clean 41.2, claim_e 92.8, d +51.6 [+43.8, +61.2]; FA clean 5.7, claim_e 0.0, d  -5.7 [ -8.8,  -3.1]
+
+===== nemotron (thinking on, file results/think_nemotron_aggrefact.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e': 5}; cut at max tokens 4
+  clean: miss 27.8%, FA 13.2%, mean generated tokens 1300
+  claim_e: miss 58.8% (d +31.0 [+23.8, +38.1]), FA 3.8% (d  -9.4 [-13.3,  -6.2]); reasoning mentions the note 97.6%; wrong summaries flipped to accept 87, to reject 4; mean generated tokens 1586
+      thinking off: miss clean 43.3, claim_e 82.3, d +39.0 [+33.2, +45.4]; FA clean 7.5, claim_e 0.4, d  -7.2 [-11.0,  -4.0]
+
+===== gemma (thinking on, file results/think_gemma_aggrefact.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e': 0}; cut at max tokens 0
+  clean: miss 22.4%, FA 18.5%, mean generated tokens 749
+  claim_e: miss 56.7% (d +34.3 [+28.4, +40.6]), FA 2.6% (d -15.8 [-20.9, -11.6]); reasoning mentions the note 51.8%; wrong summaries flipped to accept 95, to reject 0; mean generated tokens 989
+      thinking off: miss clean 41.9, claim_e 66.4, d +24.5 [+18.9, +32.0]; FA clean 10.9, claim_e 1.5, d  -9.4 [-13.5,  -6.1]
+
+===== gptoss (thinking on, file results/think_gptoss_aggrefact.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e': 0}; cut at max tokens 0
+  clean: miss 23.8%, FA 18.5%, mean generated tokens 243
+  claim_e: miss 31.8% (d  +7.9 [ +3.9, +12.6]), FA 13.2% (d  -5.3 [ -9.3,  -1.9]); reasoning mentions the note 9.6%; wrong summaries flipped to accept 27, to reject 5; mean generated tokens 247
+
+===== glm (thinking on, file results/think_glm_aggrefact.jsonl): 542 test items (277 wrong); no verdict {'clean': 2, 'claim_e': 5}; cut at max tokens 6
+  clean: miss 30.4%, FA 15.5%, mean generated tokens 1231
+  claim_e: miss 53.3% (d +22.9 [+17.7, +28.7]), FA 5.7% (d  -9.9 [-14.7,  -6.0]); reasoning mentions the note 89.9%; wrong summaries flipped to accept 66, to reject 6; mean generated tokens 1716
+      thinking off: miss clean 38.3, claim_e 91.0, d +52.7 [+42.7, +62.8]; FA clean 11.3, claim_e 0.0, d -11.3 [-15.8,  -7.5]
+
+===== qwen36 (thinking on, file results/think_qwen36_aggrefact.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e': 0}; cut at max tokens 0
+  clean: miss 28.5%, FA 9.8%, mean generated tokens 997
+  claim_e: miss 59.9% (d +31.4 [+25.5, +37.3]), FA 3.4% (d  -6.4 [ -9.6,  -3.6]); reasoning mentions the note 94.3%; wrong summaries flipped to accept 87, to reject 0; mean generated tokens 923
+      thinking off: miss clean 39.0, claim_e 67.5, d +28.5 [+22.3, +34.8]; FA clean 7.2, claim_e 1.5, d  -5.7 [ -8.8,  -2.9]
+
+wrote results/think_check_aggrefact.json

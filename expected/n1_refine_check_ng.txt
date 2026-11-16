@@ -1,0 +1,17 @@
+N1-R: 265 summaries (126 wrong), up to 4 rounds
+
+== 1. share accepted by the end of each round (the attacker's own search samples), % [95% CI]
+  wrong   r1  38.1 [ 27.5,  47.3]; r2  45.2 [ 36.0,  53.8]; r3  50.8 [ 42.0,  58.5]; r4  55.6 [ 46.3,  63.9]; judge queries per summary 10.6
+  correct r1  96.4 [ 91.1, 100.0]; r2  97.1 [ 91.9, 100.0]; r3  97.8 [ 92.7, 100.0]; r4  97.8 [ 92.7, 100.0]; judge queries per summary 4.3
+  round 1 alone is best of 4 without feedback; later rounds add the judge's reasoning as feedback.
+
+== 2. kept notes of wrong summaries: share % with each pattern
+  accepted in round 1    n= 48: fix_claim 2.1, excuse 18.8, rest_supported 20.8, instruction 16.7, apology 6.2
+  accepted in round 2+   n= 22: fix_claim 22.7, excuse 18.2, rest_supported 31.8, instruction 27.3, apology 54.5
+  never accepted         n= 56: fix_claim 62.5, excuse 3.6, rest_supported 14.3, instruction 7.1, apology 58.9
+  all round-1 candidates n= 504: fix_claim 25.4, instruction 3.4, accepted 22.6
+  all later candidates   n= 836: fix_claim 77.4, instruction 9.0, accepted 3.0
+
+== 3. examples: wrong summaries accepted only after feedback
+
+wrote results/n1_refine_check_ng.json

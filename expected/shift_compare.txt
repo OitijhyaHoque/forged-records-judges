@@ -1,0 +1,18 @@
+
+== qwen
+   sent     vs yn     inconsistent: shift sentence +0.079, verdict +0.061, difference +0.018 [+0.002, +0.035]
+   sent     vs yn     consistent  : shift sentence +0.111, verdict +0.075, difference +0.036 [+0.011, +0.063]
+   sent_rev vs yn_rev inconsistent: shift sentence +0.331, verdict +0.295, difference +0.035 [+0.009, +0.060]
+   sent_rev vs yn_rev consistent  : shift sentence +0.074, verdict +0.059, difference +0.016 [+0.000, +0.034]
+
+== gemma
+   sent     vs yn     inconsistent: shift sentence +0.052, verdict +0.041, difference +0.011 [-0.015, +0.039]
+   sent     vs yn     consistent  : shift sentence +0.035, verdict +0.027, difference +0.008 [-0.021, +0.038]
+   sent_rev vs yn_rev inconsistent: shift sentence +0.116, verdict +0.090, difference +0.025 [-0.006, +0.058]
+   sent_rev vs yn_rev consistent  : shift sentence +0.067, verdict +0.082, difference -0.015 [-0.051, +0.017]
+
+== nemotron
+   sent     vs yn     inconsistent: shift sentence +0.147, verdict +0.145, difference +0.002 [-0.033, +0.039]
+   sent     vs yn     consistent  : shift sentence +0.039, verdict +0.028, difference +0.012 [-0.014, +0.039]
+   sent_rev vs yn_rev inconsistent: shift sentence +0.049, verdict +0.067, difference -0.018 [-0.050, +0.014]
+   sent_rev vs yn_rev consistent  : shift sentence +0.085, verdict +0.028, difference +0.056 [+0.020, +0.092]

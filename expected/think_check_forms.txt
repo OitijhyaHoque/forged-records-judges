@@ -1,0 +1,50 @@
+
+===== nemotron (thinking on, file results/think_nemotron_forms.jsonl): 265 test items (126 wrong); no verdict {'clean': 1, 'pointer_e': 1, 'claim_o': 4, 'claim_global': 2, 'bare_e': 1, 'claim_e': 1}; cut at max tokens 10
+  clean: miss 26.2%, FA 4.3%, mean generated tokens 1293
+  pointer_e: miss 27.8% (d  +1.6 [ -2.5,  +6.7]), FA 8.7% (d  +4.3 [ +0.7,  +9.2]); reasoning mentions the note 81.5%; wrong summaries flipped to accept 4, to reject 2; mean generated tokens 1516
+      thinking off: miss clean 32.5, pointer_e 29.4, d  -3.2 [-10.3,  +3.5]; FA clean 15.1, pointer_e 18.7, d  +3.6 [ -5.7, +14.8]
+  claim_o: miss 28.0% (d  +1.8 [ -1.0,  +4.8]), FA 2.2% (d  -2.1 [ -4.7,  +0.0]); reasoning mentions the note 94.3%; wrong summaries flipped to accept 3, to reject 0; mean generated tokens 1626
+      thinking off: miss clean 32.5, claim_o 37.3, d  +4.8 [ -0.7, +10.5]; FA clean 15.1, claim_o 9.4, d  -5.8 [-17.1,  +3.9]
+  claim_global: miss 31.5% (d  +5.3 [ +1.6, +10.6]), FA 0.7% (d  -3.6 [ -7.1,  -0.8]); reasoning mentions the note 77.0%; wrong summaries flipped to accept 6, to reject 0; mean generated tokens 1575
+      thinking off: miss clean 32.5, claim_global 31.0, d  -1.6 [ -5.2,  +1.4]; FA clean 15.1, claim_global 12.2, d  -2.9 [ -8.3,  +0.8]
+  bare_e: miss 37.6% (d +11.4 [ +3.9, +19.9]), FA 5.0% (d  +0.7 [ -2.3,  +4.0]); reasoning mentions the note 88.3%; wrong summaries flipped to accept 16, to reject 2; mean generated tokens 1618
+      thinking off: miss clean 32.5, bare_e 35.7, d  +3.2 [ -3.1,  +9.4]; FA clean 15.1, bare_e 12.2, d  -2.9 [-10.9,  +4.4]
+  claim_e: miss 42.4% (d +16.2 [ +8.8, +25.0]), FA 2.2% (d  -2.2 [ -4.8,  -0.0]); reasoning mentions the note 97.4%; wrong summaries flipped to accept 20, to reject 0; mean generated tokens 1692
+      thinking off: miss clean 32.5, claim_e 40.5, d  +7.9 [ +1.5, +14.3]; FA clean 15.1, claim_e 14.4, d  -0.7 [ -8.6,  +8.1]
+  pair claim_e - claim_o: d miss +14.4 [ +7.0, +22.7], d FA  -0.0 [ -2.2,  +2.0]
+  pair claim_e - claim_global: d miss +10.9 [ +4.0, +18.9], d FA  +1.4 [ +0.0,  +3.6]
+  pair bare_e - pointer_e: d miss  +9.8 [ +3.4, +17.8], d FA  -3.7 [ -9.8,  +1.5]
+
+===== gemma (thinking on, file results/think_gemma_forms.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'pointer_e': 1, 'claim_o': 0, 'claim_global': 1, 'bare_e': 0, 'claim_e': 0}; cut at max tokens 2
+  clean: miss 23.0%, FA 14.4%, mean generated tokens 773
+  pointer_e: miss 22.2% (d  -0.8 [ -3.2,  +1.8]), FA 11.6% (d  -2.8 [ -9.5,  +2.7]); reasoning mentions the note 38.9%; wrong summaries flipped to accept 1, to reject 2; mean generated tokens 848
+      thinking off: miss clean 23.0, pointer_e 23.0, d  +0.0 [ -3.0,  +3.2]; FA clean 12.9, pointer_e 12.2, d  -0.7 [ -6.8,  +4.0]
+  claim_o: miss 23.8% (d  +0.8 [ -1.7,  +3.8]), FA 5.8% (d  -8.6 [-16.5,  -1.7]); reasoning mentions the note 23.8%; wrong summaries flipped to accept 2, to reject 1; mean generated tokens 743
+      thinking off: miss clean 23.0, claim_o 25.4, d  +2.4 [ -1.8,  +7.1]; FA clean 12.9, claim_o 10.8, d  -2.2 [ -8.1,  +3.0]
+  claim_global: miss 25.4% (d  +2.4 [ +0.0,  +5.2]), FA 4.3% (d -10.0 [-18.7,  -2.5]); reasoning mentions the note 12.8%; wrong summaries flipped to accept 3, to reject 0; mean generated tokens 749
+      thinking off: miss clean 23.0, claim_global 23.8, d  +0.8 [ +0.0,  +2.5]; FA clean 12.9, claim_global 12.2, d  -0.7 [ -2.3,  +0.0]
+  bare_e: miss 40.5% (d +17.5 [+10.0, +26.0]), FA 6.5% (d  -7.9 [-15.1,  -2.0]); reasoning mentions the note 56.6%; wrong summaries flipped to accept 22, to reject 0; mean generated tokens 972
+      thinking off: miss clean 23.0, bare_e 27.8, d  +4.8 [ +0.0,  +9.3]; FA clean 12.9, bare_e 6.5, d  -6.5 [-12.9,  -0.8]
+  claim_e: miss 35.7% (d +12.7 [ +6.7, +20.1]), FA 3.6% (d -10.8 [-18.9,  -3.4]); reasoning mentions the note 42.6%; wrong summaries flipped to accept 16, to reject 0; mean generated tokens 988
+      thinking off: miss clean 23.0, claim_e 27.8, d  +4.8 [ +0.6,  +9.6]; FA clean 12.9, claim_e 10.1, d  -2.9 [ -8.2,  +0.8]
+  pair claim_e - claim_o: d miss +11.9 [ +6.2, +18.9], d FA  -2.2 [ -5.7,  +0.8]
+  pair claim_e - claim_global: d miss +10.3 [ +4.6, +17.4], d FA  -0.8 [ -4.3,  +3.1]
+  pair bare_e - pointer_e: d miss +18.3 [+11.5, +25.8], d FA  -5.1 [ -9.7,  -1.3]
+
+===== qwen (thinking on, file results/think_qwen_forms.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'pointer_e': 0, 'claim_o': 1, 'claim_global': 0, 'bare_e': 2, 'claim_e': 0}; cut at max tokens 3
+  clean: miss 13.5%, FA 33.1%, mean generated tokens 548
+  pointer_e: miss 10.3% (d  -3.2 [ -6.2,  -0.7]), FA 31.7% (d  -1.4 [ -7.8,  +4.2]); reasoning mentions the note 62.6%; wrong summaries flipped to accept 0, to reject 4; mean generated tokens 740
+      thinking off: miss clean 22.2, pointer_e 23.0, d  +0.8 [ -1.7,  +3.5]; FA clean 12.2, pointer_e 12.9, d  +0.7 [ -3.6,  +4.9]
+  claim_o: miss 23.2% (d  +9.7 [ +4.1, +17.5]), FA 9.4% (d -23.7 [-34.9, -13.5]); reasoning mentions the note 71.3%; wrong summaries flipped to accept 12, to reject 0; mean generated tokens 826
+      thinking off: miss clean 22.2, claim_o 27.0, d  +4.8 [ +1.5,  +8.7]; FA clean 12.2, claim_o 4.3, d  -7.9 [-14.8,  -1.8]
+  claim_global: miss 24.6% (d +11.1 [ +4.9, +19.1]), FA 6.5% (d -26.6 [-37.5, -16.0]); reasoning mentions the note 46.0%; wrong summaries flipped to accept 14, to reject 0; mean generated tokens 641
+      thinking off: miss clean 22.2, claim_global 25.4, d  +3.2 [ +0.7,  +6.3]; FA clean 12.2, claim_global 8.6, d  -3.6 [ -7.9,  -0.7]
+  bare_e: miss 46.8% (d +33.3 [+24.6, +42.1]), FA 12.9% (d -20.1 [-28.6, -11.2]); reasoning mentions the note 92.1%; wrong summaries flipped to accept 41, to reject 0; mean generated tokens 931
+      thinking off: miss clean 22.2, bare_e 31.7, d  +9.5 [ +5.2, +14.5]; FA clean 12.2, bare_e 3.6, d  -8.6 [-15.0,  -2.7]
+  claim_e: miss 34.1% (d +20.6 [+12.9, +30.1]), FA 6.5% (d -26.6 [-36.9, -16.8]); reasoning mentions the note 82.6%; wrong summaries flipped to accept 26, to reject 0; mean generated tokens 1054
+      thinking off: miss clean 22.2, claim_e 35.7, d +13.5 [ +7.6, +20.4]; FA clean 12.2, claim_e 3.6, d  -8.6 [-15.0,  -2.7]
+  pair claim_e - claim_o: d miss +10.9 [ +3.9, +19.4], d FA  -2.9 [ -9.1,  +2.9]
+  pair claim_e - claim_global: d miss  +9.5 [ +1.9, +18.6], d FA  +0.0 [ -3.5,  +3.6]
+  pair bare_e - pointer_e: d miss +36.5 [+27.4, +46.2], d FA -18.7 [-25.8, -11.8]
+
+wrote results/think_check_forms.json

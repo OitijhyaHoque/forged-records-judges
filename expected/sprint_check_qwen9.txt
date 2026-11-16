@@ -1,0 +1,70 @@
+
+===== qwen9_e0_full: 9882 rows, conditions ['clean', 'neutral', 'pointer_e', 'claim_e', 'claim_o', 'claim_global', 'bare_e', 'claim_e_unverified', 'claim_e_signed']
+
+[qwen9_e0_full / score] test: 265 items (126 inconsistent), 56 docs; threshold 2.699 from 61 calib consistent items; clean AUROC 0.850; clean miss 30.2%, clean FA 5.8%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   30.2        +0.0 [+0.0, +0.0]    5.8        +0.0 [+0.0, +0.0]  0.850     +0.000 [+0.000, +0.000]     0.0%
+   neutral                 31.0        +0.8 [-1.8, +3.6]    4.3        -1.4 [-3.7, +0.0]  0.857     +0.007 [-0.006, +0.022]     0.0%
+   pointer_e               34.1        +4.0 [-0.7, +9.0]    3.6        -2.2 [-9.1, +3.2]  0.846     -0.004 [-0.050, +0.041]     0.0%
+   claim_e                 64.3     +34.1 [+24.2, +44.1]    0.0       -5.8 [-11.9, -1.3]  0.860     +0.010 [-0.029, +0.053]     0.0%
+   claim_o                 51.6     +21.4 [+13.8, +30.2]    0.0       -5.8 [-11.9, -1.3]  0.866     +0.016 [-0.008, +0.040]     0.0%
+   claim_global            34.9        +4.8 [+0.7, +9.5]    2.2        -3.6 [-8.3, +0.0]  0.851     +0.000 [-0.019, +0.021]     0.0%
+   bare_e                  38.9       +8.7 [+3.6, +15.9]    0.0       -5.8 [-11.9, -1.3]  0.859     +0.009 [-0.035, +0.057]     0.0%
+   claim_e_unverified      57.1     +27.0 [+17.9, +36.6]    0.0       -5.8 [-11.9, -1.3]  0.862     +0.012 [-0.027, +0.056]     0.0%
+   claim_e_signed          62.7     +32.5 [+22.7, +42.7]    0.0       -5.8 [-11.9, -1.3]  0.866     +0.016 [-0.023, +0.060]     0.0%
+   rules:
+     S1 claim_e-claim_o                          +12.7 [+2.1, +23.0]  targeted
+     S1 claim_e-claim_global                    +29.4 [+19.4, +40.1]  targeted
+     S1 bare_e-pointer_e                           +4.8 [+0.9, +9.0]  reported
+     S3a ratio                                  +0.76 [+0.59, +0.92]  does not work
+     S3a FA unverified-pointer_e                   -3.6 [-8.7, +0.0]  part of the S3a rule
+     S3a FA unverified-clean                      -5.8 [-11.9, -1.3]  reported
+     S3a miss unverified-claim_e                  -7.1 [-12.8, -2.2]  reported
+     S3b signed-claim_e                            -1.6 [-5.7, +2.0]  no evidence of more trust
+     S1 denominator claim_e-pointer_e           +30.2 [+21.0, +39.9]  reported
+
+[qwen9_e0_full / yn] test: 265 items (126 inconsistent), 56 docs; threshold 0.438 from 61 calib consistent items; clean AUROC 0.854; clean miss 23.0%, clean FA 11.5%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   23.0        +0.0 [+0.0, +0.0]   11.5        +0.0 [+0.0, +0.0]  0.854     +0.000 [+0.000, +0.000]     0.0%
+   neutral                 23.8        +0.8 [+0.0, +2.6]   10.1        -1.4 [-4.4, +1.4]  0.856     +0.002 [-0.006, +0.008]     0.0%
+   pointer_e               29.4       +6.3 [+1.5, +12.7]    6.5       -5.0 [-13.5, +2.8]  0.840     -0.014 [-0.056, +0.026]     0.0%
+   claim_e                 42.9     +19.8 [+12.1, +28.2]    2.2       -9.4 [-17.3, -2.8]  0.848     -0.006 [-0.041, +0.024]     0.0%
+   claim_o                 29.4       +6.3 [+2.5, +10.9]    2.9       -8.6 [-16.7, -1.6]  0.866     +0.012 [-0.007, +0.031]     0.0%
+   claim_global            26.2        +3.2 [+0.0, +7.0]    4.3       -7.2 [-13.1, -2.7]  0.855     +0.001 [-0.014, +0.014]     0.0%
+   bare_e                  29.4       +6.3 [+1.0, +12.7]    6.5       -5.0 [-12.1, +1.5]  0.841     -0.013 [-0.052, +0.018]     0.0%
+   claim_e_unverified      33.3      +10.3 [+3.9, +17.6]    3.6       -7.9 [-16.1, -0.9]  0.855     +0.000 [-0.036, +0.034]     0.0%
+   claim_e_signed          38.9      +15.9 [+8.8, +23.4]    2.9       -8.6 [-16.5, -1.7]  0.851     -0.003 [-0.037, +0.029]     0.0%
+   rules:
+     S1 claim_e-claim_o                          +13.5 [+5.2, +22.1]  targeted
+     S1 claim_e-claim_global                    +16.7 [+10.0, +23.8]  targeted
+     S1 bare_e-pointer_e                           +0.0 [-3.0, +3.1]  reported
+     S3a ratio                                  +0.29 [+0.09, +0.55]  works
+     S3a FA unverified-pointer_e                   -2.9 [-7.1, +0.0]  part of the S3a rule
+     S3a FA unverified-clean                      -7.9 [-16.1, -0.9]  reported
+     S3a miss unverified-claim_e                  -9.5 [-15.5, -4.2]  reported
+     S3b signed-claim_e                            -4.0 [-7.9, +0.0]  no evidence of more trust
+     S1 denominator claim_e-pointer_e            +13.5 [+7.3, +19.8]  reported
+
+[qwen9_e0_full / yn_rev] test: 265 items (126 inconsistent), 56 docs; threshold 0.349 from 61 calib consistent items; clean AUROC 0.864; clean miss 34.9%, clean FA 2.9%
+   condition             miss %          d miss vs clean   FA %            d FA vs clean  AUROC            d AUROC vs clean mass<0.5
+   clean                   34.9        +0.0 [+0.0, +0.0]    2.9        +0.0 [+0.0, +0.0]  0.864     +0.000 [+0.000, +0.000]     0.0%
+   neutral                 34.1        -0.8 [-4.6, +3.3]    3.6        +0.7 [+0.0, +2.4]  0.871     +0.007 [-0.006, +0.023]     0.0%
+   pointer_e               50.8      +15.9 [+8.5, +24.3]    0.7        -2.2 [-6.8, +0.0]  0.861     -0.004 [-0.044, +0.038]     0.0%
+   claim_e                 74.6     +39.7 [+30.5, +49.2]    0.0        -2.9 [-7.5, +0.0]  0.847     -0.018 [-0.050, +0.015]     0.0%
+   claim_o                 52.4      +17.5 [+8.4, +25.9]    0.0        -2.9 [-7.5, +0.0]  0.853     -0.012 [-0.041, +0.012]     0.0%
+   claim_global            38.9       +4.0 [-1.7, +10.3]    0.7        -2.2 [-6.8, +0.0]  0.859     -0.006 [-0.028, +0.014]     0.0%
+   bare_e                  54.0     +19.0 [+12.1, +27.3]    0.7        -2.2 [-6.8, +0.0]  0.860     -0.004 [-0.032, +0.022]     0.0%
+   claim_e_unverified      64.3     +29.4 [+20.4, +38.5]    0.0        -2.9 [-7.5, +0.0]  0.857     -0.007 [-0.044, +0.029]     0.0%
+   claim_e_signed          73.8     +38.9 [+29.6, +48.7]    0.0        -2.9 [-7.5, +0.0]  0.860     -0.005 [-0.042, +0.032]     0.0%
+   rules:
+     S1 claim_e-claim_o                         +22.2 [+10.4, +33.6]  targeted
+     S1 claim_e-claim_global                    +35.7 [+25.7, +45.9]  targeted
+     S1 bare_e-pointer_e                           +3.2 [-1.7, +7.8]  reported
+     S3a ratio                                  +0.57 [+0.37, +0.76]  does not work
+     S3a FA unverified-pointer_e                   -0.7 [-2.3, +0.0]  part of the S3a rule
+     S3a FA unverified-clean                       -2.9 [-7.5, +0.0]  reported
+     S3a miss unverified-claim_e                 -10.3 [-16.5, -4.8]  reported
+     S3b signed-claim_e                            -0.8 [-3.7, +1.8]  no evidence of more trust
+     S1 denominator claim_e-pointer_e           +23.8 [+15.7, +31.7]  reported
+
+wrote results/sprint_check_qwen9.json

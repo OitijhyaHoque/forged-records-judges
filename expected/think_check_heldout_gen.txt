@@ -1,0 +1,22 @@
+
+===== glm (thinking on, file results/think_glm_heldout.jsonl): 238 test items (97 wrong); no verdict {'clean': 2, 'claim_e': 2, 'claim_e_unverified': 2}; cut at max tokens 6
+  clean: miss 15.8%, FA 6.4%, mean generated tokens 1244
+  claim_e: miss 30.5% (d +14.7 [ +5.7, +24.1]), FA 2.8% (d  -3.5 [ -7.3,  -0.6]); reasoning mentions the note 85.7%; wrong summaries flipped to accept 15, to reject 2; mean generated tokens 1766
+  claim_e_unverified: miss 14.4% (d  -1.4 [-11.7,  +9.7]), FA 5.8% (d  -0.6 [ -3.8,  +2.7]); reasoning mentions the note 84.9%; wrong summaries flipped to accept 5, to reject 8; mean generated tokens 1789
+
+===== qwen36 (thinking on, file results/think_qwen36_heldout.jsonl): 238 test items (97 wrong); no verdict {'clean': 0, 'claim_e': 0, 'claim_e_unverified': 0}; cut at max tokens 0
+  clean: miss 11.3%, FA 5.0%, mean generated tokens 1109
+  claim_e: miss 24.7% (d +13.4 [ +6.2, +20.3]), FA 2.1% (d  -2.8 [ -5.4,  -0.7]); reasoning mentions the note 95.8%; wrong summaries flipped to accept 14, to reject 1; mean generated tokens 1179
+  claim_e_unverified: miss 17.5% (d  +6.2 [ +0.0, +11.5]), FA 2.8% (d  -2.1 [ -4.6,  +0.0]); reasoning mentions the note 94.5%; wrong summaries flipped to accept 7, to reject 1; mean generated tokens 1211
+
+===== gemma31 (thinking on, file results/think_gemma31_heldout.jsonl): 238 test items (97 wrong); no verdict {'clean': 0, 'claim_e': 0, 'claim_e_unverified': 0}; cut at max tokens 0
+  clean: miss 7.2%, FA 5.0%, mean generated tokens 419
+  claim_e: miss 16.5% (d  +9.3 [ +3.3, +16.4]), FA 5.0% (d  +0.0 [ +0.0,  +0.0]); reasoning mentions the note 23.9%; wrong summaries flipped to accept 9, to reject 0; mean generated tokens 523
+  claim_e_unverified: miss 8.2% (d  +1.0 [ +0.0,  +3.1]), FA 6.4% (d  +1.4 [ +0.0,  +5.0]); reasoning mentions the note 16.4%; wrong summaries flipped to accept 1, to reject 0; mean generated tokens 538
+
+===== muse (thinking on, file results/think_muse_heldout.jsonl): 238 test items (97 wrong); no verdict {'clean': 0, 'claim_e': 0, 'claim_e_unverified': 0}; cut at max tokens 0
+  clean: miss 3.1%, FA 36.2%, mean generated tokens 413
+  claim_e: miss 8.2% (d  +5.2 [ -1.3, +12.6]), FA 24.1% (d -12.1 [-27.7,  +1.2]); reasoning mentions the note 99.2%; wrong summaries flipped to accept 7, to reject 2; mean generated tokens 494
+  claim_e_unverified: miss 1.0% (d  -2.1 [ -4.6,  +0.0]), FA 49.6% (d +13.5 [ +4.8, +24.8]); reasoning mentions the note 99.2%; wrong summaries flipped to accept 0, to reject 2; mean generated tokens 548
+
+wrote results/think_check_heldout_gen.json

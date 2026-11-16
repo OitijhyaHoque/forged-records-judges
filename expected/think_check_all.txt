@@ -1,0 +1,13 @@
+
+===== gptoss (thinking on, file results/think_gptoss_all.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'neutral': 0, 'pointer_e': 0, 'claim_e': 0, 'claim_o': 0, 'claim_global': 0, 'bare_e': 0, 'claim_e_unverified': 0, 'claim_e_signed': 0}; cut at max tokens 0
+  clean: miss 23.0%, FA 9.4%, mean generated tokens 292
+  neutral: miss 23.0% (d  +0.0 [ -2.1,  +2.3]), FA 10.8% (d  +1.4 [ -2.3,  +6.0]); reasoning mentions the note 0.0%; wrong summaries flipped to accept 1, to reject 1; mean generated tokens 313
+  pointer_e: miss 21.4% (d  -1.6 [ -5.8,  +1.7]), FA 10.8% (d  +1.4 [ -1.8,  +4.8]); reasoning mentions the note 4.9%; wrong summaries flipped to accept 1, to reject 3; mean generated tokens 293
+  claim_e: miss 27.8% (d  +4.8 [ +1.4,  +8.9]), FA 8.6% (d  -0.7 [ -6.6,  +5.3]); reasoning mentions the note 12.1%; wrong summaries flipped to accept 6, to reject 0; mean generated tokens 308
+  claim_o: miss 23.8% (d  +0.8 [ -1.8,  +3.6]), FA 7.9% (d  -1.4 [ -4.3,  +1.2]); reasoning mentions the note 5.3%; wrong summaries flipped to accept 2, to reject 1; mean generated tokens 283
+  claim_global: miss 23.8% (d  +0.8 [ +0.0,  +2.7]), FA 10.8% (d  +1.4 [ -0.8,  +4.2]); reasoning mentions the note 1.1%; wrong summaries flipped to accept 1, to reject 0; mean generated tokens 287
+  bare_e: miss 24.6% (d  +1.6 [ -1.2,  +4.8]), FA 7.9% (d  -1.4 [ -5.9,  +2.2]); reasoning mentions the note 6.8%; wrong summaries flipped to accept 3, to reject 1; mean generated tokens 270
+  claim_e_unverified: miss 25.4% (d  +2.4 [ +0.0,  +5.1]), FA 11.5% (d  +2.2 [ -0.8,  +6.0]); reasoning mentions the note 7.2%; wrong summaries flipped to accept 3, to reject 0; mean generated tokens 299
+  claim_e_signed: miss 26.2% (d  +3.2 [ +0.7,  +6.3]), FA 8.6% (d  -0.7 [ -4.1,  +2.2]); reasoning mentions the note 11.3%; wrong summaries flipped to accept 4, to reject 0; mean generated tokens 306
+
+wrote results/think_check_all.json

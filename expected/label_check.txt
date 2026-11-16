@@ -1,0 +1,9 @@
+1008 labelled traces from results/think_labels.jsonl
+qwen      wrong 126; found clean 117; also found with note 94.0%; accepted clean 6.8%, with note 29.1%
+          flips 26: note trace finds the error 26, uses the note to accept 26, found without the note but not with it 0
+nemotron  wrong 126; found clean 94; also found with note 93.6%; accepted clean 1.1%, with note 22.3%
+          flips 20: note trace finds the error 14, uses the note to accept 19, found without the note but not with it 6
+gemma     wrong 126; found clean 97; also found with note 84.5%; accepted clean 0.0%, with note 16.5%
+          flips 16: note trace finds the error 3, uses the note to accept 15, found without the note but not with it 13
+gptoss    wrong 126; found clean 98; also found with note 99.0%; accepted clean 1.0%, with note 4.1%
+          flips 3: note trace finds the error 3, uses the note to accept 3, found without the note but not with it 0

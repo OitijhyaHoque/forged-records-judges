@@ -1,0 +1,74 @@
+
+== qwen9 yn  G1: miss clean 23.0, claim_o 29.4, claim_e 42.9; claim_e - claim_o +13.5 [+5.2, +21.5] points; claim_e - clean +19.8 [+12.0, +27.9]; flipped 23 (test 19); passes=False
+   R1 critical layer +19.0 [+18.0, +20.0] of 32 -> late=False; final t: clean -1.503, neutral -1.383, pointer_e -0.817, claim_o -0.783, claim_e -0.248; claim_e - claim_o +0.534 [+0.358, +0.694]
+   R2 evidence site: layer 13, AUROC claim_o 0.878, claim_e 0.859, clean 0.877; o - e +0.019 [-0.013, +0.049] -> evidence intact
+   R3 decision site: layer 16, AUROC claim_o 0.895, claim_e 0.856, clean 0.883; o - e +0.039 [+0.005, +0.080] -> decision degraded
+   summary end: layer 14, AUROC claim_o 0.832, claim_e 0.812, clean 0.830; o - e +0.020 [-0.055, +0.081] -> summary intact
+   R4 (67 of 126 test items with gap > 0.5): summ +1.00 [+0.94, +1.04], docsumm +0.99 [+0.93, +1.01], e +1.09 [+1.04, +1.23], q +0.69 [+0.66, +0.76]; P1 max 1.08, first layer below 0.5: 0 -> mediated
+      P4 transfer claim_e -> claim_o: summ +1.06 [+1.01, +1.11], docsumm +0.98 [+0.92, +1.00], e +1.09 [+0.98, +1.20], q +0.76 [+0.70, +0.82]
+      P1 by layer: 0.00 0.01 0.00 0.01 0.00 0.00 0.00 0.01 0.01 0.01 0.01 0.01 0.01 0.02 0.02 0.07 0.16 0.50 0.66 0.90 0.93 0.93 0.99 0.99 1.00 1.00 1.01 1.02 1.07 1.08 1.05 1.00
+   patch2 (67 items): into claim_e: summary minus e +0.04 [-0.05, +0.11], sentence ko +0.04 [-0.05, +0.11]; transfer into claim_o: summary minus e -0.02 [-0.07, +0.09], sentence ko -0.02 [-0.07, +0.09]
+      sentence e, one layer: -0.00 -0.00 0.00 0.01 0.01 0.03 0.04 0.44 0.40 0.44 0.42 0.91 0.82 0.72 0.54 0.46 0.27 0.05 0.03 0.01 0.00 0.00 0.00 0.01 0.00 0.00 0.00 0.00 0.00 0.00 0.01 0.01
+   knockout (67 items; 'none' max |t - t_e| 0.112): none +0.00 [-0.01, +0.01], e_note_all +0.95 [+0.80, +1.04], e_note_L3 +0.03 [-0.12, +0.11], e_note_L7 +0.12 [+0.05, +0.17], e_note_L11 +0.18 [+0.02, +0.34], e_note_late +0.37 [+0.27, +0.52], e_quote_all +0.89 [+0.80, +1.02], q_note_all +0.38 [+0.22, +0.52], post_note_all +1.29 [+1.08, +1.50], o_e_note_all -0.01 [-0.04, +0.02], o_post_note_all -0.40 [-0.56, -0.14]
+   patch3 (70 of 126 items with |t_e - t_p| > 0.5; median t_e - t_p +0.81): pointer_e -> claim_e e +0.29 [+0.24, +0.36], summ +0.35 [+0.25, +0.43], docsumm +0.43 [+0.35, +0.49]; claim_e -> pointer_e e +0.33 [+0.19, +0.44], summ +0.35 [+0.19, +0.49]
+   fixed-threshold miss, output: clean 23.0 neutral 23.8 pointer_e 30.2 claim_o 30.2 claim_e 43.7; claim_e - clean +20.6 [+12.8, +29.3]; claim_e - claim_o +13.5 [+4.5, +23.1]
+   fixed-threshold miss, e: clean 34.1 neutral 34.1 pointer_e 39.7 claim_o 33.3 claim_e 41.3; claim_e - clean +7.1 [+0.0, +15.0]; claim_e - claim_o +7.9 [+1.8, +13.9]; minus output -5.6 [-15.0, +4.5]
+   fixed-threshold miss, summary_last: clean 35.7 neutral 38.1 pointer_e 52.4 claim_o 42.1 claim_e 49.2; claim_e - clean +13.5 [+5.2, +22.5]; claim_e - claim_o +7.1 [-3.7, +17.8]; minus output -6.3 [-22.9, +9.2]
+   fixed-threshold miss, answer: clean 23.8 neutral 22.2 pointer_e 28.6 claim_o 23.0 claim_e 31.0; claim_e - clean +7.1 [+2.2, +13.7]; claim_e - claim_o +7.9 [+1.7, +14.8]; minus output -5.6 [-14.6, +3.3]
+   R6 weight of sentence e: clean +2.902 [+2.336, +3.505], claim_o +2.485 [+2.094, +2.867], claim_e +1.368 [+1.019, +1.709]; claim_e - claim_o -1.117 [-1.320, -0.922] -> note lowers the weight of sentence e
+   R5 share of the claim_e effect lost: w0:error_report 0.14 (n=37); w0:fix_claim -0.05 (n=37); w0:prior_score -0.07 (n=37); w0:quote 0.59 (n=37); w0:verify 0.07 (n=37); w0:version -0.00 (n=37); w1:fix_claim -0.03 (n=32); w1:quote 0.70 (n=32); w1:score_error 0.11 (n=32); w1:verify 0.16 (n=32); w2:error_report 0.39 (n=28); w2:fix_quote 0.58 (n=28); w2:prior_score -0.08 (n=28); w2:verify 0.26 (n=28)
+
+== qwen9 score  G1: miss clean 30.2, claim_o 51.6, claim_e 64.3; claim_e - claim_o +12.7 [+1.6, +22.0] points; claim_e - clean +34.1 [+24.5, +43.9]; flipped 26 (test 24); passes=True
+   R1 critical layer +23.0 [+16.0, +23.0] of 32 -> late=True; final t: clean +2.580, neutral +2.597, pointer_e +2.734, claim_o +3.075, claim_e +3.290; claim_e - claim_o +0.214 [+0.051, +0.361]
+   R2 evidence site: layer 13, AUROC claim_o 0.879, claim_e 0.859, clean 0.877; o - e +0.019 [-0.012, +0.049] -> evidence intact
+   R3 decision site: layer 31, AUROC claim_o 0.847, claim_e 0.877, clean 0.865; o - e -0.030 [-0.056, -0.005] -> unclear
+   summary end: layer 14, AUROC claim_o 0.833, claim_e 0.813, clean 0.830; o - e +0.020 [-0.055, +0.082] -> summary intact
+   R4 (75 of 126 test items with gap > 0.25): summ +0.97 [+0.90, +1.02], docsumm +0.99 [+0.96, +1.01], e +1.06 [+0.73, +1.25], q +0.96 [+0.94, +0.99]; P1 max 1.00, first layer below 0.5: 0 -> mediated
+      P4 transfer claim_e -> claim_o: summ +1.00 [+0.90, +1.05], docsumm +0.98 [+0.93, +1.01], e +0.84 [+0.73, +1.04], q +0.97 [+0.94, +1.00]
+      P1 by layer: -0.00 -0.00 -0.00 0.00 -0.00 -0.00 -0.00 0.00 0.00 -0.00 -0.00 0.00 -0.00 0.00 0.01 0.02 0.03 0.03 0.04 0.06 0.06 0.07 0.07 0.07 0.08 0.07 0.08 0.08 0.14 0.20 0.91 1.00
+   patch2 (75 items): into claim_e: summary minus e +0.18 [+0.09, +0.33], sentence ko +0.18 [+0.09, +0.33]; transfer into claim_o: summary minus e +0.15 [-0.00, +0.41], sentence ko +0.15 [-0.00, +0.35]
+      sentence e, one layer: 0.00 -0.00 -0.01 -0.01 0.00 0.01 0.06 0.35 0.33 0.31 0.47 0.83 0.78 0.70 0.53 0.41 0.24 0.03 0.02 0.00 -0.00 -0.00 -0.01 -0.00 -0.00 -0.00 -0.01 -0.00 -0.00 -0.00 -0.00 -0.00
+   knockout (75 items; 'none' max |t - t_e| 0.095): none +0.00 [-0.01, +0.02], e_note_all +0.69 [+0.40, +0.94], e_note_L3 +0.01 [-0.12, +0.16], e_note_L7 +0.05 [-0.00, +0.26], e_note_L11 +0.09 [+0.00, +0.28], e_note_late +0.18 [+0.05, +0.36], e_quote_all +0.71 [+0.35, +0.93], q_note_all +0.15 [-0.10, +0.57], post_note_all +0.89 [+0.46, +1.18], o_e_note_all +0.01 [-0.03, +0.03], o_post_note_all -0.11 [-0.29, +0.42]
+   patch3 (85 of 126 items with |t_e - t_p| > 0.25; median t_e - t_p +0.75): pointer_e -> claim_e e +0.29 [+0.16, +0.43], summ +0.28 [+0.23, +0.42], docsumm +0.39 [+0.28, +0.53]; claim_e -> pointer_e e +0.19 [+0.14, +0.29], summ +0.19 [+0.15, +0.33]
+   fixed-threshold miss, output: clean 22.2 neutral 22.2 pointer_e 28.6 claim_o 33.3 claim_e 45.2; claim_e - clean +23.0 [+15.3, +31.2]; claim_e - claim_o +11.9 [+5.4, +19.0]
+   fixed-threshold miss, e: clean 34.1 neutral 34.1 pointer_e 39.7 claim_o 33.3 claim_e 41.3; claim_e - clean +7.1 [+0.0, +15.0]; claim_e - claim_o +7.9 [+1.8, +13.9]; minus output -4.0 [-11.9, +3.5]
+   fixed-threshold miss, summary_last: clean 35.7 neutral 38.1 pointer_e 52.4 claim_o 42.1 claim_e 49.2; claim_e - clean +13.5 [+5.2, +22.5]; claim_e - claim_o +7.1 [-3.7, +17.8]; minus output -4.8 [-19.7, +9.0]
+   fixed-threshold miss, answer: clean 32.5 neutral 29.4 pointer_e 36.5 claim_o 34.9 claim_e 38.1; claim_e - clean +5.6 [-1.9, +13.8]; claim_e - claim_o +3.2 [-4.6, +11.5]; minus output -8.7 [-19.0, +2.8]
+   R6 weight of sentence e: clean +1.717 [+1.395, +2.006], claim_o +1.552 [+1.337, +1.753], claim_e +0.980 [+0.675, +1.263]; claim_e - claim_o -0.571 [-0.760, -0.389] -> note lowers the weight of sentence e
+   R5 share of the claim_e effect lost: w0:error_report 0.25 (n=37); w0:fix_claim -0.07 (n=37); w0:prior_score 0.22 (n=37); w0:quote 0.73 (n=37); w0:verify 0.21 (n=37); w0:version -0.09 (n=37); w1:fix_claim 0.02 (n=30); w1:quote 0.76 (n=30); w1:score_error 0.33 (n=30); w1:verify 0.17 (n=30); w2:error_report 0.65 (n=21); w2:fix_quote 0.54 (n=21); w2:prior_score 0.03 (n=21); w2:verify 0.40 (n=21)
+
+== gemma12 yn  G1: miss clean 25.4, claim_o 25.4, claim_e 26.2; claim_e - claim_o +0.8 [-3.1, +4.9] points; claim_e - clean +0.8 [-1.8, +4.6]; flipped 4 (test 3); passes=False
+   R1 critical layer +40.0 [+27.0, +41.0] of 48 -> late=True; final t: clean -8.374, neutral -8.262, pointer_e -7.960, claim_o -6.566, claim_e -5.171; claim_e - claim_o +1.395 [+1.006, +1.843]
+   R2 evidence site: layer 26, AUROC claim_o 0.880, claim_e 0.871, clean 0.879; o - e +0.009 [-0.018, +0.035] -> evidence intact
+   R3 decision site: layer 38, AUROC claim_o 0.875, claim_e 0.848, clean 0.856; o - e +0.027 [-0.021, +0.070] -> decision intact
+   summary end: layer 27, AUROC claim_o 0.805, claim_e 0.801, clean 0.843; o - e +0.005 [-0.039, +0.051] -> summary intact
+   R4 (109 of 126 test items with gap > 0.5): summ +0.87 [+0.82, +0.99], docsumm +0.98 [+0.92, +1.02], e +0.94 [+0.82, +1.08], q +0.90 [+0.89, +0.92]; P1 max 1.00, first layer below 0.5: 0 -> mediated
+      P4 transfer claim_e -> claim_o: summ +1.04 [+0.93, +1.19], docsumm +0.98 [+0.92, +1.04], e +1.02 [+0.92, +1.21], q +0.94 [+0.92, +0.96]
+      P1 by layer: -0.00 -0.01 -0.01 -0.01 -0.01 -0.01 -0.01 -0.00 -0.00 -0.01 -0.01 -0.01 -0.01 -0.00 -0.01 -0.01 -0.01 -0.01 -0.00 -0.01 -0.01 -0.01 -0.02 -0.01 -0.00 0.00 0.06 0.17 0.28 0.31 0.32 0.48 0.62 0.69 0.72 0.72 0.71 0.75 0.77 0.84 0.89 0.88 0.92 0.93 0.94 0.93 0.97 1.00
+   patch2 (109 items): into claim_e: summary minus e +0.15 [+0.04, +0.22], sentence ko +0.10 [+0.02, +0.18]; transfer into claim_o: summary minus e -0.00 [-0.12, +0.09], sentence ko -0.02 [-0.13, +0.07]
+      sentence e, one layer: -0.01 -0.00 0.00 0.01 0.00 0.02 0.04 0.03 0.05 0.02 0.02 -0.01 0.01 0.04 0.01 0.05 0.02 0.18 0.17 0.29 0.25 0.16 0.12 0.52 0.53 0.36 0.16 0.10 -0.03 -0.01 0.02 0.02 0.00 0.00 0.00 -0.01 -0.00 -0.01 -0.01 -0.01 -0.00 -0.01 -0.01 -0.01 -0.02 -0.01 -0.01 -0.01
+   patch3 (119 of 126 items with |t_e - t_p| > 0.5; median t_e - t_p +2.83): pointer_e -> claim_e e +0.16 [+0.12, +0.22], summ +0.16 [+0.12, +0.26], docsumm +0.39 [+0.34, +0.47]; claim_e -> pointer_e e +0.25 [+0.20, +0.34], summ +0.34 [+0.25, +0.39]
+   fixed-threshold miss, output: clean 28.6 neutral 27.8 pointer_e 25.4 claim_o 28.6 claim_e 33.3; claim_e - clean +4.8 [+0.8, +9.0]; claim_e - claim_o +4.8 [+0.0, +9.4]
+   fixed-threshold miss, e: clean 31.7 neutral 32.5 pointer_e 29.4 claim_o 31.0 claim_e 32.5; claim_e - clean +0.8 [-5.3, +7.6]; claim_e - claim_o +1.6 [-4.1, +8.7]; minus output -3.2 [-10.7, +3.6]
+   fixed-threshold miss, summary_last: clean 37.3 neutral 37.3 pointer_e 42.9 claim_o 38.9 claim_e 49.2; claim_e - clean +11.9 [+3.7, +21.0]; claim_e - claim_o +10.3 [+2.2, +18.5]; minus output +5.6 [-2.5, +14.2]
+   fixed-threshold miss, answer: clean 33.3 neutral 34.1 pointer_e 31.7 claim_o 34.1 claim_e 44.4; claim_e - clean +11.1 [+4.7, +18.3]; claim_e - claim_o +10.3 [+4.5, +17.3]; minus output +5.6 [-0.8, +11.6]
+   R6 weight of sentence e: clean +13.552 [+11.278, +15.944], claim_o +12.002 [+9.936, +13.994], claim_e +9.305 [+7.527, +10.908]; claim_e - claim_o -2.697 [-3.692, -1.832] -> note lowers the weight of sentence e
+   R5 share of the claim_e effect lost: w0:error_report 0.13 (n=39); w0:fix_claim -0.03 (n=39); w0:prior_score 0.01 (n=39); w0:quote 0.59 (n=39); w0:verify 0.37 (n=39); w0:version 0.01 (n=39); w1:fix_claim 0.02 (n=42); w1:quote 0.78 (n=42); w1:score_error -0.01 (n=42); w1:verify 0.29 (n=42); w2:error_report 0.20 (n=33); w2:fix_quote 0.67 (n=33); w2:prior_score -0.15 (n=33); w2:verify 0.38 (n=33)
+
+== gemma12 score  G1: miss clean 25.4, claim_o 26.2, claim_e 27.0; claim_e - claim_o +0.8 [-1.6, +3.5] points; claim_e - clean +1.6 [+0.0, +5.0]; flipped 2 (test 2); passes=False
+   R1 critical layer +30.0 [+30.0, +47.0] of 48 -> late=False; final t: clean +3.363, neutral +3.330, pointer_e +3.107, claim_o +3.544, claim_e +3.220; claim_e - claim_o -0.324 [-0.475, -0.178]
+   R2 evidence site: layer 26, AUROC claim_o 0.880, claim_e 0.872, clean 0.878; o - e +0.008 [-0.019, +0.035] -> evidence intact
+   R3 decision site: layer 42, AUROC claim_o 0.872, claim_e 0.854, clean 0.875; o - e +0.018 [-0.008, +0.046] -> decision intact
+   summary end: layer 27, AUROC claim_o 0.805, claim_e 0.801, clean 0.843; o - e +0.005 [-0.039, +0.051] -> summary intact
+   R4 (64 of 126 test items with gap > 0.25): summ +0.85 [+0.63, +0.90], docsumm +0.97 [+0.95, +1.01], e +0.47 [+0.16, +0.59], q +0.85 [+0.73, +0.93]; P1 max 1.00, first layer below 0.5: 0 -> mediated
+      P4 transfer claim_e -> claim_o: summ +0.83 [+0.75, +0.93], docsumm +0.99 [+0.94, +1.01], e +0.61 [+0.48, +0.84], q +0.84 [+0.74, +0.94]
+      P1 by layer: -0.01 -0.00 -0.00 -0.00 -0.00 -0.01 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.01 -0.00 -0.00 -0.00 -0.01 -0.01 -0.01 -0.01 -0.01 -0.00 0.00 -0.00 0.09 0.10 0.25 0.30 0.35 0.43 0.42 0.40 0.41 0.41 0.41 0.44 0.46 0.49 0.49 0.52 0.52 0.64 0.70 0.74 1.00
+   patch2 (64 items): into claim_e: summary minus e +0.30 [+0.09, +0.46], sentence ko +0.28 [+0.09, +0.47]; transfer into claim_o: summary minus e +0.30 [+0.10, +0.51], sentence ko +0.29 [+0.12, +0.51]
+      sentence e, one layer: 0.00 -0.00 -0.00 0.00 -0.00 -0.00 -0.00 0.00 0.00 0.00 0.00 0.01 -0.00 0.01 0.00 0.01 -0.00 0.07 0.08 0.19 0.11 0.08 0.04 0.18 0.10 0.22 0.24 0.20 0.26 0.06 0.01 0.01 -0.01 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00 -0.00
+   patch3 (51 of 126 items with |t_e - t_p| > 0.25; median t_e - t_p +0.52): pointer_e -> claim_e e +0.09 [-0.01, +0.27], summ +0.15 [+0.03, +0.41], docsumm +0.49 [+0.16, +0.84]; claim_e -> pointer_e e +0.21 [+0.12, +0.38], summ +0.26 [+0.11, +0.39]
+   fixed-threshold miss, output: clean 53.2 neutral 48.4 pointer_e 41.3 claim_o 57.9 claim_e 50.0; claim_e - clean -3.2 [-10.3, +3.6]; claim_e - claim_o -7.9 [-15.9, +0.0]
+   fixed-threshold miss, e: clean 31.7 neutral 32.5 pointer_e 29.4 claim_o 31.0 claim_e 32.5; claim_e - clean +0.8 [-5.3, +7.6]; claim_e - claim_o +1.6 [-4.1, +8.7]; minus output +9.5 [+1.3, +18.5]
+   fixed-threshold miss, summary_last: clean 36.5 neutral 36.5 pointer_e 40.5 claim_o 38.9 claim_e 50.0; claim_e - clean +13.5 [+6.1, +21.8]; claim_e - claim_o +11.1 [+2.6, +19.4]; minus output +19.0 [+8.4, +30.0]
+   fixed-threshold miss, answer: clean 24.6 neutral 23.8 pointer_e 27.8 claim_o 28.6 claim_e 34.9; claim_e - clean +10.3 [+4.8, +16.2]; claim_e - claim_o +6.3 [+2.6, +10.8]; minus output +14.3 [+5.3, +24.4]
+   R6 weight of sentence e: clean +1.238 [+0.917, +1.530], claim_o +1.212 [+0.915, +1.490], claim_e +1.350 [+1.031, +1.649]; claim_e - claim_o +0.138 [-0.081, +0.341] -> no difference
+   R5 share of the claim_e effect lost: w0:error_report 0.19 (n=16); w0:fix_claim 0.06 (n=16); w0:prior_score 0.08 (n=16); w0:quote 0.66 (n=16); w0:verify 0.17 (n=16); w0:version 0.05 (n=16); w1:fix_claim 0.11 (n=23); w1:quote 0.97 (n=23); w1:score_error 0.11 (n=23); w1:verify 0.18 (n=23); w2:error_report 0.11 (n=15); w2:fix_quote 0.98 (n=15); w2:prior_score -0.05 (n=15); w2:verify 0.48 (n=15)

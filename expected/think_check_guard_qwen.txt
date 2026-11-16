@@ -1,0 +1,6 @@
+
+===== qwen (thinking on, file results/think_qwen_guard.jsonl): 265 test items (126 wrong); no verdict {'clean': 0, 'claim_e': 2}; cut at max tokens 2
+  clean: miss 15.1%, FA 36.0%, mean generated tokens 608
+  claim_e: miss 16.7% (d  +1.6 [ +0.0,  +5.0]), FA 22.6% (d -13.3 [-21.4,  -5.7]); reasoning mentions the note 82.3%; wrong summaries flipped to accept 3, to reject 1; mean generated tokens 1037
+
+wrote results/think_check_guard_qwen.json

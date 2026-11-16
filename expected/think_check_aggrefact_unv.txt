@@ -1,0 +1,38 @@
+
+===== qwen (thinking on, file results/think_qwen_aggrefact_unv.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e_unverified': 7, 'claim_e': 2}; cut at max tokens 9
+  clean: miss 14.4%, FA 31.3%, mean generated tokens 457
+  claim_e_unverified: miss 20.0% (d  +5.6 [ +3.0,  +8.1]), FA 22.3% (d  -9.0 [-13.6,  -4.4]); reasoning mentions the note 65.3%; wrong summaries flipped to accept 20, to reject 4; mean generated tokens 1008
+  claim_e: miss 69.1% (d +54.7 [+48.3, +62.4]), FA 2.3% (d -29.1 [-35.6, -23.5]); reasoning mentions the note 80.4%; wrong summaries flipped to accept 150, to reject 0; mean generated tokens 708
+  pair claim_e_unverified - claim_e: d miss -49.1 [-57.0, -42.7], d FA +20.0 [+15.5, +26.0]
+
+===== nemotron (thinking on, file results/think_nemotron_aggrefact_unv.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e_unverified': 9, 'claim_e': 5}; cut at max tokens 13
+  clean: miss 27.8%, FA 13.2%, mean generated tokens 1300
+  claim_e_unverified: miss 32.0% (d  +4.2 [ +0.1,  +8.3]), FA 13.8% (d  +0.6 [ -2.8,  +3.9]); reasoning mentions the note 97.4%; wrong summaries flipped to accept 21, to reject 9; mean generated tokens 1733
+  claim_e: miss 58.8% (d +31.0 [+23.8, +38.1]), FA 3.8% (d  -9.4 [-13.3,  -6.2]); reasoning mentions the note 97.6%; wrong summaries flipped to accept 87, to reject 4; mean generated tokens 1586
+  pair claim_e_unverified - claim_e: d miss -26.8 [-32.6, -21.5], d FA +10.0 [ +6.5, +14.1]
+
+===== gemma (thinking on, file results/think_gemma_aggrefact_unv.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e_unverified': 0, 'claim_e': 0}; cut at max tokens 0
+  clean: miss 22.4%, FA 18.5%, mean generated tokens 749
+  claim_e_unverified: miss 33.6% (d +11.2 [ +7.5, +15.2]), FA 10.2% (d  -8.3 [-11.8,  -5.0]); reasoning mentions the note 44.8%; wrong summaries flipped to accept 31, to reject 0; mean generated tokens 959
+  claim_e: miss 56.7% (d +34.3 [+28.4, +40.6]), FA 2.6% (d -15.8 [-20.9, -11.6]); reasoning mentions the note 51.8%; wrong summaries flipped to accept 95, to reject 0; mean generated tokens 989
+  pair claim_e_unverified - claim_e: d miss -23.1 [-28.3, -17.6], d FA  +7.5 [ +4.1, +11.3]
+
+===== gptoss (thinking on, file results/think_gptoss_aggrefact_unv.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e_unverified': 0, 'claim_e': 0}; cut at max tokens 0
+  clean: miss 23.8%, FA 18.5%, mean generated tokens 243
+  claim_e_unverified: miss 25.3% (d  +1.4 [ -1.8,  +4.7]), FA 16.2% (d  -2.3 [ -5.6,  +0.4]); reasoning mentions the note 4.6%; wrong summaries flipped to accept 12, to reject 8; mean generated tokens 259
+  claim_e: miss 31.8% (d  +7.9 [ +3.9, +12.6]), FA 13.2% (d  -5.3 [ -9.3,  -1.9]); reasoning mentions the note 9.6%; wrong summaries flipped to accept 27, to reject 5; mean generated tokens 247
+  pair claim_e_unverified - claim_e: d miss  -6.5 [-10.8,  -3.2], d FA  +3.0 [ +0.0,  +6.9]
+
+===== glm (thinking on, file results/think_glm_aggrefact_unv.jsonl): 542 test items (277 wrong); no verdict {'clean': 2, 'claim_e_unverified': 1, 'claim_e': 5}; cut at max tokens 7
+  clean: miss 30.4%, FA 15.5%, mean generated tokens 1231
+  claim_e_unverified: miss 36.6% (d  +6.2 [ +1.8, +10.6]), FA 12.5% (d  -3.1 [ -7.1,  +0.8]); reasoning mentions the note 88.7%; wrong summaries flipped to accept 27, to reject 10; mean generated tokens 1576
+  claim_e: miss 53.3% (d +22.9 [+17.7, +28.7]), FA 5.7% (d  -9.9 [-14.7,  -6.0]); reasoning mentions the note 89.9%; wrong summaries flipped to accept 66, to reject 6; mean generated tokens 1716
+  pair claim_e_unverified - claim_e: d miss -16.7 [-22.1, -11.7], d FA  +6.8 [ +3.3, +10.9]
+
+===== qwen36 (thinking on, file results/think_qwen36_aggrefact_unv.jsonl): 542 test items (277 wrong); no verdict {'clean': 0, 'claim_e_unverified': 0, 'claim_e': 0}; cut at max tokens 0
+  clean: miss 28.5%, FA 9.8%, mean generated tokens 997
+  claim_e_unverified: miss 41.9% (d +13.4 [ +9.3, +18.0]), FA 6.4% (d  -3.4 [ -6.6,  -0.7]); reasoning mentions the note 92.4%; wrong summaries flipped to accept 40, to reject 3; mean generated tokens 936
+  claim_e: miss 59.9% (d +31.4 [+25.5, +37.3]), FA 3.4% (d  -6.4 [ -9.6,  -3.6]); reasoning mentions the note 94.3%; wrong summaries flipped to accept 87, to reject 0; mean generated tokens 923
+  pair claim_e_unverified - claim_e: d miss -18.1 [-22.7, -13.7], d FA  +3.0 [ +1.1,  +5.1]
+
+wrote results/think_check_aggrefact_unv.json

@@ -1,0 +1,158 @@
+
+===== qwen: 366 items, test 265 items (126 inconsistent), 56 docs; rows with mass < 0.5: {'yn': 0, 'sent': 0, 'yn_rev': 0, 'sent_rev': 0}; missing scores: none
+
+[qwen / sent vs yn] thresholds sent 0.294, yn 0.085; clean AUROC sent 0.912, yn 0.889
+   condition            miss_sent             d vs clean FA_sent             d vs clean AUROC_sent miss_hol             d vs clean
+   clean                     15.9      +0.0 [+0.0, +0.0]    18.7      +0.0 [+0.0, +0.0]      0.912     22.2      +0.0 [+0.0, +0.0]
+   neutral                   16.7      +0.8 [+0.0, +2.7]    17.3      -1.4 [-5.5, +1.5]      0.911     22.2      +0.0 [+0.0, +0.0]
+   pointer_e                 15.9      +0.0 [-4.2, +4.1]    25.2     +6.5 [-1.6, +16.9]      0.911     23.0      +0.8 [-1.7, +3.5]
+   claim_e                   21.4     +5.6 [+1.5, +10.4]    10.8     -7.9 [-16.9, +0.0]      0.906     35.7    +13.5 [+7.6, +20.4]
+   claim_o                   16.7      +0.8 [+0.0, +2.7]    20.1     +1.4 [-6.6, +12.0]      0.906     27.0      +4.8 [+1.5, +8.7]
+   claim_global              16.7      +0.8 [+0.0, +2.7]    19.4      +0.7 [-2.4, +3.7]      0.912     25.4      +3.2 [+0.7, +6.3]
+   bare_e                    23.8     +7.9 [+1.8, +15.5]     7.9    -10.8 [-18.2, -3.9]      0.903     31.7     +9.5 [+5.2, +14.5]
+   claim_e_unverified        17.5      +1.6 [-1.0, +4.6]    20.1     +1.4 [-6.7, +13.1]      0.907     23.8      +1.6 [-1.2, +4.9]
+   claim_e_signed            21.4     +5.6 [+1.5, +10.4]    11.5     -7.2 [-16.1, +0.8]      0.910     31.0     +8.7 [+4.3, +13.8]
+   readouts:
+     R1 d_sent (claim_e - clean)                                +5.6 [+1.5, +10.4]  mixed
+     R1 d_hol (claim_e - clean)                                +13.5 [+7.6, +20.4]  reported
+     R1 d_sent - d_hol                                          -7.9 [-14.6, -1.7]  reported
+     R2 clean: holistic accepts, e rejected (n=28)             +28.6 [+7.7, +54.3]  reported
+     R2 claim_e: holistic accepts, e rejected (n=45)          +40.0 [+25.4, +57.6]  reported
+     R2b flipped by the note, e rejected (n=17)              +94.1 [+78.6, +100.0]  reported
+     R3 miss_sent claim_e - claim_o                              +4.8 [+1.4, +8.9]  reported
+     R4 miss_sent claim_e_unverified - claim_e                   -4.0 [-7.4, -1.0]  reported
+     R4 FA_sent claim_e_unverified - claim_e                    +9.4 [+3.1, +16.2]  reported
+     R4 miss_sent claim_e_signed - claim_e                       +0.0 [+0.0, +0.0]  reported
+     R4 FA_sent claim_e_signed - claim_e                         +0.7 [+0.0, +2.3]  reported
+     R5 miss_sent pointer_e - clean                              +0.0 [-4.2, +4.1]  reported
+
+[qwen / sent_rev vs yn_rev] thresholds sent_rev 0.798, yn_rev 0.593; clean AUROC sent_rev 0.915, yn_rev 0.894
+   condition            miss_sent             d vs clean FA_sent             d vs clean AUROC_sent miss_hol             d vs clean
+   clean                     16.7      +0.0 [+0.0, +0.0]    15.1      +0.0 [+0.0, +0.0]      0.915     22.2      +0.0 [+0.0, +0.0]
+   neutral                   15.9      -0.8 [-2.6, +0.0]    15.8      +0.7 [-1.5, +3.2]      0.917     23.0      +0.8 [+0.0, +2.7]
+   pointer_e                 15.1      -1.6 [-4.7, +1.4]    21.6     +6.5 [-1.5, +15.7]      0.915     24.6      +2.4 [-1.6, +7.6]
+   claim_e                   29.4    +12.7 [+6.5, +20.4]     7.9     -7.2 [-15.5, +0.6]      0.903     43.7   +21.4 [+14.4, +29.4]
+   claim_o                   13.5      -3.2 [-6.7, -0.7]    20.9     +5.8 [+0.8, +12.1]      0.916     27.0      +4.8 [+1.7, +8.5]
+   claim_global              16.7      +0.0 [-2.3, +2.1]    15.1      +0.0 [-3.8, +3.7]      0.911     27.0      +4.8 [+1.6, +8.3]
+   bare_e                    33.3    +16.7 [+9.2, +25.7]     5.0    -10.1 [-17.4, -3.2]      0.897     37.3    +15.1 [+9.0, +21.6]
+   claim_e_unverified        17.5      +0.8 [-2.0, +4.7]    17.3      +2.2 [-4.3, +9.9]      0.913     30.2     +7.9 [+2.6, +14.2]
+   claim_e_signed            23.0     +6.3 [+1.8, +11.8]    10.1     -5.0 [-13.7, +3.5]      0.908     39.7   +17.5 [+10.8, +25.2]
+   readouts:
+     R1 d_sent (claim_e - clean)                               +12.7 [+6.5, +20.4]  mixed
+     R1 d_hol (claim_e - clean)                               +21.4 [+14.4, +29.4]  reported
+     R1 d_sent - d_hol                                          -8.7 [-16.5, -1.7]  reported
+     R2 clean: holistic accepts, e rejected (n=28)             +25.0 [+3.3, +52.4]  reported
+     R2 claim_e: holistic accepts, e rejected (n=55)          +34.5 [+22.2, +48.7]  reported
+     R2b flipped by the note, e rejected (n=27)               +59.3 [+40.0, +77.4]  reported
+     R3 miss_sent claim_e - claim_o                            +15.9 [+8.9, +24.1]  reported
+     R4 miss_sent claim_e_unverified - claim_e                 -11.9 [-18.5, -6.7]  reported
+     R4 FA_sent claim_e_unverified - claim_e                    +9.4 [+4.3, +14.5]  reported
+     R4 miss_sent claim_e_signed - claim_e                      -6.3 [-11.5, -2.4]  reported
+     R4 FA_sent claim_e_signed - claim_e                         +2.2 [+0.0, +4.9]  reported
+     R5 miss_sent pointer_e - clean                              -1.6 [-4.7, +1.4]  reported
+
+===== gemma: 366 items, test 265 items (126 inconsistent), 56 docs; rows with mass < 0.5: {'yn': 0, 'sent': 0, 'yn_rev': 0, 'sent_rev': 0}; missing scores: none
+
+[gemma / sent vs yn] thresholds sent 0.993, yn 0.133; clean AUROC sent 0.898, yn 0.877
+   condition            miss_sent             d vs clean FA_sent             d vs clean AUROC_sent miss_hol             d vs clean
+   clean                     17.5      +0.0 [+0.0, +0.0]    16.5      +0.0 [+0.0, +0.0]      0.898     23.0      +0.0 [+0.0, +0.0]
+   neutral                   16.7      -0.8 [-2.4, +0.0]    15.1      -1.4 [-3.7, +0.0]      0.904     23.8      +0.8 [+0.0, +2.6]
+   pointer_e                 16.7      -0.8 [-5.6, +3.6]    21.6     +5.0 [-5.8, +17.5]      0.888     23.0      +0.0 [-3.0, +3.2]
+   claim_e                   20.6      +3.2 [+0.0, +7.1]    14.4      -2.2 [-9.2, +4.0]      0.876     27.8      +4.8 [+0.6, +9.6]
+   claim_o                   19.0      +1.6 [-2.6, +5.9]    22.3     +5.8 [-0.8, +14.7]      0.883     25.4      +2.4 [-1.8, +7.1]
+   claim_global              19.8      +2.4 [+0.0, +6.2]    15.1      -1.4 [-3.7, +0.0]      0.896     23.8      +0.8 [+0.0, +2.5]
+   bare_e                    21.4      +4.0 [+1.0, +7.5]    10.8     -5.8 [-13.8, +2.5]      0.886     27.8      +4.8 [+0.0, +9.3]
+   claim_e_unverified        19.8      +2.4 [-2.0, +7.0]    15.1      -1.4 [-8.4, +4.5]      0.892     25.4      +2.4 [-1.9, +7.1]
+   claim_e_signed            21.4      +4.0 [-1.1, +9.1]    12.9     -3.6 [-10.3, +2.0]      0.877     26.2      +3.2 [-0.8, +7.9]
+   readouts:
+     R1 d_sent (claim_e - clean)                                 +3.2 [+0.0, +7.1]  mixed
+     R1 d_hol (claim_e - clean)                                  +4.8 [+0.6, +9.6]  reported
+     R1 d_sent - d_hol                                           -1.6 [-7.0, +3.0]  reported
+     R2 clean: holistic accepts, e rejected (n=29)             +24.1 [+8.3, +40.0]  reported
+     R2 claim_e: holistic accepts, e rejected (n=35)          +25.7 [+12.5, +39.5]  reported
+     R2b flipped by the note, e rejected (n=7)               +71.4 [+25.0, +100.0]  reported
+     R3 miss_sent claim_e - claim_o                              +1.6 [-1.9, +5.4]  reported
+     R4 miss_sent claim_e_unverified - claim_e                   -0.8 [-3.7, +1.7]  reported
+     R4 FA_sent claim_e_unverified - claim_e                     +0.7 [-1.5, +3.5]  reported
+     R4 miss_sent claim_e_signed - claim_e                       +0.8 [-2.9, +4.2]  reported
+     R4 FA_sent claim_e_signed - claim_e                         -1.4 [-3.6, +0.0]  reported
+     R5 miss_sent pointer_e - clean                              -0.8 [-5.6, +3.6]  reported
+
+[gemma / sent_rev vs yn_rev] thresholds sent_rev 0.977, yn_rev 0.378; clean AUROC sent_rev 0.903, yn_rev 0.877
+   condition            miss_sent             d vs clean FA_sent             d vs clean AUROC_sent miss_hol             d vs clean
+   clean                     17.5      +0.0 [+0.0, +0.0]    15.1      +0.0 [+0.0, +0.0]      0.903     20.6      +0.0 [+0.0, +0.0]
+   neutral                   17.5      +0.0 [-3.1, +3.1]    15.1      +0.0 [-2.2, +1.9]      0.904     21.4      +0.8 [+0.0, +2.6]
+   pointer_e                 14.3      -3.2 [-9.2, +1.8]    25.2    +10.1 [+2.6, +19.0]      0.897     22.2      +1.6 [-1.5, +5.0]
+   claim_e                   28.6    +11.1 [+5.8, +16.9]     5.0    -10.1 [-18.2, -3.3]      0.891     29.4     +8.7 [+3.4, +14.3]
+   claim_o                   21.4      +4.0 [+0.8, +7.6]    15.8      +0.7 [-2.8, +4.6]      0.891     24.6      +4.0 [-0.6, +9.0]
+   claim_global              19.8      +2.4 [-0.9, +5.9]    12.9      -2.2 [-5.3, +0.8]      0.901     27.0     +6.3 [+2.2, +11.1]
+   bare_e                    28.6    +11.1 [+5.6, +17.7]     5.0    -10.1 [-17.9, -3.4]      0.880     27.0     +6.3 [+1.5, +12.2]
+   claim_e_unverified        22.2      +4.8 [+0.8, +9.0]     7.2     -7.9 [-15.2, -2.3]      0.900     26.2      +5.6 [+1.7, +9.7]
+   claim_e_signed            29.4    +11.9 [+6.4, +17.6]     5.8     -9.4 [-16.8, -3.1]      0.895     29.4     +8.7 [+3.4, +14.3]
+   readouts:
+     R1 d_sent (claim_e - clean)                               +11.1 [+5.8, +16.9]  detection-stage
+     R1 d_hol (claim_e - clean)                                 +8.7 [+3.4, +14.3]  reported
+     R1 d_sent - d_hol                                           +2.4 [-0.8, +6.2]  reported
+     R2 clean: holistic accepts, e rejected (n=26)             +15.4 [+3.0, +31.8]  reported
+     R2 claim_e: holistic accepts, e rejected (n=37)            +5.4 [+0.0, +13.6]  reported
+     R2b flipped by the note, e rejected (n=11)                +18.2 [+0.0, +46.2]  reported
+     R3 miss_sent claim_e - claim_o                             +7.1 [+3.0, +11.6]  reported
+     R4 miss_sent claim_e_unverified - claim_e                  -6.3 [-10.3, -2.9]  reported
+     R4 FA_sent claim_e_unverified - claim_e                     +2.2 [+0.0, +7.4]  reported
+     R4 miss_sent claim_e_signed - claim_e                       +0.8 [-1.8, +3.5]  reported
+     R4 FA_sent claim_e_signed - claim_e                         +0.7 [-1.7, +4.6]  reported
+     R5 miss_sent pointer_e - clean                              -3.2 [-9.2, +1.8]  reported
+
+===== nemotron: 366 items, test 265 items (126 inconsistent), 56 docs; rows with mass < 0.5: {'yn': 0, 'sent': 0, 'yn_rev': 0, 'sent_rev': 0}; missing scores: none
+
+[nemotron / sent vs yn] thresholds sent 0.958, yn 0.679; clean AUROC sent 0.845, yn 0.813
+   condition            miss_sent             d vs clean FA_sent             d vs clean AUROC_sent miss_hol             d vs clean
+   clean                     19.8      +0.0 [+0.0, +0.0]    35.3      +0.0 [+0.0, +0.0]      0.845     32.5      +0.0 [+0.0, +0.0]
+   neutral                   15.1      -4.8 [-9.2, -0.9]    38.1      +2.9 [-2.7, +8.5]      0.842     33.3      +0.8 [-2.1, +3.4]
+   pointer_e                 19.8      +0.0 [-6.0, +6.1]    36.7     +1.4 [-8.4, +11.4]      0.851     29.4     -3.2 [-10.3, +3.5]
+   claim_e                   27.0     +7.1 [+2.5, +13.0]    10.8   -24.5 [-34.7, -14.2]      0.841     40.5     +7.9 [+1.5, +14.3]
+   claim_o                   15.1     -4.8 [-10.3, +0.0]    43.2     +7.9 [+0.8, +15.3]      0.833     37.3     +4.8 [-0.7, +10.5]
+   claim_global              13.5     -6.3 [-11.6, -1.7]    43.2     +7.9 [+1.4, +14.8]      0.854     31.0      -1.6 [-5.2, +1.4]
+   bare_e                    33.3    +13.5 [+7.8, +20.8]     8.6   -26.6 [-38.4, -15.4]      0.833     35.7      +3.2 [-3.1, +9.4]
+   claim_e_unverified        22.2      +2.4 [-3.4, +7.7]    25.2    -10.1 [-18.9, -1.4]      0.850     35.7      +3.2 [-2.6, +8.9]
+   claim_e_signed            30.2    +10.3 [+5.0, +16.8]     6.5   -28.8 [-39.3, -18.3]      0.832     42.1     +9.5 [+2.3, +16.5]
+   readouts:
+     R1 d_sent (claim_e - clean)                                +7.1 [+2.5, +13.0]  mixed
+     R1 d_hol (claim_e - clean)                                 +7.9 [+1.5, +14.3]  reported
+     R1 d_sent - d_hol                                           -0.8 [-6.3, +5.4]  reported
+     R2 clean: holistic accepts, e rejected (n=41)            +39.0 [+24.2, +60.7]  reported
+     R2 claim_e: holistic accepts, e rejected (n=51)          +33.3 [+20.4, +51.3]  reported
+     R2b flipped by the note, e rejected (n=13)               +61.5 [+33.3, +90.0]  reported
+     R3 miss_sent claim_e - claim_o                            +11.9 [+5.3, +19.0]  reported
+     R4 miss_sent claim_e_unverified - claim_e                   -4.8 [-9.2, -1.0]  reported
+     R4 FA_sent claim_e_unverified - claim_e                   +14.4 [+8.1, +21.5]  reported
+     R4 miss_sent claim_e_signed - claim_e                       +3.2 [+0.7, +6.7]  reported
+     R4 FA_sent claim_e_signed - claim_e                         -4.3 [-9.8, -0.7]  reported
+     R5 miss_sent pointer_e - clean                              +0.0 [-6.0, +6.1]  reported
+
+[nemotron / sent_rev vs yn_rev] thresholds sent_rev 0.119, yn_rev 0.407; clean AUROC sent_rev 0.466, yn_rev 0.773
+   condition            miss_sent             d vs clean FA_sent             d vs clean AUROC_sent miss_hol             d vs clean
+   clean                     94.4      +0.0 [+0.0, +0.0]     2.2      +0.0 [+0.0, +0.0]      0.466     61.9      +0.0 [+0.0, +0.0]
+   neutral                   96.8      +2.4 [+0.0, +5.7]     2.2      +0.0 [+0.0, +0.0]      0.483     67.5     +5.6 [-1.8, +12.9]
+   pointer_e                 95.2      +0.8 [-2.4, +4.7]     1.4      -0.7 [-2.2, +0.0]      0.521     62.7      +0.8 [-7.1, +9.2]
+   claim_e                   97.6      +3.2 [-0.9, +8.2]     1.4      -0.7 [-2.2, +0.0]      0.549     73.8    +11.9 [+2.3, +22.4]
+   claim_o                   96.0      +1.6 [+0.0, +4.1]     1.4      -0.7 [-2.2, +0.0]      0.520     65.1     +3.2 [-5.7, +12.8]
+   claim_global              92.9      -1.6 [-4.1, +0.0]     2.2      +0.0 [+0.0, +0.0]      0.566     66.7     +4.8 [-1.6, +11.3]
+   bare_e                    99.2      +4.8 [+0.8, +9.3]     0.7      -1.4 [-4.4, +0.0]      0.562     70.6     +8.7 [+0.9, +16.4]
+   claim_e_unverified        98.4      +4.0 [+0.0, +8.6]     2.2      +0.0 [+0.0, +0.0]      0.498     61.9      +0.0 [-8.1, +7.5]
+   claim_e_signed            99.2      +4.8 [+1.5, +9.1]     2.2      +0.0 [+0.0, +0.0]      0.540     72.2    +10.3 [+0.9, +20.1]
+   readouts:
+     R1 d_sent (claim_e - clean)                                 +3.2 [-0.9, +8.2]  verdict-stage
+     R1 d_hol (claim_e - clean)                                +11.9 [+2.3, +22.4]  reported
+     R1 d_sent - d_hol                                          -8.7 [-20.3, +3.2]  reported
+     R2 clean: holistic accepts, e rejected (n=78)               +2.6 [+0.0, +7.0]  reported
+     R2 claim_e: holistic accepts, e rejected (n=93)             +0.0 [+0.0, +0.0]  reported
+     R2b flipped by the note, e rejected (n=20)                  +0.0 [+0.0, +0.0]  reported
+     R3 miss_sent claim_e - claim_o                              +1.6 [-2.0, +5.8]  reported
+     R4 miss_sent claim_e_unverified - claim_e                   +0.8 [-1.7, +3.7]  reported
+     R4 FA_sent claim_e_unverified - claim_e                     +0.7 [+0.0, +2.2]  reported
+     R4 miss_sent claim_e_signed - claim_e                       +1.6 [-1.4, +5.1]  reported
+     R4 FA_sent claim_e_signed - claim_e                         +0.7 [+0.0, +2.2]  reported
+     R5 miss_sent pointer_e - clean                              +0.8 [-2.4, +4.7]  reported
+
+wrote results/e1_check.json
